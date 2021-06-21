@@ -1,0 +1,29 @@
+The flag 'temp' used in rule pal2nal_codon is only valid for outputs, not inputs.
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run_null is only valid for outputs, not inputs.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	Nuc_AA_FnaF_of_diverGene
+	1	all
+	2
+Select jobs to execute...
+
+[Tue Jun 15 17:18:37 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/samps_Tree-20210527
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm
+    jobid: 1
+
+WildcardError in line 34 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/coreGnm-dN-dS-calculate-pipeline.py:
+Wildcards in params cannot be determined from output files. Note that you have to use a function to deactivate automatic wildcard expansion in params strings, e.g., `lambda wildcards: '{test}'`. Also see https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#non-file-parameters-for-rules:
+'person'
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 140, in run_jobs
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 441, in run
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 230, in _run
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 156, in _run
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 162, in printjob

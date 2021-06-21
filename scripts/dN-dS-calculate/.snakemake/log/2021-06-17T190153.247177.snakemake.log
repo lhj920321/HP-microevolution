@@ -1,0 +1,31 @@
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	2	codeml_run
+	3
+Select jobs to execute...
+
+[Thu Jun 17 19:01:53 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P13.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P13
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P13.codeml.log
+    jobid: 5
+    wildcards: person=P13
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P13 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P13.codeml.log
+Terminating processes on user request, this might take some time.
+[Thu Jun 17 19:02:04 2021]
+Error in rule codeml_run:
+    jobid: 5
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P13.codeml.log
+    shell:
+        bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P13 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P13.codeml.log
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/.snakemake/log/2021-06-17T190153.247177.snakemake.log

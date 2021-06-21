@@ -121,7 +121,7 @@ def convertToVcf(sample,samp_FreqDic,ntfreqlieD,ntfreqlsD,refID,RefGnm):
 	outLst = []
 	sampSiteInfoD = {}
 	SampCol = ntfreqlieD[sample]
-	RefChromID = refID.split(">")[1]
+	RefChromID = refID.split(">")[1].split(" ")[0]
 
 	for Cite in samp_FreqDic:
 		REF = RefGnm[Cite-1]
@@ -157,8 +157,8 @@ def convertToVcf(sample,samp_FreqDic,ntfreqlieD,ntfreqlsD,refID,RefGnm):
 		AD = str(NumD[ALT])
 		FREQ = samp_FreqDic[Cite]
 		DP = totnum
-		if len(str(FREQ)) > 5:
-			print(FREQ)
+		#if len(str(FREQ)) > 5:
+			#print(FREQ)
 
 		outlineL = []
 		outlineL.append(RefChromID)

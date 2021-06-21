@@ -1,0 +1,339 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	3	BGI_bam_Header
+	1	all
+	3	bam_index
+	3	bam_rmdup
+	3	bam_sort
+	1	bwa_index
+	3	bwa_run
+	3	mpileup
+	1	refGonm_faidx
+	3	varscan2_mpileup2snp
+	24
+Select jobs to execute...
+
+[Tue May 18 19:24:42 2021]
+rule refGonm_faidx:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta
+    output: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta.fai
+    jobid: 18
+    wildcards: bwa_ref_samp=P11-E-j
+
+samtools  faidx  /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta
+
+[Tue May 18 19:24:42 2021]
+rule bwa_index:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta
+    output: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta.bwt
+    jobid: 5
+    wildcards: bwa_ref_samp=P11-E-j
+
+bwa index /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta
+[Tue May 18 19:24:42 2021]
+Finished job 18.
+1 of 24 steps (4%) done
+[Tue May 18 19:24:43 2021]
+Finished job 5.
+2 of 24 steps (8%) done
+Select jobs to execute...
+
+[Tue May 18 19:24:43 2021]
+rule bwa_run:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta, /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-t/P11-E-t.R1.paired.fastq.gz, /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-t/P11-E-t.R2.paired.fastq.gz, /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta.bwt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.bam
+    jobid: 13
+    wildcards: sample=P11-E-t, bwa_ref_samp=P11-E-j
+
+bwa  mem  -t  30  /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta  /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-t/P11-E-t.R1.paired.fastq.gz  /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-t/P11-E-t.R2.paired.fastq.gz       		|  samtools view -bS -  > /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.bam   
+
+[Tue May 18 19:24:43 2021]
+rule bwa_run:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta, /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-j/P11-E-j.R1.paired.fastq.gz, /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-j/P11-E-j.R2.paired.fastq.gz, /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta.bwt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.bam
+    jobid: 9
+    wildcards: sample=P11-E-j, bwa_ref_samp=P11-E-j
+
+bwa  mem  -t  30  /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta  /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-j/P11-E-j.R1.paired.fastq.gz  /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-j/P11-E-j.R2.paired.fastq.gz       		|  samtools view -bS -  > /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.bam   
+
+[Tue May 18 19:24:43 2021]
+rule bwa_run:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta, /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-x/P11-E-x.R1.paired.fastq.gz, /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-x/P11-E-x.R2.paired.fastq.gz, /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta.bwt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.bam
+    jobid: 4
+    wildcards: sample=P11-E-x, bwa_ref_samp=P11-E-j
+
+bwa  mem  -t  30  /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta  /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-x/P11-E-x.R1.paired.fastq.gz  /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-x/P11-E-x.R2.paired.fastq.gz       		|  samtools view -bS -  > /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.bam   
+[Tue May 18 19:34:51 2021]
+Finished job 13.
+3 of 24 steps (12%) done
+Select jobs to execute...
+
+[Tue May 18 19:34:51 2021]
+rule bam_sort:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.bam
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.bam
+    jobid: 12
+    wildcards: sample=P11-E-t, bwa_ref_samp=P11-E-j
+
+samtools  sort  --threads   30  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.bam  -o /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.bam
+[Tue May 18 19:34:55 2021]
+Finished job 9.
+4 of 24 steps (17%) done
+Select jobs to execute...
+
+[Tue May 18 19:34:55 2021]
+rule bam_sort:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.bam
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.bam
+    jobid: 8
+    wildcards: sample=P11-E-j, bwa_ref_samp=P11-E-j
+
+samtools  sort  --threads   30  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.bam  -o /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.bam
+[Tue May 18 19:35:43 2021]
+Finished job 4.
+5 of 24 steps (21%) done
+Select jobs to execute...
+
+[Tue May 18 19:35:44 2021]
+rule bam_sort:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.bam
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.bam
+    jobid: 3
+    wildcards: sample=P11-E-x, bwa_ref_samp=P11-E-j
+
+samtools  sort  --threads   30  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.bam  -o /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.bam
+Removing temporary output file /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.bam.
+[Tue May 18 19:36:33 2021]
+Finished job 12.
+6 of 24 steps (25%) done
+Select jobs to execute...
+
+[Tue May 18 19:36:33 2021]
+rule bam_rmdup:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.bam
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.bam, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.metrics
+    log: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.log
+    jobid: 11
+    wildcards: sample=P11-E-t, bwa_ref_samp=P11-E-j
+
+picard  MarkDuplicates  INPUT=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.bam  		OUTPUT=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.bam  METRICS_FILE=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.metrics   REMOVE_DUPLICATES=true  2> /shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.log
+Removing temporary output file /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.bam.
+[Tue May 18 19:36:43 2021]
+Finished job 8.
+7 of 24 steps (29%) done
+Select jobs to execute...
+
+[Tue May 18 19:36:43 2021]
+rule bam_rmdup:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.bam
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.bam, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.metrics
+    log: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.log
+    jobid: 7
+    wildcards: sample=P11-E-j, bwa_ref_samp=P11-E-j
+
+picard  MarkDuplicates  INPUT=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.bam  		OUTPUT=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.bam  METRICS_FILE=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.metrics   REMOVE_DUPLICATES=true  2> /shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.log
+Removing temporary output file /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.bam.
+[Tue May 18 19:37:21 2021]
+Finished job 3.
+8 of 24 steps (33%) done
+Select jobs to execute...
+
+[Tue May 18 19:37:21 2021]
+rule bam_rmdup:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.bam
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.bam, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.metrics
+    log: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.log
+    jobid: 2
+    wildcards: sample=P11-E-x, bwa_ref_samp=P11-E-j
+
+picard  MarkDuplicates  INPUT=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.bam  		OUTPUT=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.bam  METRICS_FILE=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.metrics   REMOVE_DUPLICATES=true  2> /shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.log
+Removing temporary output file /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.bam.
+Removing temporary output file /shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.metrics.
+[Tue May 18 19:42:14 2021]
+Finished job 11.
+9 of 24 steps (38%) done
+Select jobs to execute...
+
+[Tue May 18 19:42:14 2021]
+rule BGI_bam_Header:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.bam
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.bam
+    jobid: 10
+    wildcards: sample=P11-E-t, bwa_ref_samp=P11-E-j
+
+picard  AddOrReplaceReadGroups I=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.bam  O=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.bam 		ID=sample_P11-E-t LB=hp_P11-E-t_lib1 PL=NGS  SM=sample_P11-E-t   PU=unit1
+Removing temporary output file /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.bam.
+Removing temporary output file /shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.metrics.
+[Tue May 18 19:42:25 2021]
+Finished job 7.
+10 of 24 steps (42%) done
+Select jobs to execute...
+
+[Tue May 18 19:42:25 2021]
+rule BGI_bam_Header:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.bam
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.bam
+    jobid: 6
+    wildcards: sample=P11-E-j, bwa_ref_samp=P11-E-j
+
+picard  AddOrReplaceReadGroups I=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.bam  O=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.bam 		ID=sample_P11-E-j LB=hp_P11-E-j_lib1 PL=NGS  SM=sample_P11-E-j   PU=unit1
+Removing temporary output file /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.bam.
+Removing temporary output file /shared/liuhj/HP/process/NGS_map2PersonResptGnm/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.metrics.
+[Tue May 18 19:43:23 2021]
+Finished job 2.
+11 of 24 steps (46%) done
+Select jobs to execute...
+
+[Tue May 18 19:43:23 2021]
+rule BGI_bam_Header:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.bam
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.bam
+    jobid: 1
+    wildcards: sample=P11-E-x, bwa_ref_samp=P11-E-j
+
+picard  AddOrReplaceReadGroups I=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.bam  O=/shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.bam 		ID=sample_P11-E-x LB=hp_P11-E-x_lib1 PL=NGS  SM=sample_P11-E-x   PU=unit1
+[Tue May 18 19:45:33 2021]
+Finished job 10.
+12 of 24 steps (50%) done
+Select jobs to execute...
+
+[Tue May 18 19:45:33 2021]
+rule bam_index:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.bam
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.bam.bai
+    jobid: 16
+    wildcards: sample=P11-E-t, bwa_ref_samp=P11-E-j
+
+samtools index  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.bam
+[Tue May 18 19:45:45 2021]
+Finished job 6.
+13 of 24 steps (54%) done
+Select jobs to execute...
+
+[Tue May 18 19:45:45 2021]
+rule bam_index:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.bam
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.bam.bai
+    jobid: 15
+    wildcards: sample=P11-E-j, bwa_ref_samp=P11-E-j
+
+samtools index  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.bam
+[Tue May 18 19:46:02 2021]
+Finished job 16.
+14 of 24 steps (58%) done
+Select jobs to execute...
+
+[Tue May 18 19:46:02 2021]
+rule mpileup:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.bam, /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta.fai, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.bam.bai
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.mpileup
+    log: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.mpileup.log
+    jobid: 20
+    wildcards: sample=P11-E-t, bwa_ref_samp=P11-E-j
+
+samtools mpileup -q 30  --reference  /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.bam  1>/shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.mpileup 2>/shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.mpileup.log
+[Tue May 18 19:46:15 2021]
+Finished job 15.
+15 of 24 steps (62%) done
+Select jobs to execute...
+
+[Tue May 18 19:46:15 2021]
+rule mpileup:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.bam, /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta.fai, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.bam.bai
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.mpileup
+    log: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.mpileup.log
+    jobid: 19
+    wildcards: sample=P11-E-j, bwa_ref_samp=P11-E-j
+
+samtools mpileup -q 30  --reference  /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.bam  1>/shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.mpileup 2>/shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.mpileup.log
+[Tue May 18 19:46:59 2021]
+Finished job 1.
+16 of 24 steps (67%) done
+Select jobs to execute...
+
+[Tue May 18 19:46:59 2021]
+rule bam_index:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.bam
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.bam.bai
+    jobid: 14
+    wildcards: sample=P11-E-x, bwa_ref_samp=P11-E-j
+
+samtools index  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.bam
+[Tue May 18 19:47:31 2021]
+Finished job 14.
+17 of 24 steps (71%) done
+Select jobs to execute...
+
+[Tue May 18 19:47:31 2021]
+rule mpileup:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.bam, /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta.fai, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.bam.bai
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.mpileup
+    log: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.mpileup.log
+    jobid: 17
+    wildcards: sample=P11-E-x, bwa_ref_samp=P11-E-j
+
+samtools mpileup -q 30  --reference  /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.fasta  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.bam  1>/shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.mpileup 2>/shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.mpileup.log
+[Tue May 18 20:37:52 2021]
+Finished job 20.
+18 of 24 steps (75%) done
+Select jobs to execute...
+
+[Tue May 18 20:37:52 2021]
+rule varscan2_mpileup2snp:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.mpileup
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.varscan2.mpileup2snp.vcf
+    jobid: 23
+    wildcards: sample=P11-E-t, bwa_ref_samp=P11-E-j
+
+varscan   mpileup2snp  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.mpileup  --min-coverage 50  --min-reads2  5  --min-avg-qual 30  --min-var-freq  0.02   --output-vcf 1  >/shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.varscan2.mpileup2snp.vcf 
+[Tue May 18 20:38:05 2021]
+Finished job 19.
+19 of 24 steps (79%) done
+Select jobs to execute...
+
+[Tue May 18 20:38:05 2021]
+rule varscan2_mpileup2snp:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.mpileup
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.varscan2.mpileup2snp.vcf
+    jobid: 22
+    wildcards: sample=P11-E-j, bwa_ref_samp=P11-E-j
+
+varscan   mpileup2snp  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.mpileup  --min-coverage 50  --min-reads2  5  --min-avg-qual 30  --min-var-freq  0.02   --output-vcf 1  >/shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.varscan2.mpileup2snp.vcf 
+[Tue May 18 20:43:05 2021]
+Finished job 17.
+20 of 24 steps (83%) done
+Select jobs to execute...
+
+[Tue May 18 20:43:05 2021]
+rule varscan2_mpileup2snp:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.mpileup
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.varscan2.mpileup2snp.vcf
+    jobid: 21
+    wildcards: sample=P11-E-x, bwa_ref_samp=P11-E-j
+
+varscan   mpileup2snp  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.mpileup  --min-coverage 50  --min-reads2  5  --min-avg-qual 30  --min-var-freq  0.02   --output-vcf 1  >/shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.varscan2.mpileup2snp.vcf 
+[Tue May 18 20:45:33 2021]
+Finished job 23.
+21 of 24 steps (88%) done
+[Tue May 18 20:45:44 2021]
+Finished job 22.
+22 of 24 steps (92%) done
+[Tue May 18 20:51:23 2021]
+Finished job 21.
+23 of 24 steps (96%) done
+Select jobs to execute...
+
+[Tue May 18 20:51:23 2021]
+localrule all:
+    input: /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-x/P11-E-x.R1.paired.fastq.gz, /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-j/P11-E-j.R1.paired.fastq.gz, /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-t/P11-E-t.R1.paired.fastq.gz, /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-x/P11-E-x.R1.paired.fastq.gz, /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-j/P11-E-j.R1.paired.fastq.gz, /shared/liuhj/HP/data/NGS/Trimmomatic/P11-E-t/P11-E-t.R1.paired.fastq.gz, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.bam, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.bam, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.bam, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.bam.bai, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.bam.bai, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/bwa/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.bam.bai, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.mpileup, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.mpileup, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.mpileup, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-x/P11-E-x_2_P11-E-j.sort.rmdup.Header.varscan2.mpileup2snp.vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-j/P11-E-j_2_P11-E-j.sort.rmdup.Header.varscan2.mpileup2snp.vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/mpileup/P11-E-t/P11-E-t_2_P11-E-j.sort.rmdup.Header.varscan2.mpileup2snp.vcf
+    jobid: 0
+
+[Tue May 18 20:51:23 2021]
+Finished job 0.
+24 of 24 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/.snakemake/log/2021-05-18T192442.708793.snakemake.log

@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	pilon
+	2
+Select jobs to execute...
+
+[Thu May 27 21:32:34 2021]
+rule pilon:
+    input: /shared/liuhj/HP/process/assembly/ONT_assembly/HP_P12-E-x/6-bridge_contigs/bridged_contigs.fasta, /shared/liuhj/HP/data/NGS/Trimmomatic/P12-E-x/P12-E-x.R1.paired.fastq, /shared/liuhj/HP/data/NGS/Trimmomatic/P12-E-x/P12-E-x.R2.paired.fastq
+    output: /shared/liuhj/HP/process/assembly/ONT_assembly/pilon/P12-E-x/P12-E-x.pilon.1.fasta, /shared/liuhj/HP/process/assembly/ONT_assembly/pilon/P12-E-x/P12-E-x.0.bam, /shared/liuhj/HP/process/assembly/ONT_assembly/pilon/P12-E-x/P12-E-x.1.bam, /shared/liuhj/HP/process/assembly/ONT_assembly/pilon/P12-E-x/P12-E-x.2.bam
+    log: /shared/liuhj/HP/process/assembly/ONT_assembly/pilon/P12-E-x/P12-E-x.pilon.log
+    jobid: 1
+    wildcards: sample=P12-E-x
+
+bash  Pilon.sh   P12-E-x  pilon 		/shared/liuhj/HP/process/assembly/ONT_assembly/HP_P12-E-x/6-bridge_contigs/bridged_contigs.fasta   /shared/liuhj/HP/data/NGS/Trimmomatic/P12-E-x/P12-E-x.R1.paired.fastq  /shared/liuhj/HP/data/NGS/Trimmomatic/P12-E-x/P12-E-x.R2.paired.fastq  /shared/liuhj/HP/process/assembly/ONT_assembly/pilon/P12-E-x   1   
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 40 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/assembly/pilon_pipeline.py:
+Job Missing files after 5 seconds:
+/shared/liuhj/HP/process/assembly/ONT_assembly/pilon/P12-E-x/P12-E-x.pilon.1.fasta
+/shared/liuhj/HP/process/assembly/ONT_assembly/pilon/P12-E-x/P12-E-x.1.bam
+/shared/liuhj/HP/process/assembly/ONT_assembly/pilon/P12-E-x/P12-E-x.2.bam
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 1 completed successfully, but some output files are missing. 1
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 583, in handle_job_success
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 259, in handle_job_success
+Removing output files of failed job pilon since they might be corrupted:
+/shared/liuhj/HP/process/assembly/ONT_assembly/pilon/P12-E-x/P12-E-x.0.bam
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/assembly/.snakemake/log/2021-05-27T213234.114411.snakemake.log

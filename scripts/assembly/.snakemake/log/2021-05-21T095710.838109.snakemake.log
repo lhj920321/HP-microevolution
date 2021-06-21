@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	pilon
+	2
+
+[Fri May 21 09:57:10 2021]
+rule pilon:
+    input: /amax/homes/liuhj/HP/process/ONT_assembly/HP_P12-E-x/6-bridge_contigs/bridged_contigs.fasta, /amax/homes/liuhj/HP/seq-data/NGS/Trimmomatic/P12-E-x/P12-E-x.R1.paired.fastq.gz, /amax/homes/liuhj/HP/seq-data/NGS/Trimmomatic/P12-E-x/P12-E-x.R2.paired.fastq.gz
+    output: /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.pilon.3.fasta, /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.0.bam, /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.1.bam, /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.2.bam
+    log: /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.pilon.log
+    jobid: 1
+    wildcards: sample=P12-E-x
+
+bash  Pilon.sh   P12-E-x  pilon 		/amax/homes/liuhj/HP/process/ONT_assembly/HP_P12-E-x/6-bridge_contigs/bridged_contigs.fasta   /amax/homes/liuhj/HP/seq-data/NGS/Trimmomatic/P12-E-x/P12-E-x.R1.paired.fastq.gz  /amax/homes/liuhj/HP/seq-data/NGS/Trimmomatic/P12-E-x/P12-E-x.R2.paired.fastq.gz  /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x   2>/amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.pilon.log 
+Terminating processes on user request, this might take some time.
+[Fri May 21 09:57:43 2021]
+Error in rule pilon:
+    jobid: 1
+    output: /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.pilon.3.fasta, /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.0.bam, /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.1.bam, /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.2.bam
+    log: /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.pilon.log (check log file(s) for error message)
+    shell:
+        bash  Pilon.sh   P12-E-x  pilon 		/amax/homes/liuhj/HP/process/ONT_assembly/HP_P12-E-x/6-bridge_contigs/bridged_contigs.fasta   /amax/homes/liuhj/HP/seq-data/NGS/Trimmomatic/P12-E-x/P12-E-x.R1.paired.fastq.gz  /amax/homes/liuhj/HP/seq-data/NGS/Trimmomatic/P12-E-x/P12-E-x.R2.paired.fastq.gz  /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x   2>/amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.pilon.log 
+        (exited with non-zero exit code)
+
+Removing output files of failed job pilon since they might be corrupted:
+/amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.0.bam
+Complete log: /amax/homes/liuhj/HP/scripts/HP-microevolution/scripts/assembly/.snakemake/log/2021-05-21T095710.838109.snakemake.log

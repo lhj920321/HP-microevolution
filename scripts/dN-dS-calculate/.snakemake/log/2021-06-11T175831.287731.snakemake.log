@@ -1,0 +1,50 @@
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	Generate_controlF
+	1	all
+	1	codeml_run
+	3
+Select jobs to execute...
+
+[Fri Jun 11 17:58:31 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P1, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl
+    output: /shared/liuhj/HP/process/dN-dS-caculate/P1.ctl.log
+    jobid: 1
+    wildcards: person=P1
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate/P1  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate/P1.ctl.log
+[Fri Jun 11 17:58:31 2021]
+Finished job 1.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Fri Jun 11 17:58:31 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P1.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate/P1
+    output: /shared/liuhj/HP/process/dN-dS-caculate/P1.codeml.log
+    jobid: 3
+    wildcards: person=P1
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate/P1 /shared/liuhj/HP/process/dN-dS-caculate/P1.codeml.log
+[Fri Jun 11 17:58:32 2021]
+Finished job 3.
+2 of 3 steps (67%) done
+Select jobs to execute...
+
+[Fri Jun 11 17:58:32 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P1.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate/P1.codeml.log
+    jobid: 0
+
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate/P1.ctl.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate/P1.codeml.log.
+[Fri Jun 11 17:58:32 2021]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/.snakemake/log/2021-06-11T175831.287731.snakemake.log

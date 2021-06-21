@@ -170,7 +170,7 @@ def main():
 	person = iSNV_SNP_table.split("/")[-2]
 	out_snvSNPCountF = out_P + "/" + person + ".snvSNPcount.txt"
 	out_snvSNPCountF_O=open(out_snvSNPCountF,'a')
-	out_snvSNPCountF_O.write("\t".join(["sample","snvCount","SNPCount","personCommonCitesNum"]) + "\n")
+	out_snvSNPCountF_O.write("\t".join(["sample","snvCount(" + str(minFreq) + "-" + str(1-minFreq) + ")" ,"SNPCount(>=" + str(1-minFreq) + ")","personCommonCitesNum"]) + "\n")
 	for sampleID in snvSNPcount_Dic:	
 		out_snvSNPCountF_O.write(snvSNPcount_Dic[sampleID] + "\n")
 	out_snvSNPCountF_O.close()	

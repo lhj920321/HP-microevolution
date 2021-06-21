@@ -3,7 +3,7 @@
 #######CCS data map to respe genome ngmlr
 ###################################
 
-person = "P23"
+person = "P1"
 
 if person == 'P1':
 	bwa_ref_samp = 'P1-E-j'

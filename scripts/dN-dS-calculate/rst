@@ -1,0 +1,9 @@
+Supplemental results for CODEML (seqf: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P14/P14__ywiE.codon  treef: )
+
+
+pairwise comparison (Goldman & Yang 1994)
+seq seq        N       S       dN       dS     dN/dS   Paras.
+  2   1    412.1    127.9   0.0000   0.0000   0.4672   0.0000   1.6656   0.4672  -702.802
+  3   1    408.9    131.1   0.0000   0.0000   0.3519   0.0000   1.8570   0.3519  -702.802
+  3   2    351.4    188.6   0.0000   0.0000  99.0000   0.0000 999.0000  99.0000  -702.802
+

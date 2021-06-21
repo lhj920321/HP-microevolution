@@ -1,0 +1,29 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	pilon
+	2
+
+[Fri May 21 09:53:06 2021]
+rule pilon:
+    input: /amax/homes/liuhj/HP/process/ONT_assembly/HP_P12-E-x/6-bridge_contigs, /amax/homes/liuhj/HP/seq-data/NGS/Trimmomatic/P12-E-x/P12-E-x.R1.paired.fastq.gz, /amax/homes/liuhj/HP/seq-data/NGS/Trimmomatic/P12-E-x/P12-E-x.R2.paired.fastq.gz
+    output: /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.pilon.3.fasta, /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.0.bam, /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.1.bam, /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.2.bam
+    log: /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.pilon.log
+    jobid: 1
+    wildcards: sample=P12-E-x
+
+bash  Pilon.sh   P12-E-x  pilon 		/amax/homes/liuhj/HP/process/ONT_assembly/HP_P12-E-x/6-bridge_contigs   /amax/homes/liuhj/HP/seq-data/NGS/Trimmomatic/P12-E-x/P12-E-x.R1.paired.fastq.gz  /amax/homes/liuhj/HP/seq-data/NGS/Trimmomatic/P12-E-x/P12-E-x.R2.paired.fastq.gz  /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x   2>/amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.pilon.log 
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 40 of /amax/homes/liuhj/HP/scripts/HP-microevolution/scripts/assembly/pilon_pipeline.py:
+Missing files after 5 seconds:
+/amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.pilon.3.fasta
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Removing output files of failed job pilon since they might be corrupted:
+/amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.0.bam, /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.1.bam, /amax/homes/liuhj/HP/process/ONT_assembly/pilon/P12-E-x/P12-E-x.2.bam
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /amax/homes/liuhj/HP/scripts/HP-microevolution/scripts/assembly/.snakemake/log/2021-05-21T095306.156685.snakemake.log

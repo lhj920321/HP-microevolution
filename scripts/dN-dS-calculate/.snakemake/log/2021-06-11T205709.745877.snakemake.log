@@ -1,0 +1,33 @@
+The flag 'temp' used in rule pal2nal_codon is only valid for outputs, not inputs.
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	codeml_dNdS_collect
+	2
+Select jobs to execute...
+
+[Fri Jun 11 20:57:09 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P1
+    output: /shared/liuhj/HP/process/dN-dS-caculate/P1.codeml.dNdS.txt
+    jobid: 2
+    wildcards: person=P1
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P1  -o  /shared/liuhj/HP/process/dN-dS-caculate/P1.codeml.dNdS.txt 
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 107 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/dN-dS-calculate-pipeline.py:
+Job Missing files after 5 seconds:
+/shared/liuhj/HP/process/dN-dS-caculate/P1.codeml.dNdS.txt
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 2 completed successfully, but some output files are missing. 2
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 583, in handle_job_success
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 259, in handle_job_success
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/.snakemake/log/2021-06-11T205709.745877.snakemake.log

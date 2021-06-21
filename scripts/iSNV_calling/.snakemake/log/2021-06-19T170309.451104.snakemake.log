@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	14	iSNV_freq_distribut_RepeatRegionfilt
+	15
+Select jobs to execute...
+
+[Sat Jun 19 17:03:09 2021]
+rule iSNV_freq_distribut_RepeatRegionfilt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/SNVFreq_distribut_Stat_filtRepeat
+    jobid: 40
+    wildcards: person=P23
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/SNVFreq_distribut_Stat_filtRepeat  -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2 -T CCS 
+Terminating processes on user request, this might take some time.
+[Sat Jun 19 17:03:10 2021]
+Finished job 40.
+1 of 15 steps (7%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/.snakemake/log/2021-06-19T170309.451104.snakemake.log

@@ -1,0 +1,6 @@
+The flag 'temp' used in rule pal2nal_codon is only valid for outputs, not inputs.
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+CreateRuleException in line 114 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/dN-dS-calculate-pipeline.py:
+The name Generate_controlF is already used by another rule
+  File "/shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/dN-dS-calculate-pipeline.py", line 114, in <module>

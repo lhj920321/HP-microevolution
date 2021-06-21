@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	mpileup
+	2
+
+[Sat Jun 12 21:35:08 2021]
+rule mpileup:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P5-E-j.fasta, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-j.sort.bam, /shared/liuhj/HP/process/assembly/all_genomes/P5-E-j.fasta.fai, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-j.sort.bam.bai
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup
+    log: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup.log
+    jobid: 1
+    wildcards: sample=P5-E-d, bwa_ref_samp=P5-E-j
+
+samtools mpileup -q 20  --reference  /shared/liuhj/HP/process/assembly/all_genomes/P5-E-j.fasta  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-j.sort.bam  1>/shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup 2>/shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup.log
+[Sat Jun 12 22:21:09 2021]
+Finished job 1.
+1 of 2 steps (50%) done
+
+[Sat Jun 12 22:21:09 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup
+    jobid: 0
+
+[Sat Jun 12 22:21:09 2021]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/CCS_map_scripts/.snakemake/log/2021-06-12T213508.168149.snakemake.log

@@ -1,0 +1,646 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	13	convert_iSNVpytable_To_vcf
+	13	iSNV_freq_distribut
+	13	iSNV_freq_distribut_RepeatRegion_recombiRegion_filt
+	13	ntfreq_2_FreqBigtable
+	53
+
+[Mon Jun 14 11:17:30 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P6.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/out.samps-ntfreq.bigtable.txt
+    jobid: 5
+    wildcards: person=P6
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P6.respect.fasta  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon Jun 14 11:17:49 2021]
+Finished job 5.
+1 of 53 steps (2%) done
+
+[Mon Jun 14 11:17:49 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P6.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/vcf
+    jobid: 19
+    wildcards: person=P6
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P6.respect.fasta -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/vcf -m 0.02  
+[Mon Jun 14 11:17:52 2021]
+Finished job 19.
+2 of 53 steps (4%) done
+
+[Mon Jun 14 11:17:52 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P25.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/out.samps-ntfreq.bigtable.txt
+    jobid: 14
+    wildcards: person=P25
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P25.respect.fasta  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon Jun 14 11:18:11 2021]
+Finished job 14.
+3 of 53 steps (6%) done
+
+[Mon Jun 14 11:18:11 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P25.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/vcf
+    jobid: 28
+    wildcards: person=P25
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P25.respect.fasta -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/vcf -m 0.02  
+[Mon Jun 14 11:18:15 2021]
+Finished job 28.
+4 of 53 steps (8%) done
+
+[Mon Jun 14 11:18:15 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P7.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/out.samps-ntfreq.bigtable.txt
+    jobid: 6
+    wildcards: person=P7
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P7.respect.fasta  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon Jun 14 11:18:33 2021]
+Finished job 6.
+5 of 53 steps (9%) done
+
+[Mon Jun 14 11:18:33 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P7.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/vcf
+    jobid: 20
+    wildcards: person=P7
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P7.respect.fasta -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/vcf -m 0.02  
+[Mon Jun 14 11:18:37 2021]
+Finished job 20.
+6 of 53 steps (11%) done
+
+[Mon Jun 14 11:18:37 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P21.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/out.samps-ntfreq.bigtable.txt
+    jobid: 10
+    wildcards: person=P21
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P21.respect.fasta  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon Jun 14 11:19:12 2021]
+Finished job 10.
+7 of 53 steps (13%) done
+
+[Mon Jun 14 11:19:12 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P21.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/vcf
+    jobid: 24
+    wildcards: person=P21
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P21.respect.fasta -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/vcf -m 0.02  
+[Mon Jun 14 11:19:16 2021]
+Finished job 24.
+8 of 53 steps (15%) done
+
+[Mon Jun 14 11:19:16 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P19.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/out.samps-ntfreq.bigtable.txt
+    jobid: 8
+    wildcards: person=P19
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P19.respect.fasta  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon Jun 14 11:19:41 2021]
+Finished job 8.
+9 of 53 steps (17%) done
+
+[Mon Jun 14 11:19:41 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P19.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/vcf
+    jobid: 22
+    wildcards: person=P19
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P19.respect.fasta -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/vcf -m 0.02  
+[Mon Jun 14 11:19:45 2021]
+Finished job 22.
+10 of 53 steps (19%) done
+
+[Mon Jun 14 11:19:45 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P23.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/out.samps-ntfreq.bigtable.txt
+    jobid: 12
+    wildcards: person=P23
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P23.respect.fasta  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon Jun 14 11:20:03 2021]
+Finished job 12.
+11 of 53 steps (21%) done
+
+[Mon Jun 14 11:20:03 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P23.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/vcf
+    jobid: 26
+    wildcards: person=P23
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P23.respect.fasta -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/vcf -m 0.02  
+[Mon Jun 14 11:20:07 2021]
+Finished job 26.
+12 of 53 steps (23%) done
+
+[Mon Jun 14 11:20:07 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P2.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/out.samps-ntfreq.bigtable.txt
+    jobid: 2
+    wildcards: person=P2
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P2.respect.fasta  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon Jun 14 11:20:17 2021]
+Finished job 2.
+13 of 53 steps (25%) done
+
+[Mon Jun 14 11:20:17 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P2.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/vcf
+    jobid: 16
+    wildcards: person=P2
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P2.respect.fasta -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/vcf -m 0.02  
+[Mon Jun 14 11:20:20 2021]
+Finished job 16.
+14 of 53 steps (26%) done
+
+[Mon Jun 14 11:20:20 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P22.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/out.samps-ntfreq.bigtable.txt
+    jobid: 11
+    wildcards: person=P22
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P22.respect.fasta  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon Jun 14 11:20:39 2021]
+Finished job 11.
+15 of 53 steps (28%) done
+
+[Mon Jun 14 11:20:39 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P22.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/vcf
+    jobid: 25
+    wildcards: person=P22
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P22.respect.fasta -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/vcf -m 0.02  
+[Mon Jun 14 11:20:43 2021]
+Finished job 25.
+16 of 53 steps (30%) done
+
+[Mon Jun 14 11:20:43 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P4.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/out.samps-ntfreq.bigtable.txt
+    jobid: 3
+    wildcards: person=P4
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P4.respect.fasta  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon Jun 14 11:21:10 2021]
+Finished job 3.
+17 of 53 steps (32%) done
+
+[Mon Jun 14 11:21:10 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P4.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/vcf
+    jobid: 17
+    wildcards: person=P4
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P4.respect.fasta -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/vcf -m 0.02  
+[Mon Jun 14 11:21:14 2021]
+Finished job 17.
+18 of 53 steps (34%) done
+
+[Mon Jun 14 11:21:14 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P20.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/out.samps-ntfreq.bigtable.txt
+    jobid: 9
+    wildcards: person=P20
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P20.respect.fasta  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon Jun 14 11:21:48 2021]
+Finished job 9.
+19 of 53 steps (36%) done
+
+[Mon Jun 14 11:21:48 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P20.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/vcf
+    jobid: 23
+    wildcards: person=P20
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P20.respect.fasta -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/vcf -m 0.02  
+[Mon Jun 14 11:21:52 2021]
+Finished job 23.
+20 of 53 steps (38%) done
+
+[Mon Jun 14 11:21:52 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P24.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/out.samps-ntfreq.bigtable.txt
+    jobid: 13
+    wildcards: person=P24
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P24.respect.fasta  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon Jun 14 11:22:18 2021]
+Finished job 13.
+21 of 53 steps (40%) done
+
+[Mon Jun 14 11:22:18 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P24.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/vcf
+    jobid: 27
+    wildcards: person=P24
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P24.respect.fasta -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/vcf -m 0.02  
+[Mon Jun 14 11:22:22 2021]
+Finished job 27.
+22 of 53 steps (42%) done
+
+[Mon Jun 14 11:22:22 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P18.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/out.samps-ntfreq.bigtable.txt
+    jobid: 7
+    wildcards: person=P18
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P18.respect.fasta  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon Jun 14 11:22:41 2021]
+Finished job 7.
+23 of 53 steps (43%) done
+
+[Mon Jun 14 11:22:41 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P18.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/vcf
+    jobid: 21
+    wildcards: person=P18
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P18.respect.fasta -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/vcf -m 0.02  
+[Mon Jun 14 11:22:44 2021]
+Finished job 21.
+24 of 53 steps (45%) done
+
+[Mon Jun 14 11:22:44 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P5.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/out.samps-ntfreq.bigtable.txt
+    jobid: 4
+    wildcards: person=P5
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P5.respect.fasta  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon Jun 14 11:22:57 2021]
+Finished job 4.
+25 of 53 steps (47%) done
+
+[Mon Jun 14 11:22:57 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P5.respect.fasta
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/vcf
+    jobid: 18
+    wildcards: person=P5
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P5.respect.fasta -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/vcf -m 0.02  
+[Mon Jun 14 11:23:07 2021]
+Finished job 18.
+26 of 53 steps (49%) done
+
+[Mon Jun 14 11:23:07 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 46
+    wildcards: person=P5
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Mon Jun 14 11:23:12 2021]
+Finished job 46.
+27 of 53 steps (51%) done
+
+[Mon Jun 14 11:23:12 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/general-snvFreq_distribut_Stat
+    jobid: 32
+    wildcards: person=P5
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Mon Jun 14 11:23:16 2021]
+Finished job 32.
+28 of 53 steps (53%) done
+
+[Mon Jun 14 11:23:16 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 55
+    wildcards: person=P24
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Mon Jun 14 11:23:18 2021]
+Finished job 55.
+29 of 53 steps (55%) done
+
+[Mon Jun 14 11:23:18 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/general-snvFreq_distribut_Stat
+    jobid: 41
+    wildcards: person=P24
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Mon Jun 14 11:23:20 2021]
+Finished job 41.
+30 of 53 steps (57%) done
+
+[Mon Jun 14 11:23:20 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 53
+    wildcards: person=P22
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Mon Jun 14 11:23:23 2021]
+Finished job 53.
+31 of 53 steps (58%) done
+
+[Mon Jun 14 11:23:23 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/general-snvFreq_distribut_Stat
+    jobid: 39
+    wildcards: person=P22
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Mon Jun 14 11:23:25 2021]
+Finished job 39.
+32 of 53 steps (60%) done
+
+[Mon Jun 14 11:23:25 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 49
+    wildcards: person=P18
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Mon Jun 14 11:23:26 2021]
+Finished job 49.
+33 of 53 steps (62%) done
+
+[Mon Jun 14 11:23:26 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/general-snvFreq_distribut_Stat
+    jobid: 35
+    wildcards: person=P18
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Mon Jun 14 11:23:28 2021]
+Finished job 35.
+34 of 53 steps (64%) done
+
+[Mon Jun 14 11:23:28 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 44
+    wildcards: person=P2
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Mon Jun 14 11:23:29 2021]
+Finished job 44.
+35 of 53 steps (66%) done
+
+[Mon Jun 14 11:23:29 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/general-snvFreq_distribut_Stat
+    jobid: 30
+    wildcards: person=P2
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Mon Jun 14 11:23:30 2021]
+Finished job 30.
+36 of 53 steps (68%) done
+
+[Mon Jun 14 11:23:30 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 48
+    wildcards: person=P7
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Mon Jun 14 11:23:31 2021]
+Finished job 48.
+37 of 53 steps (70%) done
+
+[Mon Jun 14 11:23:31 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/general-snvFreq_distribut_Stat
+    jobid: 34
+    wildcards: person=P7
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Mon Jun 14 11:23:32 2021]
+Finished job 34.
+38 of 53 steps (72%) done
+
+[Mon Jun 14 11:23:32 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 45
+    wildcards: person=P4
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Mon Jun 14 11:23:34 2021]
+Finished job 45.
+39 of 53 steps (74%) done
+
+[Mon Jun 14 11:23:34 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/general-snvFreq_distribut_Stat
+    jobid: 31
+    wildcards: person=P4
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Mon Jun 14 11:23:36 2021]
+Finished job 31.
+40 of 53 steps (75%) done
+
+[Mon Jun 14 11:23:36 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 54
+    wildcards: person=P23
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Mon Jun 14 11:23:38 2021]
+Finished job 54.
+41 of 53 steps (77%) done
+
+[Mon Jun 14 11:23:38 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 47
+    wildcards: person=P6
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Mon Jun 14 11:23:39 2021]
+Finished job 47.
+42 of 53 steps (79%) done
+
+[Mon Jun 14 11:23:39 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/general-snvFreq_distribut_Stat
+    jobid: 40
+    wildcards: person=P23
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Mon Jun 14 11:23:40 2021]
+Finished job 40.
+43 of 53 steps (81%) done
+
+[Mon Jun 14 11:23:40 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/general-snvFreq_distribut_Stat
+    jobid: 33
+    wildcards: person=P6
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Mon Jun 14 11:23:42 2021]
+Finished job 33.
+44 of 53 steps (83%) done
+
+[Mon Jun 14 11:23:42 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 51
+    wildcards: person=P20
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Mon Jun 14 11:23:45 2021]
+Finished job 51.
+45 of 53 steps (85%) done
+
+[Mon Jun 14 11:23:45 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 52
+    wildcards: person=P21
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Mon Jun 14 11:23:47 2021]
+Finished job 52.
+46 of 53 steps (87%) done
+
+[Mon Jun 14 11:23:47 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 50
+    wildcards: person=P19
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Mon Jun 14 11:23:49 2021]
+Finished job 50.
+47 of 53 steps (89%) done
+
+[Mon Jun 14 11:23:49 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 56
+    wildcards: person=P25
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Mon Jun 14 11:23:51 2021]
+Finished job 56.
+48 of 53 steps (91%) done
+
+[Mon Jun 14 11:23:51 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/general-snvFreq_distribut_Stat
+    jobid: 37
+    wildcards: person=P20
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Mon Jun 14 11:23:53 2021]
+Finished job 37.
+49 of 53 steps (92%) done
+
+[Mon Jun 14 11:23:53 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/general-snvFreq_distribut_Stat
+    jobid: 38
+    wildcards: person=P21
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Mon Jun 14 11:23:55 2021]
+Finished job 38.
+50 of 53 steps (94%) done
+
+[Mon Jun 14 11:23:55 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/general-snvFreq_distribut_Stat
+    jobid: 36
+    wildcards: person=P19
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Mon Jun 14 11:23:57 2021]
+Finished job 36.
+51 of 53 steps (96%) done
+
+[Mon Jun 14 11:23:57 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/general-snvFreq_distribut_Stat
+    jobid: 42
+    wildcards: person=P25
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Mon Jun 14 11:23:58 2021]
+Finished job 42.
+52 of 53 steps (98%) done
+
+[Mon Jun 14 11:23:58 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P1/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P1/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/vcf, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P1/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P1/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P2/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P4/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P5/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P6/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P7/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P18/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P19/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P20/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P21/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P22/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P23/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P24/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/P25/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 0
+
+[Mon Jun 14 11:23:58 2021]
+Finished job 0.
+53 of 53 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/.snakemake/log/2021-06-14T111730.911679.snakemake.log

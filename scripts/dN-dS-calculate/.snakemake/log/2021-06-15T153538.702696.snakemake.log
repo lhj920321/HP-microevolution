@@ -1,0 +1,7 @@
+The flag 'temp' used in rule pal2nal_codon is only valid for outputs, not inputs.
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run_null is only valid for outputs, not inputs.
+Building DAG of jobs...
+Nothing to be done.
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/.snakemake/log/2021-06-15T153538.702696.snakemake.log

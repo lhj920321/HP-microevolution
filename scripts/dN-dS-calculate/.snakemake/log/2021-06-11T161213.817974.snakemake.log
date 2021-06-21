@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 20 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/dN-dS-calculate-pipeline.py:
+Missing input files for rule Nuc_AA_FnaF_of_diverGene:
+/shared/liuhj/HP/process/Person_core_genome/P1.log

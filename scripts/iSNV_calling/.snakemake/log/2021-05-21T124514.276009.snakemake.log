@@ -1,0 +1,31 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	iSNV_freq_distribut
+	1	ntfreq_2_FreqBigtable
+	3
+Select jobs to execute...
+
+[Fri May 21 12:45:14 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/NGS_map2_23S_rRNA/mpileup/23SrRNA.all_ntfreq_files.txt, /shared/liuhj/HP/ref/ref_resistanceGenes/23S_rRNA.fasta
+    output: /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA/out.samps-ntfreq.bigtable.txt
+    jobid: 1
+    wildcards: person=23SrRNA
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step6_read_ntfreq.py  -i  /shared/liuhj/HP/process/NGS_map2_23S_rRNA/mpileup/23SrRNA.all_ntfreq_files.txt -r /shared/liuhj/HP/ref/ref_resistanceGenes/23S_rRNA.fasta  -o /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA  		-D  50 -A 5 -N 100 -F 0.02 -S 0.0 
+[Fri May 21 12:45:14 2021]
+Error in rule ntfreq_2_FreqBigtable:
+    jobid: 1
+    output: /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA/out.samps-ntfreq.bigtable.txt
+    shell:
+        python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step6_read_ntfreq.py  -i  /shared/liuhj/HP/process/NGS_map2_23S_rRNA/mpileup/23SrRNA.all_ntfreq_files.txt -r /shared/liuhj/HP/ref/ref_resistanceGenes/23S_rRNA.fasta  -o /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA  		-D  50 -A 5 -N 100 -F 0.02 -S 0.0 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/.snakemake/log/2021-05-21T124514.276009.snakemake.log

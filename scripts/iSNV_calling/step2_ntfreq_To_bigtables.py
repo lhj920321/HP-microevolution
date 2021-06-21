@@ -25,7 +25,7 @@ def refgenome_Base(RefFile):
 	seq = ''
 	for RefFile in open(RefFile).readlines():
 		if ">" in RefFile:
-			refID = RefFile.split("\n")[0].split(">")[-1]
+			refID = RefFile.split("\n")[0].split(">")[-1].split(" ")[0]
 		if ">" not in RefFile:
 			seq += RefFile.split("\n")[0]
 
@@ -45,7 +45,7 @@ def refgenome_Base11(RefFile):  ##may not be used
 	refSeqDic = {}
 	for RefFile in open(RefFile).readlines():
 		if ">" in RefFile:
-			refID = RefFile.split("\n")[0].split(">")[-1]
+			refID = RefFile.split("\n")[0].split(">")[-1].split(" ")[0]
 			refSeqDic[refID] = ''
 		else:
 			refSeqDic[refID] += RefFile.split("\n")[0]
@@ -73,7 +73,7 @@ def All_ntfreq_file(refID,ntfreqFLst,DEP_THRES):
 	for ntfreqF in ntfreqFLst:
 		file_num += 1
 		print("loading ntfreq file " +  str(file_num) + "  :  " + ntfreqF)
-		SampID = ntfreqF.split("/")[-1].split(".ntfreq")[0]
+		SampID = ntfreqF.split("/")[-1].split(".sort")[0]
 		All_ntpattDic[SampID] = {}
 		All_StrandbiaDic[SampID] = {}
 		All_CovDic[SampID] = {} 
@@ -90,6 +90,8 @@ def All_ntfreq_file(refID,ntfreqFLst,DEP_THRES):
 					refChrm = Tags[0]
 					if refChrm != refID:
 						print("ref genome ID not equel the refID in ntfreq file")
+						print("refID in ntfreq :" + refChrm)
+						print(refID.split(" ")[0])
 						break					
 					Posi = int(Tags[1])
 					#print(Posi)

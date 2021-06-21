@@ -1,0 +1,12 @@
+Building DAG of jobs...
+AmbiguousRuleException:
+Rules Nuc_AA_FnaF_of_diverGene and clustalW2_align are ambiguous for the file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm-P1.clustalW.log.
+Consider starting rule output with a unique prefix, constrain your wildcards, or use the ruleorder directive.
+Wildcards:
+	Nuc_AA_FnaF_of_diverGene: person=P1.clustalW.log
+	clustalW2_align: person=P1
+Expected input files:
+	Nuc_AA_FnaF_of_diverGene: /shared/liuhj/HP/process/samps_Tree-20210527
+	clustalW2_align: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm-P1Expected output files:
+	Nuc_AA_FnaF_of_diverGene: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm-P1.clustalW.log
+	clustalW2_align: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm-P1.clustalW.log

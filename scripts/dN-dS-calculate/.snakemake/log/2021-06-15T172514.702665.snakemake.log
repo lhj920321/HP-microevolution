@@ -1,0 +1,76 @@
+The flag 'temp' used in rule pal2nal_codon is only valid for outputs, not inputs.
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run_null is only valid for outputs, not inputs.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	4	Nuc_AA_FnaF_of_diverGene
+	1	all
+	5
+Select jobs to execute...
+
+[Tue Jun 15 17:25:14 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/samps_Tree-20210527
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P2
+    jobid: 2
+    wildcards: person=P2
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P2 -r /shared/liuhj/HP/process/samps_Tree-20210527  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P2
+[Tue Jun 15 17:25:15 2021]
+Finished job 2.
+1 of 5 steps (20%) done
+Select jobs to execute...
+
+[Tue Jun 15 17:25:15 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/samps_Tree-20210527
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P19
+    jobid: 16
+    wildcards: person=P19
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P19 -r /shared/liuhj/HP/process/samps_Tree-20210527  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P19
+[Tue Jun 15 17:25:15 2021]
+Finished job 16.
+2 of 5 steps (40%) done
+Select jobs to execute...
+
+[Tue Jun 15 17:25:15 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/samps_Tree-20210527
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P21
+    jobid: 18
+    wildcards: person=P21
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P21 -r /shared/liuhj/HP/process/samps_Tree-20210527  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P21
+[Tue Jun 15 17:25:16 2021]
+Finished job 18.
+3 of 5 steps (60%) done
+Select jobs to execute...
+
+[Tue Jun 15 17:25:16 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/samps_Tree-20210527
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P1
+    jobid: 1
+    wildcards: person=P1
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P1 -r /shared/liuhj/HP/process/samps_Tree-20210527  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P1
+[Tue Jun 15 17:25:16 2021]
+Finished job 1.
+4 of 5 steps (80%) done
+Select jobs to execute...
+
+[Tue Jun 15 17:25:16 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P1, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P2, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P3, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P4, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P5, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P6, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P7, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P8, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P9, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P10, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P12, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P15, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P16, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P17, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P18, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P19, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P20, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P21, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P22, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P23, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P24, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P25
+    jobid: 0
+
+[Tue Jun 15 17:25:16 2021]
+Finished job 0.
+5 of 5 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/.snakemake/log/2021-06-15T172514.702665.snakemake.log

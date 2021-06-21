@@ -1,0 +1,332 @@
+The flag 'temp' used in rule pal2nal_codon is only valid for outputs, not inputs.
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run_null is only valid for outputs, not inputs.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	22	clustalW2_align
+	23
+Select jobs to execute...
+
+[Tue Jun 15 19:26:59 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.clustalW.log
+    jobid: 8
+    wildcards: person=P8
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.clustalW.log
+[Tue Jun 15 19:27:06 2021]
+Finished job 8.
+1 of 23 steps (4%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:27:06 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.clustalW.log
+    jobid: 22
+    wildcards: person=P25
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.clustalW.log
+[Tue Jun 15 19:27:14 2021]
+Finished job 22.
+2 of 23 steps (9%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:27:14 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.clustalW.log
+    jobid: 15
+    wildcards: person=P18
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.clustalW.log
+[Tue Jun 15 19:27:21 2021]
+Finished job 15.
+3 of 23 steps (13%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:27:21 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.clustalW.log
+    jobid: 1
+    wildcards: person=P1
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.clustalW.log
+[Tue Jun 15 19:27:42 2021]
+Finished job 1.
+4 of 23 steps (17%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:27:42 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.clustalW.log
+    jobid: 13
+    wildcards: person=P16
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.clustalW.log
+[Tue Jun 15 19:27:55 2021]
+Finished job 13.
+5 of 23 steps (22%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:27:55 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.clustalW.log
+    jobid: 14
+    wildcards: person=P17
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.clustalW.log
+[Tue Jun 15 19:28:09 2021]
+Finished job 14.
+6 of 23 steps (26%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:28:09 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.clustalW.log
+    jobid: 19
+    wildcards: person=P22
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.clustalW.log
+[Tue Jun 15 19:28:16 2021]
+Finished job 19.
+7 of 23 steps (30%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:28:16 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.clustalW.log
+    jobid: 21
+    wildcards: person=P24
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.clustalW.log
+[Tue Jun 15 19:28:24 2021]
+Finished job 21.
+8 of 23 steps (35%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:28:24 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.clustalW.log
+    jobid: 12
+    wildcards: person=P15
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.clustalW.log
+[Tue Jun 15 19:28:37 2021]
+Finished job 12.
+9 of 23 steps (39%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:28:37 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.clustalW.log
+    jobid: 3
+    wildcards: person=P3
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.clustalW.log
+[Tue Jun 15 19:28:51 2021]
+Finished job 3.
+10 of 23 steps (43%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:28:51 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.clustalW.log
+    jobid: 5
+    wildcards: person=P5
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.clustalW.log
+[Tue Jun 15 19:28:59 2021]
+Finished job 5.
+11 of 23 steps (48%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:28:59 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.clustalW.log
+    jobid: 7
+    wildcards: person=P7
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.clustalW.log
+[Tue Jun 15 19:29:12 2021]
+Finished job 7.
+12 of 23 steps (52%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:29:12 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.clustalW.log
+    jobid: 9
+    wildcards: person=P9
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.clustalW.log
+[Tue Jun 15 19:29:26 2021]
+Finished job 9.
+13 of 23 steps (57%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:29:26 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.clustalW.log
+    jobid: 17
+    wildcards: person=P20
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.clustalW.log
+[Tue Jun 15 19:29:47 2021]
+Finished job 17.
+14 of 23 steps (61%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:29:47 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.clustalW.log
+    jobid: 10
+    wildcards: person=P10
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.clustalW.log
+[Tue Jun 15 19:29:59 2021]
+Finished job 10.
+15 of 23 steps (65%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:29:59 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.clustalW.log
+    jobid: 20
+    wildcards: person=P23
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.clustalW.log
+[Tue Jun 15 19:30:07 2021]
+Finished job 20.
+16 of 23 steps (70%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:30:07 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.clustalW.log
+    jobid: 6
+    wildcards: person=P6
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.clustalW.log
+[Tue Jun 15 19:30:14 2021]
+Finished job 6.
+17 of 23 steps (74%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:30:14 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.clustalW.log
+    jobid: 18
+    wildcards: person=P21
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.clustalW.log
+[Tue Jun 15 19:30:35 2021]
+Finished job 18.
+18 of 23 steps (78%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:30:35 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.clustalW.log
+    jobid: 2
+    wildcards: person=P2
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.clustalW.log
+[Tue Jun 15 19:30:56 2021]
+Finished job 2.
+19 of 23 steps (83%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:30:56 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.clustalW.log
+    jobid: 16
+    wildcards: person=P19
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.clustalW.log
+[Tue Jun 15 19:31:10 2021]
+Finished job 16.
+20 of 23 steps (87%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:31:10 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.clustalW.log
+    jobid: 11
+    wildcards: person=P12
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.clustalW.log
+[Tue Jun 15 19:31:18 2021]
+Finished job 11.
+21 of 23 steps (91%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:31:18 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.clustalW.log
+    jobid: 4
+    wildcards: person=P4
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.clustalW.log
+[Tue Jun 15 19:31:31 2021]
+Finished job 4.
+22 of 23 steps (96%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:31:31 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.clustalW.log
+    jobid: 0
+
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.clustalW.log.
+[Tue Jun 15 19:31:31 2021]
+Finished job 0.
+23 of 23 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/.snakemake/log/2021-06-15T192659.387067.snakemake.log

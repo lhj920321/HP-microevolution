@@ -1,0 +1,303 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	22	convert_iSNVpytable_To_vcf
+	23
+Select jobs to execute...
+
+[Fri May 28 17:17:06 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P18.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/vcf
+    jobid: 37
+    wildcards: person=P18
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P18.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/vcf -m 0.02  
+
+[Fri May 28 17:17:06 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P1.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf
+    jobid: 23
+    wildcards: person=P1
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P1.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf -m 0.02  
+
+[Fri May 28 17:17:06 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P21.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/vcf
+    jobid: 40
+    wildcards: person=P21
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P21.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/vcf -m 0.02  
+
+[Fri May 28 17:17:06 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P24.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/vcf
+    jobid: 43
+    wildcards: person=P24
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P24.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/vcf -m 0.02  
+[Fri May 28 17:17:10 2021]
+Finished job 23.
+1 of 23 steps (4%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:10 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P19.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/vcf
+    jobid: 38
+    wildcards: person=P19
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P19.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/vcf -m 0.02  
+[Fri May 28 17:17:12 2021]
+Finished job 43.
+2 of 23 steps (9%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:12 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P4.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/vcf
+    jobid: 26
+    wildcards: person=P4
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P4.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/vcf -m 0.02  
+[Fri May 28 17:17:13 2021]
+Finished job 37.
+3 of 23 steps (13%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:13 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P5.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/vcf
+    jobid: 27
+    wildcards: person=P5
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P5.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/vcf -m 0.02  
+[Fri May 28 17:17:15 2021]
+Finished job 38.
+4 of 23 steps (17%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:15 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P6.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/vcf
+    jobid: 28
+    wildcards: person=P6
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P6.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/vcf -m 0.02  
+[Fri May 28 17:17:15 2021]
+Finished job 40.
+5 of 23 steps (22%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:15 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P23.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/vcf
+    jobid: 42
+    wildcards: person=P23
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P23.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/vcf -m 0.02  
+[Fri May 28 17:17:16 2021]
+Finished job 26.
+6 of 23 steps (26%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:17 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P25.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/vcf
+    jobid: 44
+    wildcards: person=P25
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P25.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/vcf -m 0.02  
+[Fri May 28 17:17:17 2021]
+Finished job 27.
+7 of 23 steps (30%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:17 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P10.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/vcf
+    jobid: 32
+    wildcards: person=P10
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P10.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/vcf -m 0.02  
+[Fri May 28 17:17:19 2021]
+Finished job 42.
+8 of 23 steps (35%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:19 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P15.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/vcf
+    jobid: 34
+    wildcards: person=P15
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P15.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/vcf -m 0.02  
+[Fri May 28 17:17:20 2021]
+Finished job 28.
+9 of 23 steps (39%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:20 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P17.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/vcf
+    jobid: 36
+    wildcards: person=P17
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P17.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/vcf -m 0.02  
+[Fri May 28 17:17:21 2021]
+Finished job 44.
+10 of 23 steps (43%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:21 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P8.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/vcf
+    jobid: 30
+    wildcards: person=P8
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P8.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/vcf -m 0.02  
+[Fri May 28 17:17:22 2021]
+Finished job 32.
+11 of 23 steps (48%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:22 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P20.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/vcf
+    jobid: 39
+    wildcards: person=P20
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P20.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/vcf -m 0.02  
+[Fri May 28 17:17:24 2021]
+Finished job 34.
+12 of 23 steps (52%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:24 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P3.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/vcf
+    jobid: 25
+    wildcards: person=P3
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P3.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/vcf -m 0.02  
+[Fri May 28 17:17:25 2021]
+Finished job 36.
+13 of 23 steps (57%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:25 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P16.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/vcf
+    jobid: 35
+    wildcards: person=P16
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P16.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/vcf -m 0.02  
+[Fri May 28 17:17:27 2021]
+Finished job 30.
+14 of 23 steps (61%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:27 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P12.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/vcf
+    jobid: 33
+    wildcards: person=P12
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P12.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/vcf -m 0.02  
+[Fri May 28 17:17:29 2021]
+Finished job 39.
+15 of 23 steps (65%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:29 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P7.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/vcf
+    jobid: 29
+    wildcards: person=P7
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P7.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/vcf -m 0.02  
+[Fri May 28 17:17:32 2021]
+Finished job 35.
+16 of 23 steps (70%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:32 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P22.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/vcf
+    jobid: 41
+    wildcards: person=P22
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P22.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/vcf -m 0.02  
+[Fri May 28 17:17:32 2021]
+Finished job 25.
+17 of 23 steps (74%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:32 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P2.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/vcf
+    jobid: 24
+    wildcards: person=P2
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P2.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/vcf -m 0.02  
+[Fri May 28 17:17:33 2021]
+Finished job 33.
+18 of 23 steps (78%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:33 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P9.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/vcf
+    jobid: 31
+    wildcards: person=P9
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P9.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/vcf -m 0.02  
+[Fri May 28 17:17:34 2021]
+Finished job 29.
+19 of 23 steps (83%) done
+[Fri May 28 17:17:39 2021]
+Finished job 41.
+20 of 23 steps (87%) done
+[Fri May 28 17:17:39 2021]
+Finished job 31.
+21 of 23 steps (91%) done
+[Fri May 28 17:17:39 2021]
+Finished job 24.
+22 of 23 steps (96%) done
+Select jobs to execute...
+
+[Fri May 28 17:17:39 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/vcf
+    jobid: 0
+
+[Fri May 28 17:17:39 2021]
+Finished job 0.
+23 of 23 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/.snakemake/log/2021-05-28T171706.586657.snakemake.log

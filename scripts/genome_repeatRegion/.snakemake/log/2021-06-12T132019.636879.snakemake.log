@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	blast
+	2
+Select jobs to execute...
+
+[Sat Jun 12 13:20:19 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastOut.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastdb
+    jobid: 2
+    wildcards: samp=P1-E-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastOut.txt
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 47 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/simulateRead_blast_and_selectRepeat_region-pipeline.py:
+Job Missing files after 5 seconds:
+/shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastdb
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 2 completed successfully, but some output files are missing. 2
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 583, in handle_job_success
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 259, in handle_job_success
+Removing output files of failed job blast since they might be corrupted:
+/shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastOut.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/.snakemake/log/2021-06-12T132019.636879.snakemake.log

@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	convert_iSNVpytable_To_vcf
+	1	iSNV_freq_distribut
+	1	ntfreq_2_FreqBigtable
+	4
+
+[Mon May 17 17:42:45 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/table_config/P1.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P1.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/out.samps-ntfreq.bigtable.txt
+    jobid: 1
+    wildcards: person=P1
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/table_config/P1.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P1.respect.fasta  -o /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+Terminating processes on user request, this might take some time.
+[Mon May 17 17:42:51 2021]
+Error in rule ntfreq_2_FreqBigtable:
+    jobid: 1
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/out.samps-ntfreq.bigtable.txt
+    shell:
+        python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/table_config/P1.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P1.respect.fasta  -o /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+        (exited with non-zero exit code)
+
+Removing output files of failed job ntfreq_2_FreqBigtable since they might be corrupted:
+/shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/.snakemake/log/2021-05-17T174245.162300.snakemake.log

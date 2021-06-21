@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	iSNV_freq_distribut_RepeatRegion_recombiRegion_filt
+	2
+Select jobs to execute...
+
+[Sat Jun 12 14:48:08 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 3
+    wildcards: person=P11
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Sat Jun 12 14:48:08 2021]
+Error in rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    jobid: 3
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    shell:
+        python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job iSNV_freq_distribut_RepeatRegion_recombiRegion_filt since they might be corrupted:
+/shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/.snakemake/log/2021-06-12T144808.070588.snakemake.log

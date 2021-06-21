@@ -1,0 +1,57 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	convert_iSNVpytable_To_vcf
+	1	iSNV_freq_distribut
+	1	ntfreq_2_FreqBigtable
+	4
+
+[Mon May 17 17:30:30 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/table_config/P1.ntfreq_file_list.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P1.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/out.samps-ntfreq.bigtable.txt
+    jobid: 1
+    wildcards: person=P1
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/table_config/P1.ntfreq_file_list.txt -r /shared/liuhj/HP/process/assembly/person_respectGnm/P1.respect.fasta  -o /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1  		-D  100 -A 5 -N 1000000 -F 0.02 -S 0.1 
+[Mon May 17 17:30:37 2021]
+Finished job 1.
+1 of 4 steps (25%) done
+
+[Mon May 17 17:30:37 2021]
+rule convert_iSNVpytable_To_vcf:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/out.samps-ntfreq.bigtable.txt, /shared/liuhj/HP/process/assembly/person_respectGnm/P1.respect.fasta
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf
+    jobid: 2
+    wildcards: person=P1
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_iSNVtable_To_vcf.py   -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt  		-n /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/out.samps-ntfreq.bigtable.txt  -r  /shared/liuhj/HP/process/assembly/person_respectGnm/P1.respect.fasta -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf -m 0.05  
+[Mon May 17 17:30:37 2021]
+Finished job 2.
+2 of 4 steps (50%) done
+
+[Mon May 17 17:30:37 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/general-snvFreq_distribut_Stat
+    jobid: 3
+    wildcards: person=P1
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/general-snvFreq_distribut_Stat -m 0.05  -M 1.0  -s 2  
+[Mon May 17 17:30:39 2021]
+Finished job 3.
+3 of 4 steps (75%) done
+
+[Mon May 17 17:30:39 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/general-snvFreq_distribut_Stat
+    jobid: 0
+
+[Mon May 17 17:30:39 2021]
+Finished job 0.
+4 of 4 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/.snakemake/log/2021-05-17T173030.037431.snakemake.log

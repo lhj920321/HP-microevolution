@@ -1,0 +1,296 @@
+The flag 'temp' used in rule pal2nal_codon is only valid for outputs, not inputs.
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	21	codeml_dNdS_collect
+	22
+Select jobs to execute...
+
+[Fri Jun 11 21:18:29 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P4
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P4.codeml.dNdS.txt
+    jobid: 25
+    wildcards: person=P4
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P4  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P4.codeml.dNdS.txt 
+[Fri Jun 11 21:18:30 2021]
+Finished job 25.
+1 of 22 steps (5%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:30 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P22
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P22.codeml.dNdS.txt
+    jobid: 39
+    wildcards: person=P22
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P22  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P22.codeml.dNdS.txt 
+[Fri Jun 11 21:18:30 2021]
+Finished job 39.
+2 of 22 steps (9%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:30 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P1
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P1.codeml.dNdS.txt
+    jobid: 22
+    wildcards: person=P1
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P1  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P1.codeml.dNdS.txt 
+[Fri Jun 11 21:18:30 2021]
+Finished job 22.
+3 of 22 steps (14%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:30 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P25
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P25.codeml.dNdS.txt
+    jobid: 42
+    wildcards: person=P25
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P25  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P25.codeml.dNdS.txt 
+[Fri Jun 11 21:18:30 2021]
+Finished job 42.
+4 of 22 steps (18%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:30 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P15
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P15.codeml.dNdS.txt
+    jobid: 32
+    wildcards: person=P15
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P15  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P15.codeml.dNdS.txt 
+[Fri Jun 11 21:18:31 2021]
+Finished job 32.
+5 of 22 steps (23%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:31 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P23
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P23.codeml.dNdS.txt
+    jobid: 40
+    wildcards: person=P23
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P23  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P23.codeml.dNdS.txt 
+[Fri Jun 11 21:18:31 2021]
+Finished job 40.
+6 of 22 steps (27%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:31 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P2
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P2.codeml.dNdS.txt
+    jobid: 23
+    wildcards: person=P2
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P2  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P2.codeml.dNdS.txt 
+[Fri Jun 11 21:18:31 2021]
+Finished job 23.
+7 of 22 steps (32%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:31 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P20
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P20.codeml.dNdS.txt
+    jobid: 37
+    wildcards: person=P20
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P20  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P20.codeml.dNdS.txt 
+[Fri Jun 11 21:18:31 2021]
+Finished job 37.
+8 of 22 steps (36%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:31 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P18
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P18.codeml.dNdS.txt
+    jobid: 35
+    wildcards: person=P18
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P18  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P18.codeml.dNdS.txt 
+[Fri Jun 11 21:18:32 2021]
+Finished job 35.
+9 of 22 steps (41%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:32 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P3
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P3.codeml.dNdS.txt
+    jobid: 24
+    wildcards: person=P3
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P3  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P3.codeml.dNdS.txt 
+[Fri Jun 11 21:18:32 2021]
+Finished job 24.
+10 of 22 steps (45%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:32 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P12
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P12.codeml.dNdS.txt
+    jobid: 31
+    wildcards: person=P12
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P12  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P12.codeml.dNdS.txt 
+[Fri Jun 11 21:18:32 2021]
+Finished job 31.
+11 of 22 steps (50%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:32 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P21
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P21.codeml.dNdS.txt
+    jobid: 38
+    wildcards: person=P21
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P21  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P21.codeml.dNdS.txt 
+[Fri Jun 11 21:18:32 2021]
+Finished job 38.
+12 of 22 steps (55%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:32 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P10
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P10.codeml.dNdS.txt
+    jobid: 30
+    wildcards: person=P10
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P10  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P10.codeml.dNdS.txt 
+[Fri Jun 11 21:18:33 2021]
+Finished job 30.
+13 of 22 steps (59%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:33 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P19
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P19.codeml.dNdS.txt
+    jobid: 36
+    wildcards: person=P19
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P19  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P19.codeml.dNdS.txt 
+[Fri Jun 11 21:18:33 2021]
+Finished job 36.
+14 of 22 steps (64%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:33 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P9
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P9.codeml.dNdS.txt
+    jobid: 29
+    wildcards: person=P9
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P9  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P9.codeml.dNdS.txt 
+[Fri Jun 11 21:18:33 2021]
+Finished job 29.
+15 of 22 steps (68%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:33 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P7
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P7.codeml.dNdS.txt
+    jobid: 28
+    wildcards: person=P7
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P7  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P7.codeml.dNdS.txt 
+[Fri Jun 11 21:18:33 2021]
+Finished job 28.
+16 of 22 steps (73%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:33 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P24
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P24.codeml.dNdS.txt
+    jobid: 41
+    wildcards: person=P24
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P24  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P24.codeml.dNdS.txt 
+[Fri Jun 11 21:18:34 2021]
+Finished job 41.
+17 of 22 steps (77%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:34 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P5
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P5.codeml.dNdS.txt
+    jobid: 26
+    wildcards: person=P5
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P5  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P5.codeml.dNdS.txt 
+[Fri Jun 11 21:18:34 2021]
+Finished job 26.
+18 of 22 steps (82%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:34 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P16
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P16.codeml.dNdS.txt
+    jobid: 33
+    wildcards: person=P16
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P16  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P16.codeml.dNdS.txt 
+[Fri Jun 11 21:18:34 2021]
+Finished job 33.
+19 of 22 steps (86%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:34 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P17
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P17.codeml.dNdS.txt
+    jobid: 34
+    wildcards: person=P17
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P17  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P17.codeml.dNdS.txt 
+[Fri Jun 11 21:18:34 2021]
+Finished job 34.
+20 of 22 steps (91%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:34 2021]
+rule codeml_dNdS_collect:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P6
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P6.codeml.dNdS.txt
+    jobid: 27
+    wildcards: person=P6
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P6  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P6.codeml.dNdS.txt 
+[Fri Jun 11 21:18:35 2021]
+Finished job 27.
+21 of 22 steps (95%) done
+Select jobs to execute...
+
+[Fri Jun 11 21:18:35 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P1, /shared/liuhj/HP/process/dN-dS-caculate/P2, /shared/liuhj/HP/process/dN-dS-caculate/P3, /shared/liuhj/HP/process/dN-dS-caculate/P4, /shared/liuhj/HP/process/dN-dS-caculate/P5, /shared/liuhj/HP/process/dN-dS-caculate/P6, /shared/liuhj/HP/process/dN-dS-caculate/P7, /shared/liuhj/HP/process/dN-dS-caculate/P9, /shared/liuhj/HP/process/dN-dS-caculate/P10, /shared/liuhj/HP/process/dN-dS-caculate/P12, /shared/liuhj/HP/process/dN-dS-caculate/P15, /shared/liuhj/HP/process/dN-dS-caculate/P16, /shared/liuhj/HP/process/dN-dS-caculate/P17, /shared/liuhj/HP/process/dN-dS-caculate/P18, /shared/liuhj/HP/process/dN-dS-caculate/P19, /shared/liuhj/HP/process/dN-dS-caculate/P20, /shared/liuhj/HP/process/dN-dS-caculate/P21, /shared/liuhj/HP/process/dN-dS-caculate/P22, /shared/liuhj/HP/process/dN-dS-caculate/P23, /shared/liuhj/HP/process/dN-dS-caculate/P24, /shared/liuhj/HP/process/dN-dS-caculate/P25, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P1.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P2.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P3.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P4.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P5.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P6.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P7.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P9.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P10.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P12.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P15.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P16.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P17.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P18.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P19.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P20.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P21.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P22.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P23.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P24.codeml.dNdS.txt, /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P25.codeml.dNdS.txt
+    jobid: 0
+
+[Fri Jun 11 21:18:35 2021]
+Finished job 0.
+22 of 22 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/.snakemake/log/2021-06-11T211829.825282.snakemake.log

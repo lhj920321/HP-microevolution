@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 122 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/CCS_map_scripts/CCSbwa2Person_representative_sample-ngmlr.P5.py:
+Missing input files for rule mpileup:
+/shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.sort.bam
+/shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.sort.bam.bai

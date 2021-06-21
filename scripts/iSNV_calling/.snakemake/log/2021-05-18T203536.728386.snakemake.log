@@ -1,0 +1,21 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	iSNV_SNV_density_stat
+	2
+Select jobs to execute...
+
+[Tue May 18 20:35:36 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/snv_density_Stat
+    jobid: 4
+    wildcards: person=P1
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/snv_density_Stat -M 0.02 -S 500 -L 1700000
+Terminating processes on user request, this might take some time.
+Cancelling snakemake on user request.

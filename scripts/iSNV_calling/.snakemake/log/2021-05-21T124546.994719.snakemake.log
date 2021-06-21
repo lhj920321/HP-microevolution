@@ -1,0 +1,47 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	iSNV_freq_distribut
+	1	ntfreq_2_FreqBigtable
+	3
+Select jobs to execute...
+
+[Fri May 21 12:45:47 2021]
+rule ntfreq_2_FreqBigtable:
+    input: /shared/liuhj/HP/process/NGS_map2_23S_rRNA/mpileup/23SrRNA.all_ntfreq_files.txt, /shared/liuhj/HP/ref/ref_resistanceGenes/23S_rRNA.fasta
+    output: /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA/out.samps-ntfreq.bigtable.txt
+    jobid: 1
+    wildcards: person=23SrRNA
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/step2_ntfreq_To_bigtables.py  -i  /shared/liuhj/HP/process/NGS_map2_23S_rRNA/mpileup/23SrRNA.all_ntfreq_files.txt -r /shared/liuhj/HP/ref/ref_resistanceGenes/23S_rRNA.fasta  -o /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA  		-D  50 -A 5 -N 100 -F 0.02 -S 0.0 
+[Fri May 21 12:45:49 2021]
+Finished job 1.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Fri May 21 12:45:49 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA/general-snvFreq_distribut_Stat
+    jobid: 2
+    wildcards: person=23SrRNA
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA/general-snvFreq_distribut_Stat -m 0.05  -M 1.0  -s 2  
+[Fri May 21 12:46:22 2021]
+Finished job 2.
+2 of 3 steps (67%) done
+Select jobs to execute...
+
+[Fri May 21 12:46:22 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2_23S_rRNA/23SrRNA/general-snvFreq_distribut_Stat
+    jobid: 0
+
+[Fri May 21 12:46:22 2021]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/.snakemake/log/2021-05-21T124546.994719.snakemake.log

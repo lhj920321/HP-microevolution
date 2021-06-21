@@ -1,0 +1,7 @@
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run_null is only valid for outputs, not inputs.
+Building DAG of jobs...
+MissingInputException in line 80 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/coreGnm-dN-dS-calculate-pipeline.py:
+Missing input files for rule Generate_controlF:
+/shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/paml-control-file-sample.ctl

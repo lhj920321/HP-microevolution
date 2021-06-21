@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 37 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNV_calling-pipeline-23SrRNA.py:
+Missing input files for rule ntfreq_2_FreqBigtable:
+/shared/liuhj/HP/process/NGS_map2_23S_rRNA/mpileup/P1.all_ntfreq_files.txt

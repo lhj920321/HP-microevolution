@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 40 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/assembly/pilon_pipeline.py:
+Missing input files for rule pilon:
+/shared/liuhj/HP/data/NGS/Trimmomatic/P12-E-x/P12-E-x.R1.paired.fastq
+/shared/liuhj/HP/data/NGS/Trimmomatic/P12-E-x/P12-E-x.R2.paired.fastq

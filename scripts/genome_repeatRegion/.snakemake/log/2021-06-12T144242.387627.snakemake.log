@@ -1,0 +1,75 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	blast
+	1	cutGenmTosimulRead
+	1	makeblastdb
+	1	select_repeatRegion
+	5
+Select jobs to execute...
+
+[Sat Jun 12 14:42:42 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P12-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.blastdb.ndb
+    jobid: 96
+    wildcards: samp=P12-E-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P12-E-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.blastdb
+[Sat Jun 12 14:42:42 2021]
+Finished job 96.
+1 of 5 steps (20%) done
+Select jobs to execute...
+
+[Sat Jun 12 14:42:42 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P12-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.simulateReads.fasta
+    jobid: 8
+    wildcards: samp=P12-E-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P12-E-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 14:42:42 2021]
+Finished job 8.
+2 of 5 steps (40%) done
+Select jobs to execute...
+
+[Sat Jun 12 14:42:42 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.blastOut.txt
+    jobid: 95
+    wildcards: samp=P12-E-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.blastOut.txt
+[Sat Jun 12 14:42:44 2021]
+Finished job 95.
+3 of 5 steps (60%) done
+Select jobs to execute...
+
+[Sat Jun 12 14:42:44 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.RepeatRegion.txt
+    jobid: 94
+    wildcards: samp=P12-E-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.RepeatRegion.txt  -r P12-E-x 
+[Sat Jun 12 14:42:44 2021]
+Finished job 94.
+4 of 5 steps (80%) done
+Select jobs to execute...
+
+[Sat Jun 12 14:42:44 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-t/P10-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-t/P10-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x/P12-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.RepeatRegion.txt
+    jobid: 0
+
+[Sat Jun 12 14:42:44 2021]
+Finished job 0.
+5 of 5 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/.snakemake/log/2021-06-12T144242.387627.snakemake.log

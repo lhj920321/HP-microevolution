@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	mpileup
+	2
+
+[Sat Jun 12 18:54:14 2021]
+rule mpileup:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P5-E-j.fasta, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-j.sort.bam, /shared/liuhj/HP/process/assembly/all_genomes/P5-E-j.fasta.fai, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-j.sort.bam.bai
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup
+    log: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup.log
+    jobid: 1
+    wildcards: sample=P5-E-d, bwa_ref_samp=P5-E-j
+
+samtools mpileup -q 20  --reference  /shared/liuhj/HP/process/assembly/all_genomes/P5-E-j.fasta  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-j.sort.bam  1>/shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup 2>/shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup.log
+Terminating processes on user request, this might take some time.
+[Sat Jun 12 18:54:14 2021]
+Error in rule mpileup:
+    jobid: 1
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup
+    log: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup.log (check log file(s) for error message)
+    shell:
+        samtools mpileup -q 20  --reference  /shared/liuhj/HP/process/assembly/all_genomes/P5-E-j.fasta  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-j.sort.bam  1>/shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup 2>/shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup.log
+        (exited with non-zero exit code)
+
+Removing output files of failed job mpileup since they might be corrupted:
+/shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-j.sort.mpileup
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/CCS_map_scripts/.snakemake/log/2021-06-12T185414.063898.snakemake.log

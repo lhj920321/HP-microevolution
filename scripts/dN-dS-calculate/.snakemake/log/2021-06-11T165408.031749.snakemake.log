@@ -1,0 +1,6 @@
+Building DAG of jobs...
+WorkflowError:
+MissingInputException: Missing input files for rule Nuc_AA_FnaF_of_diverGene:
+/shared/liuhj/HP/process/Person_core_genome/control_files/P1.ctl.log
+MissingInputException: Missing input files for rule Nuc_AA_FnaF_of_diverGene:
+/shared/liuhj/HP/process/Person_core_genome/control_files/P1

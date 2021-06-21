@@ -1,0 +1,3 @@
+NameError in line 19 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/dN-dS-calculate-pipeline.py:
+name 'personLst' is not defined
+  File "/shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/dN-dS-calculate-pipeline.py", line 19, in <module>

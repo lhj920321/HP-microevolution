@@ -1,0 +1,16 @@
+The flag 'temp' used in rule pal2nal_codon is only valid for outputs, not inputs.
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run_null is only valid for outputs, not inputs.
+Building DAG of jobs...
+AmbiguousRuleException:
+Rules clustalW2_align and Nuc_AA_FnaF_of_diverGene are ambiguous for the file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P1.clustalW.log.
+Consider starting rule output with a unique prefix, constrain your wildcards, or use the ruleorder directive.
+Wildcards:
+	clustalW2_align: person=P1
+	Nuc_AA_FnaF_of_diverGene: person=P1.clustalW.log
+Expected input files:
+	clustalW2_align: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P1
+	Nuc_AA_FnaF_of_diverGene: /shared/liuhj/HP/process/samps_Tree-20210527Expected output files:
+	clustalW2_align: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P1.clustalW.log
+	Nuc_AA_FnaF_of_diverGene: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/CoreGnm_P1.clustalW.log

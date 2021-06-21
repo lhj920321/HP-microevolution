@@ -1,0 +1,47 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	iSNV_freq_distribut
+	1	iSNV_snv_density_Stat_1k
+	3
+Select jobs to execute...
+
+[Fri May 28 18:13:55 2021]
+rule iSNV_freq_distribut:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/general-snvFreq_distribut_Stat
+    jobid: 3
+    wildcards: person=P11
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat.py  -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/general-snvFreq_distribut_Stat -m 0.02  -M 1.0  -s 2  
+[Fri May 28 18:14:01 2021]
+Finished job 3.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Fri May 28 18:14:01 2021]
+rule iSNV_snv_density_Stat_1k:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/snv_density_Stat_1k
+    jobid: 4
+    wildcards: person=P11
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/snv_density_Stat_1k -M 0.02 -S 500 -L 1700000
+[Fri May 28 18:14:42 2021]
+Finished job 4.
+2 of 3 steps (67%) done
+Select jobs to execute...
+
+[Fri May 28 18:14:42 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/snv_density_Stat_1k
+    jobid: 0
+
+[Fri May 28 18:14:42 2021]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/.snakemake/log/2021-05-28T181355.527567.snakemake.log

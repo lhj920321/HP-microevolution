@@ -1,0 +1,3663 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	70	blast
+	70	cutGenmTosimulRead
+	70	makeblastdb
+	70	select_repeatRegion
+	281
+Select jobs to execute...
+
+[Sat Jun 12 13:26:22 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P24-C_sC-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.simulateReads.fasta
+    jobid: 46
+    wildcards: samp=P24-C_sC-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P24-C_sC-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:22 2021]
+Finished job 46.
+1 of 281 steps (0.36%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:22 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P22-C_sL-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.simulateReads.fasta
+    jobid: 42
+    wildcards: samp=P22-C_sL-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P22-C_sL-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:22 2021]
+Finished job 42.
+2 of 281 steps (0.71%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:22 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P2-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.blastdb.ndb
+    jobid: 228
+    wildcards: samp=P2-E-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P2-E-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.blastdb
+[Sat Jun 12 13:26:23 2021]
+Finished job 228.
+3 of 281 steps (1%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:23 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.simulateReads.fasta
+    jobid: 33
+    wildcards: samp=P20-C_bR-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:23 2021]
+Finished job 33.
+4 of 281 steps (1%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:23 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P24-C_sC-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.simulateReads.fasta
+    jobid: 47
+    wildcards: samp=P24-C_sC-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P24-C_sC-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:23 2021]
+Finished job 47.
+5 of 281 steps (2%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:23 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P16-C_bS-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.simulateReads.fasta
+    jobid: 20
+    wildcards: samp=P16-C_bS-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P16-C_bS-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:23 2021]
+Finished job 20.
+6 of 281 steps (2%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:23 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P24-C_sC-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.simulateReads.fasta
+    jobid: 45
+    wildcards: samp=P24-C_sC-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P24-C_sC-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:23 2021]
+Finished job 45.
+7 of 281 steps (2%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:23 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P5-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.blastdb.ndb
+    jobid: 255
+    wildcards: samp=P5-E-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P5-E-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.blastdb
+[Sat Jun 12 13:26:23 2021]
+Finished job 255.
+8 of 281 steps (3%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:23 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P8-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.blastdb.ndb
+    jobid: 279
+    wildcards: samp=P8-E-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P8-E-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.blastdb
+[Sat Jun 12 13:26:23 2021]
+Finished job 279.
+9 of 281 steps (3%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:23 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P14-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.simulateReads.fasta
+    jobid: 13
+    wildcards: samp=P14-E-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P14-E-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:23 2021]
+Finished job 13.
+10 of 281 steps (4%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:23 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P8-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.simulateReads.fasta
+    jobid: 69
+    wildcards: samp=P8-E-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P8-E-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:23 2021]
+Finished job 69.
+11 of 281 steps (4%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:23 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P19-C_bR-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.blastdb.ndb
+    jobid: 153
+    wildcards: samp=P19-C_bR-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P19-C_bR-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.blastdb
+[Sat Jun 12 13:26:24 2021]
+Finished job 153.
+12 of 281 steps (4%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:24 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P15-C_bS-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.simulateReads.fasta
+    jobid: 17
+    wildcards: samp=P15-C_bS-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P15-C_bS-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:24 2021]
+Finished job 17.
+13 of 281 steps (5%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:24 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P16-C_bS-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.simulateReads.fasta
+    jobid: 18
+    wildcards: samp=P16-C_bS-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P16-C_bS-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:24 2021]
+Finished job 18.
+14 of 281 steps (5%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:24 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P13-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.blastdb.ndb
+    jobid: 102
+    wildcards: samp=P13-E-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P13-E-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.blastdb
+[Sat Jun 12 13:26:24 2021]
+Finished job 102.
+15 of 281 steps (5%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:24 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P16-C_bS-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.simulateReads.fasta
+    jobid: 19
+    wildcards: samp=P16-C_bS-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P16-C_bS-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:24 2021]
+Finished job 19.
+16 of 281 steps (6%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:24 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.simulateReads.fasta
+    jobid: 34
+    wildcards: samp=P20-C_bR-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:24 2021]
+Finished job 34.
+17 of 281 steps (6%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:24 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P25-C_sC-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.simulateReads.fasta
+    jobid: 48
+    wildcards: samp=P25-C_sC-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P25-C_sC-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:24 2021]
+Finished job 48.
+18 of 281 steps (6%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:24 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P2-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.blastdb.ndb
+    jobid: 231
+    wildcards: samp=P2-E-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P2-E-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.blastdb
+[Sat Jun 12 13:26:24 2021]
+Finished job 231.
+19 of 281 steps (7%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:24 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.blastdb.ndb
+    jobid: 189
+    wildcards: samp=P21-C_sL-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.blastdb
+[Sat Jun 12 13:26:24 2021]
+Finished job 189.
+20 of 281 steps (7%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:25 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P13-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.blastdb.ndb
+    jobid: 105
+    wildcards: samp=P13-E-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P13-E-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.blastdb
+[Sat Jun 12 13:26:25 2021]
+Finished job 105.
+21 of 281 steps (7%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:25 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.simulateReads.fasta
+    jobid: 35
+    wildcards: samp=P20-C_bR-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:25 2021]
+Finished job 35.
+22 of 281 steps (8%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:25 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P5-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.blastdb.ndb
+    jobid: 252
+    wildcards: samp=P5-E-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P5-E-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.blastdb
+[Sat Jun 12 13:26:25 2021]
+Finished job 252.
+23 of 281 steps (8%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:25 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P2-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.simulateReads.fasta
+    jobid: 50
+    wildcards: samp=P2-E-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P2-E-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:25 2021]
+Finished job 50.
+24 of 281 steps (9%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:25 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.simulateReads.fasta
+    jobid: 37
+    wildcards: samp=P21-C_sL-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:25 2021]
+Finished job 37.
+25 of 281 steps (9%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:25 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P2-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.simulateReads.fasta
+    jobid: 51
+    wildcards: samp=P2-E-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P2-E-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:25 2021]
+Finished job 51.
+26 of 281 steps (9%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:25 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P18-C_bR-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.simulateReads.fasta
+    jobid: 24
+    wildcards: samp=P18-C_bR-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P18-C_bR-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:25 2021]
+Finished job 24.
+27 of 281 steps (10%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:25 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P2-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.simulateReads.fasta
+    jobid: 52
+    wildcards: samp=P2-E-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P2-E-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:25 2021]
+Finished job 52.
+28 of 281 steps (10%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:25 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.simulateReads.fasta
+    jobid: 38
+    wildcards: samp=P21-C_sL-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:25 2021]
+Finished job 38.
+29 of 281 steps (10%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:25 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.blastdb.ndb
+    jobid: 192
+    wildcards: samp=P21-C_sL-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.blastdb
+[Sat Jun 12 13:26:26 2021]
+Finished job 192.
+30 of 281 steps (11%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:26 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P3-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.blastdb.ndb
+    jobid: 234
+    wildcards: samp=P3-E-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P3-E-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.blastdb
+[Sat Jun 12 13:26:26 2021]
+Finished job 234.
+31 of 281 steps (11%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:26 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.simulateReads.fasta
+    jobid: 39
+    wildcards: samp=P21-C_sL-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:26 2021]
+Finished job 39.
+32 of 281 steps (11%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:26 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P18-C_bR-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.simulateReads.fasta
+    jobid: 25
+    wildcards: samp=P18-C_bR-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P18-C_bR-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:26 2021]
+Finished job 25.
+33 of 281 steps (12%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:26 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P1-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.blastdb.ndb
+    jobid: 165
+    wildcards: samp=P1-E-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P1-E-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.blastdb
+[Sat Jun 12 13:26:26 2021]
+Finished job 165.
+34 of 281 steps (12%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:26 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.simulateReads.fasta
+    jobid: 40
+    wildcards: samp=P21-C_sL-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:26 2021]
+Finished job 40.
+35 of 281 steps (12%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:26 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P19-C_bR-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.simulateReads.fasta
+    jobid: 26
+    wildcards: samp=P19-C_bR-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P19-C_bR-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:26 2021]
+Finished job 26.
+36 of 281 steps (13%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:26 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P3-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.simulateReads.fasta
+    jobid: 54
+    wildcards: samp=P3-E-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P3-E-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:26 2021]
+Finished job 54.
+37 of 281 steps (13%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:26 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P2-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.simulateReads.fasta
+    jobid: 53
+    wildcards: samp=P2-E-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P2-E-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:26 2021]
+Finished job 53.
+38 of 281 steps (14%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:26 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P14-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.blastdb.ndb
+    jobid: 108
+    wildcards: samp=P14-E-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P14-E-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.blastdb
+[Sat Jun 12 13:26:27 2021]
+Finished job 108.
+39 of 281 steps (14%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:27 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P19-C_bR-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.simulateReads.fasta
+    jobid: 27
+    wildcards: samp=P19-C_bR-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P19-C_bR-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:27 2021]
+Finished job 27.
+40 of 281 steps (14%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:27 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P22-C_sL-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.simulateReads.fasta
+    jobid: 41
+    wildcards: samp=P22-C_sL-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P22-C_sL-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:27 2021]
+Finished job 41.
+41 of 281 steps (15%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:27 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P14-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.blastdb.ndb
+    jobid: 111
+    wildcards: samp=P14-E-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P14-E-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.blastdb
+[Sat Jun 12 13:26:27 2021]
+Finished job 111.
+42 of 281 steps (15%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:27 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P3-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.simulateReads.fasta
+    jobid: 55
+    wildcards: samp=P3-E-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P3-E-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:27 2021]
+Finished job 55.
+43 of 281 steps (15%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:27 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P15-C_bS-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.simulateReads.fasta
+    jobid: 15
+    wildcards: samp=P15-C_bS-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P15-C_bS-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:27 2021]
+Finished job 15.
+44 of 281 steps (16%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:27 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P1-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.simulateReads.fasta
+    jobid: 29
+    wildcards: samp=P1-E-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P1-E-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:27 2021]
+Finished job 29.
+45 of 281 steps (16%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:27 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P3-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.simulateReads.fasta
+    jobid: 56
+    wildcards: samp=P3-E-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P3-E-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:27 2021]
+Finished job 56.
+46 of 281 steps (16%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:27 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.ONT.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.blastdb.ndb
+    jobid: 84
+    wildcards: samp=P11-E-j.ONT
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.ONT.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.blastdb
+[Sat Jun 12 13:26:27 2021]
+Finished job 84.
+47 of 281 steps (17%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:28 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P24-C_sC-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.blastdb.ndb
+    jobid: 210
+    wildcards: samp=P24-C_sC-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P24-C_sC-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.blastdb
+[Sat Jun 12 13:26:28 2021]
+Finished job 210.
+48 of 281 steps (17%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:28 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P17-C_bR-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.blastdb.ndb
+    jobid: 141
+    wildcards: samp=P17-C_bR-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P17-C_bR-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.blastdb
+[Sat Jun 12 13:26:28 2021]
+Finished job 141.
+49 of 281 steps (17%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:28 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P10-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.simulateReads.fasta
+    jobid: 1
+    wildcards: samp=P10-E-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P10-E-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:28 2021]
+Finished job 1.
+50 of 281 steps (18%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:28 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P4-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.simulateReads.fasta
+    jobid: 57
+    wildcards: samp=P4-E-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P4-E-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:28 2021]
+Finished job 57.
+51 of 281 steps (18%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:28 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P9-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.simulateReads.fasta
+    jobid: 71
+    wildcards: samp=P9-E-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P9-E-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:28 2021]
+Finished job 71.
+52 of 281 steps (19%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:28 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P7-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.blastdb.ndb
+    jobid: 267
+    wildcards: samp=P7-E-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P7-E-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.blastdb
+[Sat Jun 12 13:26:28 2021]
+Finished job 267.
+53 of 281 steps (19%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:28 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P16-C_bS-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.blastdb.ndb
+    jobid: 126
+    wildcards: samp=P16-C_bS-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P16-C_bS-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.blastdb
+[Sat Jun 12 13:26:28 2021]
+Finished job 126.
+54 of 281 steps (19%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:28 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P9-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.blastdb.ndb
+    jobid: 282
+    wildcards: samp=P9-E-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P9-E-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.blastdb
+[Sat Jun 12 13:26:29 2021]
+Finished job 282.
+55 of 281 steps (20%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:29 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P3-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.blastdb.ndb
+    jobid: 240
+    wildcards: samp=P3-E-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P3-E-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.blastdb
+[Sat Jun 12 13:26:29 2021]
+Finished job 240.
+56 of 281 steps (20%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:29 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.blastOut.txt
+    jobid: 239
+    wildcards: samp=P3-E-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.blastOut.txt
+[Sat Jun 12 13:26:31 2021]
+Finished job 239.
+57 of 281 steps (20%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:31 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.RepeatRegion.txt
+    jobid: 238
+    wildcards: samp=P3-E-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.RepeatRegion.txt  -r P3-E-x 
+[Sat Jun 12 13:26:31 2021]
+Finished job 238.
+58 of 281 steps (21%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:31 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P4-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.simulateReads.fasta
+    jobid: 58
+    wildcards: samp=P4-E-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P4-E-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:31 2021]
+Finished job 58.
+59 of 281 steps (21%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:31 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P9-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.simulateReads.fasta
+    jobid: 72
+    wildcards: samp=P9-E-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P9-E-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:31 2021]
+Finished job 72.
+60 of 281 steps (21%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:31 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P9-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.simulateReads.fasta
+    jobid: 70
+    wildcards: samp=P9-E-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P9-E-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:31 2021]
+Finished job 70.
+61 of 281 steps (22%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:31 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.blastOut.txt
+    jobid: 281
+    wildcards: samp=P9-E-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.blastOut.txt
+[Sat Jun 12 13:26:33 2021]
+Finished job 281.
+62 of 281 steps (22%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:33 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.RepeatRegion.txt
+    jobid: 280
+    wildcards: samp=P9-E-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.RepeatRegion.txt  -r P9-E-d 
+[Sat Jun 12 13:26:34 2021]
+Finished job 280.
+63 of 281 steps (22%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:34 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P14-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.blastdb.ndb
+    jobid: 114
+    wildcards: samp=P14-E-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P14-E-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.blastdb
+[Sat Jun 12 13:26:34 2021]
+Finished job 114.
+64 of 281 steps (23%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:34 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P22-C_sL-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.blastdb.ndb
+    jobid: 198
+    wildcards: samp=P22-C_sL-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P22-C_sL-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.blastdb
+[Sat Jun 12 13:26:34 2021]
+Finished job 198.
+65 of 281 steps (23%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:34 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.blastOut.txt
+    jobid: 197
+    wildcards: samp=P22-C_sL-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.blastOut.txt
+[Sat Jun 12 13:26:36 2021]
+Finished job 197.
+66 of 281 steps (23%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:36 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.RepeatRegion.txt
+    jobid: 196
+    wildcards: samp=P22-C_sL-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.RepeatRegion.txt  -r P22-C_sL-t 
+[Sat Jun 12 13:26:37 2021]
+Finished job 196.
+67 of 281 steps (24%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:37 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P24-C_sC-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.blastdb.ndb
+    jobid: 213
+    wildcards: samp=P24-C_sC-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P24-C_sC-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.blastdb
+[Sat Jun 12 13:26:37 2021]
+Finished job 213.
+68 of 281 steps (24%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:37 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.blastOut.txt
+    jobid: 212
+    wildcards: samp=P24-C_sC-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.blastOut.txt
+[Sat Jun 12 13:26:39 2021]
+Finished job 212.
+69 of 281 steps (25%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:39 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.RepeatRegion.txt
+    jobid: 211
+    wildcards: samp=P24-C_sC-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.RepeatRegion.txt  -r P24-C_sC-x 
+[Sat Jun 12 13:26:39 2021]
+Finished job 211.
+70 of 281 steps (25%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:39 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P23-C_sL-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.simulateReads.fasta
+    jobid: 43
+    wildcards: samp=P23-C_sL-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P23-C_sL-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:40 2021]
+Finished job 43.
+71 of 281 steps (25%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:40 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P13-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.blastdb.ndb
+    jobid: 99
+    wildcards: samp=P13-E-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P13-E-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.blastdb
+[Sat Jun 12 13:26:40 2021]
+Finished job 99.
+72 of 281 steps (26%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:40 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P2-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.blastdb.ndb
+    jobid: 225
+    wildcards: samp=P2-E-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P2-E-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.blastdb
+[Sat Jun 12 13:26:40 2021]
+Finished job 225.
+73 of 281 steps (26%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:40 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.blastdb.ndb
+    jobid: 183
+    wildcards: samp=P21-C_sL-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.blastdb
+[Sat Jun 12 13:26:40 2021]
+Finished job 183.
+74 of 281 steps (26%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:40 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P19-C_bR-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.simulateReads.fasta
+    jobid: 28
+    wildcards: samp=P19-C_bR-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P19-C_bR-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:40 2021]
+Finished job 28.
+75 of 281 steps (27%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:40 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P23-C_sL-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.simulateReads.fasta
+    jobid: 44
+    wildcards: samp=P23-C_sL-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P23-C_sL-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:40 2021]
+Finished job 44.
+76 of 281 steps (27%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:40 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.blastdb.ndb
+    jobid: 87
+    wildcards: samp=P11-E-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P11-E-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.blastdb
+[Sat Jun 12 13:26:40 2021]
+Finished job 87.
+77 of 281 steps (27%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:40 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P16-C_bS-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.blastdb.ndb
+    jobid: 129
+    wildcards: samp=P16-C_bS-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P16-C_bS-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.blastdb
+[Sat Jun 12 13:26:41 2021]
+Finished job 129.
+78 of 281 steps (28%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:41 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P4-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.simulateReads.fasta
+    jobid: 59
+    wildcards: samp=P4-E-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P4-E-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:41 2021]
+Finished job 59.
+79 of 281 steps (28%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:41 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P7-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.blastdb.ndb
+    jobid: 270
+    wildcards: samp=P7-E-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P7-E-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.blastdb
+[Sat Jun 12 13:26:41 2021]
+Finished job 270.
+80 of 281 steps (28%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:41 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P18-C_bR-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.blastdb.ndb
+    jobid: 144
+    wildcards: samp=P18-C_bR-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P18-C_bR-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.blastdb
+[Sat Jun 12 13:26:41 2021]
+Finished job 144.
+81 of 281 steps (29%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:41 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.blastOut.txt
+    jobid: 143
+    wildcards: samp=P18-C_bR-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.blastOut.txt
+[Sat Jun 12 13:26:43 2021]
+Finished job 143.
+82 of 281 steps (29%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:43 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P10-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.simulateReads.fasta
+    jobid: 3
+    wildcards: samp=P10-E-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P10-E-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:43 2021]
+Finished job 3.
+83 of 281 steps (30%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:43 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.blastdb.ndb
+    jobid: 171
+    wildcards: samp=P20-C_bR-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.blastdb
+[Sat Jun 12 13:26:43 2021]
+Finished job 171.
+84 of 281 steps (30%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:43 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.blastOut.txt
+    jobid: 128
+    wildcards: samp=P16-C_bS-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.blastOut.txt
+[Sat Jun 12 13:26:45 2021]
+Finished job 128.
+85 of 281 steps (30%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:45 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.RepeatRegion.txt
+    jobid: 142
+    wildcards: samp=P18-C_bR-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.RepeatRegion.txt  -r P18-C_bR-j 
+[Sat Jun 12 13:26:45 2021]
+Finished job 142.
+86 of 281 steps (31%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:45 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.ONT.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.simulateReads.fasta
+    jobid: 4
+    wildcards: samp=P11-E-j.ONT
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P11-E-j.ONT.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:45 2021]
+Finished job 4.
+87 of 281 steps (31%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:45 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P5-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.simulateReads.fasta
+    jobid: 60
+    wildcards: samp=P5-E-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P5-E-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:46 2021]
+Finished job 60.
+88 of 281 steps (31%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:46 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P4-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.blastdb.ndb
+    jobid: 243
+    wildcards: samp=P4-E-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P4-E-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.blastdb
+[Sat Jun 12 13:26:46 2021]
+Finished job 243.
+89 of 281 steps (32%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:46 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.blastOut.txt
+    jobid: 242
+    wildcards: samp=P4-E-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.blastOut.txt
+[Sat Jun 12 13:26:48 2021]
+Finished job 242.
+90 of 281 steps (32%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:48 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.RepeatRegion.txt
+    jobid: 241
+    wildcards: samp=P4-E-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.RepeatRegion.txt  -r P4-E-d 
+[Sat Jun 12 13:26:48 2021]
+Finished job 241.
+91 of 281 steps (32%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:48 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P23-C_sL-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.blastdb.ndb
+    jobid: 201
+    wildcards: samp=P23-C_sL-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P23-C_sL-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.blastdb
+[Sat Jun 12 13:26:48 2021]
+Finished job 201.
+92 of 281 steps (33%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:48 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.blastOut.txt
+    jobid: 200
+    wildcards: samp=P23-C_sL-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.blastOut.txt
+[Sat Jun 12 13:26:50 2021]
+Finished job 200.
+93 of 281 steps (33%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:50 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.RepeatRegion.txt
+    jobid: 199
+    wildcards: samp=P23-C_sL-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.RepeatRegion.txt  -r P23-C_sL-j 
+[Sat Jun 12 13:26:50 2021]
+Finished job 199.
+94 of 281 steps (33%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:50 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.simulateReads.fasta
+    jobid: 5
+    wildcards: samp=P11-E-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P11-E-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:50 2021]
+Finished job 5.
+95 of 281 steps (34%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:50 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.blastOut.txt
+    jobid: 86
+    wildcards: samp=P11-E-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.blastOut.txt
+[Sat Jun 12 13:26:52 2021]
+Finished job 86.
+96 of 281 steps (34%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:52 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.blastOut.txt
+    jobid: 170
+    wildcards: samp=P20-C_bR-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.blastOut.txt
+[Sat Jun 12 13:26:54 2021]
+Finished job 170.
+97 of 281 steps (35%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:54 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.RepeatRegion.txt
+    jobid: 127
+    wildcards: samp=P16-C_bS-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.RepeatRegion.txt  -r P16-C_bS-j 
+[Sat Jun 12 13:26:54 2021]
+Finished job 127.
+98 of 281 steps (35%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:54 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P8-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.blastdb.ndb
+    jobid: 276
+    wildcards: samp=P8-E-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P8-E-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.blastdb
+[Sat Jun 12 13:26:55 2021]
+Finished job 276.
+99 of 281 steps (35%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:55 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P19-C_bR-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.blastdb.ndb
+    jobid: 150
+    wildcards: samp=P19-C_bR-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P19-C_bR-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.blastdb
+[Sat Jun 12 13:26:55 2021]
+Finished job 150.
+100 of 281 steps (36%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:55 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P13-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.simulateReads.fasta
+    jobid: 10
+    wildcards: samp=P13-E-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P13-E-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:55 2021]
+Finished job 10.
+101 of 281 steps (36%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:55 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P7-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.simulateReads.fasta
+    jobid: 66
+    wildcards: samp=P7-E-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P7-E-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:55 2021]
+Finished job 66.
+102 of 281 steps (36%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:55 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P17-C_bR-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.simulateReads.fasta
+    jobid: 21
+    wildcards: samp=P17-C_bR-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P17-C_bR-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:55 2021]
+Finished job 21.
+103 of 281 steps (37%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:55 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.blastOut.txt
+    jobid: 149
+    wildcards: samp=P19-C_bR-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.blastOut.txt
+[Sat Jun 12 13:26:57 2021]
+Finished job 149.
+104 of 281 steps (37%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:57 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P15-C_bS-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.simulateReads.fasta
+    jobid: 16
+    wildcards: samp=P15-C_bS-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P15-C_bS-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:26:58 2021]
+Finished job 16.
+105 of 281 steps (37%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:26:58 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.blastOut.txt
+    jobid: 152
+    wildcards: samp=P19-C_bR-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.blastOut.txt
+[Sat Jun 12 13:27:00 2021]
+Finished job 152.
+106 of 281 steps (38%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:00 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.blastOut.txt
+    jobid: 101
+    wildcards: samp=P13-E-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.blastOut.txt
+[Sat Jun 12 13:27:02 2021]
+Finished job 101.
+107 of 281 steps (38%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:02 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.RepeatRegion.txt
+    jobid: 100
+    wildcards: samp=P13-E-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.RepeatRegion.txt  -r P13-E-j 
+[Sat Jun 12 13:27:03 2021]
+Finished job 100.
+108 of 281 steps (38%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:03 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P19-C_bR-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.blastdb.ndb
+    jobid: 156
+    wildcards: samp=P19-C_bR-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P19-C_bR-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.blastdb
+[Sat Jun 12 13:27:03 2021]
+Finished job 156.
+109 of 281 steps (39%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:03 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P17-C_bR-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.blastdb.ndb
+    jobid: 135
+    wildcards: samp=P17-C_bR-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P17-C_bR-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.blastdb
+[Sat Jun 12 13:27:03 2021]
+Finished job 135.
+110 of 281 steps (39%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:03 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.blastOut.txt
+    jobid: 134
+    wildcards: samp=P17-C_bR-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.blastOut.txt
+[Sat Jun 12 13:27:05 2021]
+Finished job 134.
+111 of 281 steps (40%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:05 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.blastOut.txt
+    jobid: 227
+    wildcards: samp=P2-E-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.blastOut.txt
+[Sat Jun 12 13:27:07 2021]
+Finished job 227.
+112 of 281 steps (40%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:07 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.RepeatRegion.txt
+    jobid: 226
+    wildcards: samp=P2-E-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.RepeatRegion.txt  -r P2-E-t 
+[Sat Jun 12 13:27:07 2021]
+Finished job 226.
+113 of 281 steps (40%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:07 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P1-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.simulateReads.fasta
+    jobid: 31
+    wildcards: samp=P1-E-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P1-E-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:27:07 2021]
+Finished job 31.
+114 of 281 steps (41%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:07 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.blastOut.txt
+    jobid: 164
+    wildcards: samp=P1-E-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.blastOut.txt
+[Sat Jun 12 13:27:10 2021]
+Finished job 164.
+115 of 281 steps (41%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:10 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P12-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.blastdb.ndb
+    jobid: 93
+    wildcards: samp=P12-E-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P12-E-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.blastdb
+[Sat Jun 12 13:27:10 2021]
+Finished job 93.
+116 of 281 steps (41%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:10 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.blastOut.txt
+    jobid: 269
+    wildcards: samp=P7-E-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.blastOut.txt
+[Sat Jun 12 13:27:12 2021]
+Finished job 269.
+117 of 281 steps (42%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:12 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.RepeatRegion.txt
+    jobid: 268
+    wildcards: samp=P7-E-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.RepeatRegion.txt  -r P7-E-t 
+[Sat Jun 12 13:27:12 2021]
+Finished job 268.
+118 of 281 steps (42%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:12 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P8-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.blastdb.ndb
+    jobid: 273
+    wildcards: samp=P8-E-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P8-E-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.blastdb
+[Sat Jun 12 13:27:12 2021]
+Finished job 273.
+119 of 281 steps (42%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:12 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P7-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.simulateReads.fasta
+    jobid: 65
+    wildcards: samp=P7-E-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P7-E-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:27:12 2021]
+Finished job 65.
+120 of 281 steps (43%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:12 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P13-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.simulateReads.fasta
+    jobid: 9
+    wildcards: samp=P13-E-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P13-E-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:27:12 2021]
+Finished job 9.
+121 of 281 steps (43%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:12 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.blastdb.ndb
+    jobid: 177
+    wildcards: samp=P20-C_bR-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.blastdb
+[Sat Jun 12 13:27:12 2021]
+Finished job 177.
+122 of 281 steps (43%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:12 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P4-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.blastdb.ndb
+    jobid: 249
+    wildcards: samp=P4-E-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P4-E-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.blastdb
+[Sat Jun 12 13:27:13 2021]
+Finished job 249.
+123 of 281 steps (44%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:13 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.blastOut.txt
+    jobid: 248
+    wildcards: samp=P4-E-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.blastOut.txt
+[Sat Jun 12 13:27:15 2021]
+Finished job 248.
+124 of 281 steps (44%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:15 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.RepeatRegion.txt
+    jobid: 247
+    wildcards: samp=P4-E-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.RepeatRegion.txt  -r P4-E-x 
+[Sat Jun 12 13:27:15 2021]
+Finished job 247.
+125 of 281 steps (44%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:15 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P24-C_sC-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.blastdb.ndb
+    jobid: 207
+    wildcards: samp=P24-C_sC-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P24-C_sC-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.blastdb
+[Sat Jun 12 13:27:15 2021]
+Finished job 207.
+126 of 281 steps (45%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:15 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.blastOut.txt
+    jobid: 206
+    wildcards: samp=P24-C_sC-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.blastOut.txt
+[Sat Jun 12 13:27:17 2021]
+Finished job 206.
+127 of 281 steps (45%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:17 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.RepeatRegion.txt
+    jobid: 205
+    wildcards: samp=P24-C_sC-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.RepeatRegion.txt  -r P24-C_sC-j 
+[Sat Jun 12 13:27:17 2021]
+Finished job 205.
+128 of 281 steps (46%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:17 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P17-C_bR-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.blastdb.ndb
+    jobid: 138
+    wildcards: samp=P17-C_bR-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P17-C_bR-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.blastdb
+[Sat Jun 12 13:27:17 2021]
+Finished job 138.
+129 of 281 steps (46%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:17 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P2-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.blastdb.ndb
+    jobid: 222
+    wildcards: samp=P2-E-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P2-E-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.blastdb
+[Sat Jun 12 13:27:18 2021]
+Finished job 222.
+130 of 281 steps (46%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:18 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P12-E-x.pilon.3.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.blastdb.ndb
+    jobid: 96
+    wildcards: samp=P12-E-x.pilon.3
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P12-E-x.pilon.3.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.blastdb
+[Sat Jun 12 13:27:18 2021]
+Finished job 96.
+131 of 281 steps (47%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:18 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P8-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.simulateReads.fasta
+    jobid: 68
+    wildcards: samp=P8-E-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P8-E-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:27:18 2021]
+Finished job 68.
+132 of 281 steps (47%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:18 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P14-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.simulateReads.fasta
+    jobid: 12
+    wildcards: samp=P14-E-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P14-E-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:27:18 2021]
+Finished job 12.
+133 of 281 steps (47%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:18 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.blastdb.ndb
+    jobid: 180
+    wildcards: samp=P20-C_bR-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.blastdb
+[Sat Jun 12 13:27:18 2021]
+Finished job 180.
+134 of 281 steps (48%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:18 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.blastOut.txt
+    jobid: 278
+    wildcards: samp=P8-E-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.blastOut.txt
+[Sat Jun 12 13:27:20 2021]
+Finished job 278.
+135 of 281 steps (48%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:20 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P7-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.blastdb.ndb
+    jobid: 264
+    wildcards: samp=P7-E-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P7-E-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.blastdb
+[Sat Jun 12 13:27:20 2021]
+Finished job 264.
+136 of 281 steps (48%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:20 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.blastOut.txt
+    jobid: 110
+    wildcards: samp=P14-E-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.blastOut.txt
+[Sat Jun 12 13:27:22 2021]
+Finished job 110.
+137 of 281 steps (49%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:22 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.blastdb.ndb
+    jobid: 186
+    wildcards: samp=P21-C_sL-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P21-C_sL-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.blastdb
+[Sat Jun 12 13:27:22 2021]
+Finished job 186.
+138 of 281 steps (49%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:22 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P1-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.simulateReads.fasta
+    jobid: 32
+    wildcards: samp=P1-E-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P1-E-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:27:22 2021]
+Finished job 32.
+139 of 281 steps (49%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:22 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P12-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.simulateReads.fasta
+    jobid: 7
+    wildcards: samp=P12-E-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P12-E-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:27:23 2021]
+Finished job 7.
+140 of 281 steps (50%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:23 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.RepeatRegion.txt
+    jobid: 133
+    wildcards: samp=P17-C_bR-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.RepeatRegion.txt  -r P17-C_bR-d 
+[Sat Jun 12 13:27:23 2021]
+Finished job 133.
+141 of 281 steps (50%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:23 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.RepeatRegion.txt
+    jobid: 151
+    wildcards: samp=P19-C_bR-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.RepeatRegion.txt  -r P19-C_bR-j 
+[Sat Jun 12 13:27:23 2021]
+Finished job 151.
+142 of 281 steps (51%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:23 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P1-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.blastdb.ndb
+    jobid: 159
+    wildcards: samp=P1-E-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P1-E-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.blastdb
+[Sat Jun 12 13:27:23 2021]
+Finished job 159.
+143 of 281 steps (51%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:23 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.blastOut.txt
+    jobid: 158
+    wildcards: samp=P1-E-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.blastOut.txt
+[Sat Jun 12 13:27:25 2021]
+Finished job 158.
+144 of 281 steps (51%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:25 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P15-C_bS-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.blastdb.ndb
+    jobid: 123
+    wildcards: samp=P15-C_bS-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P15-C_bS-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.blastdb
+[Sat Jun 12 13:27:25 2021]
+Finished job 123.
+145 of 281 steps (52%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:25 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P10-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.blastdb.ndb
+    jobid: 81
+    wildcards: samp=P10-E-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P10-E-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.blastdb
+[Sat Jun 12 13:27:25 2021]
+Finished job 81.
+146 of 281 steps (52%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:25 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P8-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.simulateReads.fasta
+    jobid: 67
+    wildcards: samp=P8-E-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P8-E-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:27:26 2021]
+Finished job 67.
+147 of 281 steps (52%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:26 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P5-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.simulateReads.fasta
+    jobid: 61
+    wildcards: samp=P5-E-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P5-E-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:27:26 2021]
+Finished job 61.
+148 of 281 steps (53%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:26 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P13-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.simulateReads.fasta
+    jobid: 11
+    wildcards: samp=P13-E-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P13-E-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:27:26 2021]
+Finished job 11.
+149 of 281 steps (53%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:26 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P10-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.blastdb.ndb
+    jobid: 75
+    wildcards: samp=P10-E-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P10-E-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.blastdb
+[Sat Jun 12 13:27:26 2021]
+Finished job 75.
+150 of 281 steps (53%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:26 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.blastOut.txt
+    jobid: 74
+    wildcards: samp=P10-E-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.blastOut.txt
+[Sat Jun 12 13:27:28 2021]
+Finished job 74.
+151 of 281 steps (54%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:28 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.blastOut.txt
+    jobid: 221
+    wildcards: samp=P2-E-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.blastOut.txt
+[Sat Jun 12 13:27:30 2021]
+Finished job 221.
+152 of 281 steps (54%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:30 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.RepeatRegion.txt
+    jobid: 277
+    wildcards: samp=P8-E-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.RepeatRegion.txt  -r P8-E-x 
+[Sat Jun 12 13:27:30 2021]
+Finished job 277.
+153 of 281 steps (54%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:30 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.RepeatRegion.txt
+    jobid: 109
+    wildcards: samp=P14-E-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.RepeatRegion.txt  -r P14-E-j 
+[Sat Jun 12 13:27:31 2021]
+Finished job 109.
+154 of 281 steps (55%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:31 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P15-C_bS-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.blastdb.ndb
+    jobid: 117
+    wildcards: samp=P15-C_bS-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P15-C_bS-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.blastdb
+[Sat Jun 12 13:27:31 2021]
+Finished job 117.
+155 of 281 steps (55%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:31 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.blastOut.txt
+    jobid: 116
+    wildcards: samp=P15-C_bS-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.blastOut.txt
+[Sat Jun 12 13:27:33 2021]
+Finished job 116.
+156 of 281 steps (56%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:33 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.RepeatRegion.txt
+    jobid: 73
+    wildcards: samp=P10-E-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.RepeatRegion.txt  -r P10-E-j 
+[Sat Jun 12 13:27:33 2021]
+Finished job 73.
+157 of 281 steps (56%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:33 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.RepeatRegion.txt
+    jobid: 115
+    wildcards: samp=P15-C_bS-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.RepeatRegion.txt  -r P15-C_bS-d 
+[Sat Jun 12 13:27:33 2021]
+Finished job 115.
+158 of 281 steps (56%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:33 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P9-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.blastdb.ndb
+    jobid: 285
+    wildcards: samp=P9-E-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P9-E-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.blastdb
+[Sat Jun 12 13:27:34 2021]
+Finished job 285.
+159 of 281 steps (57%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:34 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.blastOut.txt
+    jobid: 284
+    wildcards: samp=P9-E-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.blastOut.txt
+[Sat Jun 12 13:27:36 2021]
+Finished job 284.
+160 of 281 steps (57%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:36 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.RepeatRegion.txt
+    jobid: 283
+    wildcards: samp=P9-E-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.RepeatRegion.txt  -r P9-E-j 
+[Sat Jun 12 13:27:36 2021]
+Finished job 283.
+161 of 281 steps (57%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:36 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.RepeatRegion.txt
+    jobid: 157
+    wildcards: samp=P1-E-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.RepeatRegion.txt  -r P1-E-d 
+[Sat Jun 12 13:27:36 2021]
+Finished job 157.
+162 of 281 steps (58%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:36 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.blastOut.txt
+    jobid: 176
+    wildcards: samp=P20-C_bR-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.blastOut.txt
+[Sat Jun 12 13:27:38 2021]
+Finished job 176.
+163 of 281 steps (58%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:38 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.blastOut.txt
+    jobid: 185
+    wildcards: samp=P21-C_sL-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.blastOut.txt
+[Sat Jun 12 13:27:40 2021]
+Finished job 185.
+164 of 281 steps (58%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:40 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.blastOut.txt
+    jobid: 122
+    wildcards: samp=P15-C_bS-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.blastOut.txt
+[Sat Jun 12 13:27:42 2021]
+Finished job 122.
+165 of 281 steps (59%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:42 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.blastOut.txt
+    jobid: 80
+    wildcards: samp=P10-E-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.blastOut.txt
+[Sat Jun 12 13:27:44 2021]
+Finished job 80.
+166 of 281 steps (59%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:44 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P22-C_sL-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.blastdb.ndb
+    jobid: 195
+    wildcards: samp=P22-C_sL-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P22-C_sL-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.blastdb
+[Sat Jun 12 13:27:44 2021]
+Finished job 195.
+167 of 281 steps (59%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:44 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.blastOut.txt
+    jobid: 194
+    wildcards: samp=P22-C_sL-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.blastOut.txt
+[Sat Jun 12 13:27:46 2021]
+Finished job 194.
+168 of 281 steps (60%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:46 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.RepeatRegion.txt
+    jobid: 193
+    wildcards: samp=P22-C_sL-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.RepeatRegion.txt  -r P22-C_sL-d 
+[Sat Jun 12 13:27:46 2021]
+Finished job 193.
+169 of 281 steps (60%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:46 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.RepeatRegion.txt
+    jobid: 220
+    wildcards: samp=P2-E-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.RepeatRegion.txt  -r P2-E-d 
+[Sat Jun 12 13:27:46 2021]
+Finished job 220.
+170 of 281 steps (60%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:46 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P3-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.blastdb.ndb
+    jobid: 237
+    wildcards: samp=P3-E-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P3-E-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.blastdb
+[Sat Jun 12 13:27:47 2021]
+Finished job 237.
+171 of 281 steps (61%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:47 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.blastOut.txt
+    jobid: 236
+    wildcards: samp=P3-E-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.blastOut.txt
+[Sat Jun 12 13:27:49 2021]
+Finished job 236.
+172 of 281 steps (61%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:49 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.RepeatRegion.txt
+    jobid: 235
+    wildcards: samp=P3-E-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.RepeatRegion.txt  -r P3-E-t 
+[Sat Jun 12 13:27:49 2021]
+Finished job 235.
+173 of 281 steps (62%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:49 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.blastOut.txt
+    jobid: 254
+    wildcards: samp=P5-E-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.blastOut.txt
+[Sat Jun 12 13:27:51 2021]
+Finished job 254.
+174 of 281 steps (62%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:51 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.RepeatRegion.txt
+    jobid: 184
+    wildcards: samp=P21-C_sL-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.RepeatRegion.txt  -r P21-C_sL-j 
+[Sat Jun 12 13:27:51 2021]
+Finished job 184.
+175 of 281 steps (62%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:51 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.blastOut.txt
+    jobid: 275
+    wildcards: samp=P8-E-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.blastOut.txt
+[Sat Jun 12 13:27:53 2021]
+Finished job 275.
+176 of 281 steps (63%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:53 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.RepeatRegion.txt
+    jobid: 274
+    wildcards: samp=P8-E-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.RepeatRegion.txt  -r P8-E-t 
+[Sat Jun 12 13:27:53 2021]
+Finished job 274.
+177 of 281 steps (63%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:53 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.blastOut.txt
+    jobid: 98
+    wildcards: samp=P13-E-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.blastOut.txt
+[Sat Jun 12 13:27:55 2021]
+Finished job 98.
+178 of 281 steps (63%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:55 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P1-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.blastdb.ndb
+    jobid: 168
+    wildcards: samp=P1-E-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P1-E-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.blastdb
+[Sat Jun 12 13:27:55 2021]
+Finished job 168.
+179 of 281 steps (64%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:55 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.blastOut.txt
+    jobid: 266
+    wildcards: samp=P7-E-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.blastOut.txt
+[Sat Jun 12 13:27:57 2021]
+Finished job 266.
+180 of 281 steps (64%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:57 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P18-C_bR-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.blastdb.ndb
+    jobid: 147
+    wildcards: samp=P18-C_bR-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P18-C_bR-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.blastdb
+[Sat Jun 12 13:27:57 2021]
+Finished job 147.
+181 of 281 steps (64%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:57 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.RepeatRegion.txt
+    jobid: 175
+    wildcards: samp=P20-C_bR-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.RepeatRegion.txt  -r P20-C_bR-t 
+[Sat Jun 12 13:27:57 2021]
+Finished job 175.
+182 of 281 steps (65%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:57 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P17-C_bR-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.simulateReads.fasta
+    jobid: 22
+    wildcards: samp=P17-C_bR-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P17-C_bR-j.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:27:57 2021]
+Finished job 22.
+183 of 281 steps (65%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:57 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.simulateReads.fasta
+    jobid: 36
+    wildcards: samp=P20-C_bR-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:27:58 2021]
+Finished job 36.
+184 of 281 steps (65%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:58 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P9-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.blastdb.ndb
+    jobid: 288
+    wildcards: samp=P9-E-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P9-E-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.blastdb
+[Sat Jun 12 13:27:58 2021]
+Finished job 288.
+185 of 281 steps (66%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:27:58 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.blastOut.txt
+    jobid: 287
+    wildcards: samp=P9-E-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.blastOut.txt
+[Sat Jun 12 13:28:00 2021]
+Finished job 287.
+186 of 281 steps (66%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:00 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P4-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.blastdb.ndb
+    jobid: 246
+    wildcards: samp=P4-E-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P4-E-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.blastdb
+[Sat Jun 12 13:28:00 2021]
+Finished job 246.
+187 of 281 steps (67%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:00 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P12-E-x.pilon.3.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.simulateReads.fasta
+    jobid: 8
+    wildcards: samp=P12-E-x.pilon.3
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P12-E-x.pilon.3.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:28:00 2021]
+Finished job 8.
+188 of 281 steps (67%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:00 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P7-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.simulateReads.fasta
+    jobid: 64
+    wildcards: samp=P7-E-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P7-E-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:28:00 2021]
+Finished job 64.
+189 of 281 steps (67%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:00 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P15-C_bS-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.blastdb.ndb
+    jobid: 120
+    wildcards: samp=P15-C_bS-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P15-C_bS-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.blastdb
+[Sat Jun 12 13:28:00 2021]
+Finished job 120.
+190 of 281 steps (68%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:00 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P23-C_sL-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.blastdb.ndb
+    jobid: 204
+    wildcards: samp=P23-C_sL-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P23-C_sL-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.blastdb
+[Sat Jun 12 13:28:01 2021]
+Finished job 204.
+191 of 281 steps (68%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:01 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.blastOut.txt
+    jobid: 203
+    wildcards: samp=P23-C_sL-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.blastOut.txt
+[Sat Jun 12 13:28:03 2021]
+Finished job 203.
+192 of 281 steps (68%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:03 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.RepeatRegion.txt
+    jobid: 148
+    wildcards: samp=P19-C_bR-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.RepeatRegion.txt  -r P19-C_bR-d 
+[Sat Jun 12 13:28:03 2021]
+Finished job 148.
+193 of 281 steps (69%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:03 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.blastOut.txt
+    jobid: 251
+    wildcards: samp=P5-E-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.blastOut.txt
+[Sat Jun 12 13:28:05 2021]
+Finished job 251.
+194 of 281 steps (69%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:05 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.blastOut.txt
+    jobid: 272
+    wildcards: samp=P8-E-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.blastOut.txt
+[Sat Jun 12 13:28:07 2021]
+Finished job 272.
+195 of 281 steps (69%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:07 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.blastOut.txt
+    jobid: 167
+    wildcards: samp=P1-E-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.blastOut.txt
+[Sat Jun 12 13:28:09 2021]
+Finished job 167.
+196 of 281 steps (70%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:09 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.RepeatRegion.txt
+    jobid: 265
+    wildcards: samp=P7-E-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.RepeatRegion.txt  -r P7-E-j 
+[Sat Jun 12 13:28:09 2021]
+Finished job 265.
+197 of 281 steps (70%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:09 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.blastOut.txt
+    jobid: 83
+    wildcards: samp=P11-E-j.ONT
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.blastOut.txt
+[Sat Jun 12 13:28:11 2021]
+Finished job 83.
+198 of 281 steps (70%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:11 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.RepeatRegion.txt
+    jobid: 271
+    wildcards: samp=P8-E-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.RepeatRegion.txt  -r P8-E-d 
+[Sat Jun 12 13:28:11 2021]
+Finished job 271.
+199 of 281 steps (71%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:11 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.RepeatRegion.txt
+    jobid: 250
+    wildcards: samp=P5-E-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.RepeatRegion.txt  -r P5-E-d 
+[Sat Jun 12 13:28:11 2021]
+Finished job 250.
+200 of 281 steps (71%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:11 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.blastOut.txt
+    jobid: 125
+    wildcards: samp=P16-C_bS-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.blastOut.txt
+[Sat Jun 12 13:28:13 2021]
+Finished job 125.
+201 of 281 steps (72%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:13 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.RepeatRegion.txt
+    jobid: 124
+    wildcards: samp=P16-C_bS-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.RepeatRegion.txt  -r P16-C_bS-d 
+[Sat Jun 12 13:28:13 2021]
+Finished job 124.
+202 of 281 steps (72%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:13 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.RepeatRegion.txt
+    jobid: 82
+    wildcards: samp=P11-E-j.ONT
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.RepeatRegion.txt  -r P11-E-j.ONT 
+[Sat Jun 12 13:28:13 2021]
+Finished job 82.
+203 of 281 steps (72%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:13 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.blastOut.txt
+    jobid: 209
+    wildcards: samp=P24-C_sC-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.blastOut.txt
+[Sat Jun 12 13:28:15 2021]
+Finished job 209.
+204 of 281 steps (73%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:15 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.RepeatRegion.txt
+    jobid: 208
+    wildcards: samp=P24-C_sC-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.RepeatRegion.txt  -r P24-C_sC-t 
+[Sat Jun 12 13:28:15 2021]
+Finished job 208.
+205 of 281 steps (73%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:15 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.RepeatRegion.txt
+    jobid: 166
+    wildcards: samp=P1-E-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.RepeatRegion.txt  -r P1-E-x 
+[Sat Jun 12 13:28:16 2021]
+Finished job 166.
+206 of 281 steps (73%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:16 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.RepeatRegion.txt
+    jobid: 97
+    wildcards: samp=P13-E-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.RepeatRegion.txt  -r P13-E-d 
+[Sat Jun 12 13:28:17 2021]
+Finished job 97.
+207 of 281 steps (74%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:17 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.blastOut.txt
+    jobid: 245
+    wildcards: samp=P4-E-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.blastOut.txt
+[Sat Jun 12 13:28:19 2021]
+Finished job 245.
+208 of 281 steps (74%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:19 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P6-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.simulateReads.fasta
+    jobid: 63
+    wildcards: samp=P6-E-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P6-E-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:28:19 2021]
+Finished job 63.
+209 of 281 steps (74%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:19 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.blastOut.txt
+    jobid: 104
+    wildcards: samp=P13-E-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.blastOut.txt
+[Sat Jun 12 13:28:21 2021]
+Finished job 104.
+210 of 281 steps (75%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:21 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.RepeatRegion.txt
+    jobid: 103
+    wildcards: samp=P13-E-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.RepeatRegion.txt  -r P13-E-x 
+[Sat Jun 12 13:28:21 2021]
+Finished job 103.
+211 of 281 steps (75%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:21 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.blastOut.txt
+    jobid: 137
+    wildcards: samp=P17-C_bR-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.blastOut.txt
+[Sat Jun 12 13:28:24 2021]
+Finished job 137.
+212 of 281 steps (75%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:24 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.blastOut.txt
+    jobid: 179
+    wildcards: samp=P20-C_bR-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.blastOut.txt
+[Sat Jun 12 13:28:25 2021]
+Finished job 179.
+213 of 281 steps (76%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:26 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.blastOut.txt
+    jobid: 95
+    wildcards: samp=P12-E-x.pilon.3
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.blastOut.txt
+[Sat Jun 12 13:28:28 2021]
+Finished job 95.
+214 of 281 steps (76%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:28 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.blastOut.txt
+    jobid: 263
+    wildcards: samp=P7-E-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.blastOut.txt
+[Sat Jun 12 13:28:30 2021]
+Finished job 263.
+215 of 281 steps (77%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:30 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.RepeatRegion.txt
+    jobid: 202
+    wildcards: samp=P23-C_sL-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.RepeatRegion.txt  -r P23-C_sL-x 
+[Sat Jun 12 13:28:30 2021]
+Finished job 202.
+216 of 281 steps (77%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:30 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.blastOut.txt
+    jobid: 230
+    wildcards: samp=P2-E-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.blastOut.txt
+[Sat Jun 12 13:28:32 2021]
+Finished job 230.
+217 of 281 steps (77%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:32 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.blastOut.txt
+    jobid: 188
+    wildcards: samp=P21-C_sL-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.blastOut.txt
+[Sat Jun 12 13:28:34 2021]
+Finished job 188.
+218 of 281 steps (78%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:34 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P6-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.blastdb.ndb
+    jobid: 258
+    wildcards: samp=P6-E-d
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P6-E-d.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.blastdb
+[Sat Jun 12 13:28:34 2021]
+Finished job 258.
+219 of 281 steps (78%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:34 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.RepeatRegion.txt
+    jobid: 187
+    wildcards: samp=P21-C_sL-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.RepeatRegion.txt  -r P21-C_sL-t 
+[Sat Jun 12 13:28:34 2021]
+Finished job 187.
+220 of 281 steps (78%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:34 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.blastdb.ndb
+    jobid: 174
+    wildcards: samp=P20-C_bR-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P20-C_bR-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.blastdb
+[Sat Jun 12 13:28:34 2021]
+Finished job 174.
+221 of 281 steps (79%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:34 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.blastOut.txt
+    jobid: 173
+    wildcards: samp=P20-C_bR-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.blastOut.txt
+[Sat Jun 12 13:28:36 2021]
+Finished job 173.
+222 of 281 steps (79%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:36 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.RepeatRegion.txt
+    jobid: 229
+    wildcards: samp=P2-E-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.RepeatRegion.txt  -r P2-E-x 
+[Sat Jun 12 13:28:36 2021]
+Finished job 229.
+223 of 281 steps (79%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:36 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.blastOut.txt
+    jobid: 224
+    wildcards: samp=P2-E-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.blastOut.txt
+[Sat Jun 12 13:28:38 2021]
+Finished job 224.
+224 of 281 steps (80%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:38 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P14-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.simulateReads.fasta
+    jobid: 14
+    wildcards: samp=P14-E-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P14-E-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:28:38 2021]
+Finished job 14.
+225 of 281 steps (80%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:38 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.blastOut.txt
+    jobid: 92
+    wildcards: samp=P12-E-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.blastOut.txt
+[Sat Jun 12 13:28:40 2021]
+Finished job 92.
+226 of 281 steps (80%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:40 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.RepeatRegion.txt
+    jobid: 253
+    wildcards: samp=P5-E-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.RepeatRegion.txt  -r P5-E-j 
+[Sat Jun 12 13:28:41 2021]
+Finished job 253.
+227 of 281 steps (81%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:41 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.blastOut.txt
+    jobid: 155
+    wildcards: samp=P19-C_bR-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.blastOut.txt
+[Sat Jun 12 13:28:43 2021]
+Finished job 155.
+228 of 281 steps (81%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:43 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.blastOut.txt
+    jobid: 182
+    wildcards: samp=P21-C_sL-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.blastOut.txt
+[Sat Jun 12 13:28:44 2021]
+Finished job 182.
+229 of 281 steps (81%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:44 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.RepeatRegion.txt
+    jobid: 169
+    wildcards: samp=P20-C_bR-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.RepeatRegion.txt  -r P20-C_bR-d 
+[Sat Jun 12 13:28:45 2021]
+Finished job 169.
+230 of 281 steps (82%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:45 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.RepeatRegion.txt
+    jobid: 85
+    wildcards: samp=P11-E-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.RepeatRegion.txt  -r P11-E-t 
+[Sat Jun 12 13:28:45 2021]
+Finished job 85.
+231 of 281 steps (82%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:45 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.blastOut.txt
+    jobid: 113
+    wildcards: samp=P14-E-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.blastOut.txt
+[Sat Jun 12 13:28:47 2021]
+Finished job 113.
+232 of 281 steps (83%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:47 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.RepeatRegion.txt
+    jobid: 112
+    wildcards: samp=P14-E-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.RepeatRegion.txt  -r P14-E-x 
+[Sat Jun 12 13:28:47 2021]
+Finished job 112.
+233 of 281 steps (83%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:47 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.blastOut.txt
+    jobid: 233
+    wildcards: samp=P3-E-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.blastOut.txt
+[Sat Jun 12 13:28:49 2021]
+Finished job 233.
+234 of 281 steps (83%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:49 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.RepeatRegion.txt
+    jobid: 232
+    wildcards: samp=P3-E-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.RepeatRegion.txt  -r P3-E-j 
+[Sat Jun 12 13:28:50 2021]
+Finished job 232.
+235 of 281 steps (84%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:50 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P6-E-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.blastdb.ndb
+    jobid: 261
+    wildcards: samp=P6-E-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P6-E-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.blastdb
+[Sat Jun 12 13:28:50 2021]
+Finished job 261.
+236 of 281 steps (84%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:50 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.blastOut.txt
+    jobid: 260
+    wildcards: samp=P6-E-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.blastOut.txt
+[Sat Jun 12 13:28:52 2021]
+Finished job 260.
+237 of 281 steps (84%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:52 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.RepeatRegion.txt
+    jobid: 154
+    wildcards: samp=P19-C_bR-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.RepeatRegion.txt  -r P19-C_bR-t 
+[Sat Jun 12 13:28:52 2021]
+Finished job 154.
+238 of 281 steps (85%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:52 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.blastOut.txt
+    jobid: 107
+    wildcards: samp=P14-E-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.blastOut.txt
+[Sat Jun 12 13:28:54 2021]
+Finished job 107.
+239 of 281 steps (85%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:54 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.RepeatRegion.txt
+    jobid: 106
+    wildcards: samp=P14-E-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.RepeatRegion.txt  -r P14-E-d 
+[Sat Jun 12 13:28:55 2021]
+Finished job 106.
+240 of 281 steps (85%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:55 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P25-C_sC-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.blastdb.ndb
+    jobid: 219
+    wildcards: samp=P25-C_sC-t
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P25-C_sC-t.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.blastdb
+[Sat Jun 12 13:28:55 2021]
+Finished job 219.
+241 of 281 steps (86%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:55 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.blastOut.txt
+    jobid: 191
+    wildcards: samp=P21-C_sL-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.blastOut.txt
+[Sat Jun 12 13:28:57 2021]
+Finished job 191.
+242 of 281 steps (86%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:57 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.RepeatRegion.txt
+    jobid: 190
+    wildcards: samp=P21-C_sL-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.RepeatRegion.txt  -r P21-C_sL-x 
+[Sat Jun 12 13:28:57 2021]
+Finished job 190.
+243 of 281 steps (86%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:57 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.RepeatRegion.txt
+    jobid: 79
+    wildcards: samp=P10-E-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.RepeatRegion.txt  -r P10-E-x 
+[Sat Jun 12 13:28:57 2021]
+Finished job 79.
+244 of 281 steps (87%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:57 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.RepeatRegion.txt
+    jobid: 163
+    wildcards: samp=P1-E-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.RepeatRegion.txt  -r P1-E-t 
+[Sat Jun 12 13:28:58 2021]
+Finished job 163.
+245 of 281 steps (87%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:58 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.RepeatRegion.txt
+    jobid: 121
+    wildcards: samp=P15-C_bS-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.RepeatRegion.txt  -r P15-C_bS-t 
+[Sat Jun 12 13:28:58 2021]
+Finished job 121.
+246 of 281 steps (88%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:58 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.RepeatRegion.txt
+    jobid: 91
+    wildcards: samp=P12-E-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.RepeatRegion.txt  -r P12-E-t 
+[Sat Jun 12 13:28:58 2021]
+Finished job 91.
+247 of 281 steps (88%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:28:58 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.blastOut.txt
+    jobid: 119
+    wildcards: samp=P15-C_bS-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.blastOut.txt
+[Sat Jun 12 13:29:00 2021]
+Finished job 119.
+248 of 281 steps (88%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:00 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P17-C_bR-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.simulateReads.fasta
+    jobid: 23
+    wildcards: samp=P17-C_bR-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P17-C_bR-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:29:00 2021]
+Finished job 23.
+249 of 281 steps (89%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:00 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.blastOut.txt
+    jobid: 140
+    wildcards: samp=P17-C_bR-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.blastOut.txt
+[Sat Jun 12 13:29:02 2021]
+Finished job 140.
+250 of 281 steps (89%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:02 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.RepeatRegion.txt
+    jobid: 94
+    wildcards: samp=P12-E-x.pilon.3
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.RepeatRegion.txt  -r P12-E-x.pilon.3 
+[Sat Jun 12 13:29:02 2021]
+Finished job 94.
+251 of 281 steps (89%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:02 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.RepeatRegion.txt
+    jobid: 181
+    wildcards: samp=P21-C_sL-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.RepeatRegion.txt  -r P21-C_sL-d 
+[Sat Jun 12 13:29:03 2021]
+Finished job 181.
+252 of 281 steps (90%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:03 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.RepeatRegion.txt
+    jobid: 223
+    wildcards: samp=P2-E-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.RepeatRegion.txt  -r P2-E-j 
+[Sat Jun 12 13:29:03 2021]
+Finished job 223.
+253 of 281 steps (90%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:03 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.RepeatRegion.txt
+    jobid: 139
+    wildcards: samp=P17-C_bR-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.RepeatRegion.txt  -r P17-C_bR-x 
+[Sat Jun 12 13:29:03 2021]
+Finished job 139.
+254 of 281 steps (90%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:03 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P25-C_sC-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.blastdb.ndb
+    jobid: 216
+    wildcards: samp=P25-C_sC-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P25-C_sC-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.blastdb
+[Sat Jun 12 13:29:04 2021]
+Finished job 216.
+255 of 281 steps (91%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:04 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.RepeatRegion.txt
+    jobid: 244
+    wildcards: samp=P4-E-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.RepeatRegion.txt  -r P4-E-j 
+[Sat Jun 12 13:29:04 2021]
+Finished job 244.
+256 of 281 steps (91%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:04 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.blastOut.txt
+    jobid: 146
+    wildcards: samp=P18-C_bR-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.blastOut.txt
+[Sat Jun 12 13:29:06 2021]
+Finished job 146.
+257 of 281 steps (91%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:06 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.RepeatRegion.txt
+    jobid: 286
+    wildcards: samp=P9-E-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.RepeatRegion.txt  -r P9-E-t 
+[Sat Jun 12 13:29:06 2021]
+Finished job 286.
+258 of 281 steps (92%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:06 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.RepeatRegion.txt
+    jobid: 118
+    wildcards: samp=P15-C_bS-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.RepeatRegion.txt  -r P15-C_bS-j 
+[Sat Jun 12 13:29:06 2021]
+Finished job 118.
+259 of 281 steps (92%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:06 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.blastOut.txt
+    jobid: 215
+    wildcards: samp=P25-C_sC-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.blastOut.txt
+[Sat Jun 12 13:29:08 2021]
+Finished job 215.
+260 of 281 steps (93%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:08 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.RepeatRegion.txt
+    jobid: 262
+    wildcards: samp=P7-E-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.RepeatRegion.txt  -r P7-E-d 
+[Sat Jun 12 13:29:08 2021]
+Finished job 262.
+261 of 281 steps (93%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:08 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.RepeatRegion.txt
+    jobid: 145
+    wildcards: samp=P18-C_bR-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.RepeatRegion.txt  -r P18-C_bR-x 
+[Sat Jun 12 13:29:08 2021]
+Finished job 145.
+262 of 281 steps (93%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:08 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.RepeatRegion.txt
+    jobid: 259
+    wildcards: samp=P6-E-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.RepeatRegion.txt  -r P6-E-t 
+[Sat Jun 12 13:29:08 2021]
+Finished job 259.
+263 of 281 steps (94%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:08 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P25-C_sC-t.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.simulateReads.fasta
+    jobid: 49
+    wildcards: samp=P25-C_sC-t
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P25-C_sC-t.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:29:08 2021]
+Finished job 49.
+264 of 281 steps (94%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:08 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P16-C_bS-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.blastdb.ndb
+    jobid: 132
+    wildcards: samp=P16-C_bS-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P16-C_bS-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.blastdb
+[Sat Jun 12 13:29:09 2021]
+Finished job 132.
+265 of 281 steps (94%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:09 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.blastOut.txt
+    jobid: 131
+    wildcards: samp=P16-C_bS-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.blastOut.txt
+[Sat Jun 12 13:29:11 2021]
+Finished job 131.
+266 of 281 steps (95%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:11 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.blastdb.ndb
+    jobid: 90
+    wildcards: samp=P11-E-x
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P11-E-x.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.blastdb
+[Sat Jun 12 13:29:11 2021]
+Finished job 90.
+267 of 281 steps (95%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:11 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.RepeatRegion.txt
+    jobid: 178
+    wildcards: samp=P20-C_bR-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.RepeatRegion.txt  -r P20-C_bR-x 
+[Sat Jun 12 13:29:11 2021]
+Finished job 178.
+268 of 281 steps (95%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:11 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.RepeatRegion.txt
+    jobid: 136
+    wildcards: samp=P17-C_bR-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.RepeatRegion.txt  -r P17-C_bR-j 
+[Sat Jun 12 13:29:11 2021]
+Finished job 136.
+269 of 281 steps (96%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:11 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P6-E-d.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.simulateReads.fasta
+    jobid: 62
+    wildcards: samp=P6-E-d
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P6-E-d.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:29:11 2021]
+Finished job 62.
+270 of 281 steps (96%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:11 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.blastOut.txt
+    jobid: 257
+    wildcards: samp=P6-E-d
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.blastOut.txt
+[Sat Jun 12 13:29:13 2021]
+Finished job 257.
+271 of 281 steps (96%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:13 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P11-E-x.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.simulateReads.fasta
+    jobid: 6
+    wildcards: samp=P11-E-x
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P11-E-x.fasta  -o /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.simulateReads.fasta -s 75 -l 150 
+[Sat Jun 12 13:29:13 2021]
+Finished job 6.
+272 of 281 steps (97%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:13 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.blastOut.txt
+    jobid: 89
+    wildcards: samp=P11-E-x
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.blastOut.txt
+[Sat Jun 12 13:29:15 2021]
+Finished job 89.
+273 of 281 steps (97%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:15 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.RepeatRegion.txt
+    jobid: 88
+    wildcards: samp=P11-E-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.RepeatRegion.txt  -r P11-E-x 
+[Sat Jun 12 13:29:16 2021]
+Finished job 88.
+274 of 281 steps (98%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:16 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.blastOut.txt
+    jobid: 218
+    wildcards: samp=P25-C_sC-t
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.blastOut.txt
+[Sat Jun 12 13:29:17 2021]
+Finished job 218.
+275 of 281 steps (98%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:18 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.RepeatRegion.txt
+    jobid: 217
+    wildcards: samp=P25-C_sC-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.RepeatRegion.txt  -r P25-C_sC-t 
+[Sat Jun 12 13:29:18 2021]
+Finished job 217.
+276 of 281 steps (98%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:18 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.RepeatRegion.txt
+    jobid: 256
+    wildcards: samp=P6-E-d
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.RepeatRegion.txt  -r P6-E-d 
+[Sat Jun 12 13:29:18 2021]
+Finished job 256.
+277 of 281 steps (99%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:18 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.RepeatRegion.txt
+    jobid: 130
+    wildcards: samp=P16-C_bS-x
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.RepeatRegion.txt  -r P16-C_bS-x 
+[Sat Jun 12 13:29:18 2021]
+Finished job 130.
+278 of 281 steps (99%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:18 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.RepeatRegion.txt
+    jobid: 214
+    wildcards: samp=P25-C_sC-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.RepeatRegion.txt  -r P25-C_sC-j 
+[Sat Jun 12 13:29:18 2021]
+Finished job 214.
+279 of 281 steps (99%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:18 2021]
+rule select_repeatRegion:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.blastOut.txt
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.RepeatRegion.txt
+    jobid: 172
+    wildcards: samp=P20-C_bR-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/Select-RepeatRegion-from-readsBlastF.py  -i /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.blastOut.txt -o  /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.RepeatRegion.txt  -r P20-C_bR-j 
+[Sat Jun 12 13:29:19 2021]
+Finished job 172.
+280 of 281 steps (100%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:29:19 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-t/P10-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-j/P10-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-t/P10-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P10-E-x/P10-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-j.ONT/P11-E-j.ONT.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-t/P11-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P11-E-x/P11-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-t/P12-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P12-E-x.pilon.3/P12-E-x.pilon.3.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-d/P13-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-j/P13-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P13-E-x/P13-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-d/P14-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-j/P14-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P14-E-x/P14-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-d/P15-C_bS-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-j/P15-C_bS-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P15-C_bS-t/P15-C_bS-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-d/P16-C_bS-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-j/P16-C_bS-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P16-C_bS-x/P16-C_bS-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-d/P17-C_bR-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-j/P17-C_bR-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P17-C_bR-x/P17-C_bR-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-j/P18-C_bR-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P18-C_bR-x/P18-C_bR-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-d/P19-C_bR-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-j/P19-C_bR-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P19-C_bR-t/P19-C_bR-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-d/P1-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-t/P1-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-x/P1-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-d/P20-C_bR-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-j/P20-C_bR-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-t/P20-C_bR-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P20-C_bR-x/P20-C_bR-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-d/P21-C_sL-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-j/P21-C_sL-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-t/P21-C_sL-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P21-C_sL-x/P21-C_sL-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-d/P22-C_sL-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P22-C_sL-t/P22-C_sL-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-j/P23-C_sL-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P23-C_sL-x/P23-C_sL-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-j/P24-C_sC-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-t/P24-C_sC-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P24-C_sC-x/P24-C_sC-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-j/P25-C_sC-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P25-C_sC-t/P25-C_sC-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-d/P2-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-j/P2-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-t/P2-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P2-E-x/P2-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-j/P3-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-t/P3-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P3-E-x/P3-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-d/P4-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-j/P4-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P4-E-x/P4-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-d/P5-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P5-E-j/P5-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-d/P6-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P6-E-t/P6-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-d/P7-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-j/P7-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P7-E-t/P7-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-d/P8-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-t/P8-E-t.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P8-E-x/P8-E-x.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-d/P9-E-d.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-j/P9-E-j.RepeatRegion.txt, /shared/liuhj/HP/process/Genome_repeatRegion/P9-E-t/P9-E-t.RepeatRegion.txt
+    jobid: 0
+
+[Sat Jun 12 13:29:19 2021]
+Finished job 0.
+281 of 281 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/.snakemake/log/2021-06-12T132622.621075.snakemake.log

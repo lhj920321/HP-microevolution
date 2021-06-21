@@ -1,0 +1,49 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	clustalW2_align
+	1	pal2nal_codon
+	3
+Select jobs to execute...
+
+[Fri Jun 11 16:48:33 2021]
+rule clustalW2_align:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P1
+    output: /shared/liuhj/HP/process/dN-dS-caculate/P1.clustalW.log
+    jobid: 2
+    wildcards: person=P1
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/clustalW2_align.sh  /shared/liuhj/HP/process/dN-dS-caculate/P1  /shared/liuhj/HP/process/dN-dS-caculate/P1.clustalW.log
+[Fri Jun 11 16:48:33 2021]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Fri Jun 11 16:48:33 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P1
+    output: /shared/liuhj/HP/process/dN-dS-caculate/P1.pal2nal.log
+    jobid: 3
+    wildcards: person=P1
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate/P1  /shared/liuhj/HP/process/dN-dS-caculate/P1.pal2nal.log
+[Fri Jun 11 16:48:33 2021]
+Finished job 3.
+2 of 3 steps (67%) done
+Select jobs to execute...
+
+[Fri Jun 11 16:48:33 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P1, /shared/liuhj/HP/process/dN-dS-caculate/P1.clustalW.log, /shared/liuhj/HP/process/dN-dS-caculate/P1.pal2nal.log
+    jobid: 0
+
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate/P1.clustalW.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate/P1.pal2nal.log.
+[Fri Jun 11 16:48:33 2021]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/.snakemake/log/2021-06-11T164833.793022.snakemake.log

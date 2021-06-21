@@ -5,9 +5,8 @@
 
 #person_list="7 11 12    21 201 213 13    124 1346 142 75    340 345 144 457"
 
-person = "P2 P18 P25 P5"
+person = "P11"
 
-person = "P10"
 
 if person == 'P1':
 	bwa_ref_samp = 'P1-E-j'
@@ -64,8 +63,10 @@ if person == 'P10':
 '''
 
 if person == 'P11':
-	bwa_ref_samp = "P11-E-j"
-	REP_INDEX= ["P11-E-x","P11-E-j","P11-E-t"]
+	bwa_ref_samp = "P11-E-x"
+	#REP_INDEX= ["P11-E-x","P11-E-j","P11-E-t"]
+	REP_INDEX= ["P11-E-x","P11-E-t"]
+
 
 if person == 'P12':
 	bwa_ref_samp = "P12-E-t"

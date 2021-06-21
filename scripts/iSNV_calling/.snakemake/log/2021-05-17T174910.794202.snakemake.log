@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 38 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNV_calling-pipeline-20210515.py:
+Missing input files for rule ntfreq_2_FreqBigtable:
+/shared/liuhj/HP/process/assembly/person_respectGnm/P1/table.respect.fasta
+/shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/table_config/P1/table.ntfreq_file_list.txt

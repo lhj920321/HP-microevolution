@@ -1,0 +1,6 @@
+The flag 'directory' used in rule clustalW2_align is only valid for outputs, not inputs.
+Building DAG of jobs...
+ChildIOException:
+File/directory is a child to another output:
+('/shared/liuhj/HP/process/dN-dS-caculate/P1', Nuc_AA_FnaF_of_diverGene)
+('/shared/liuhj/HP/process/dN-dS-caculate/P1/log', clustalW2_align)

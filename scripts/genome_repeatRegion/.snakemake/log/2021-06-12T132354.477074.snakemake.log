@@ -1,0 +1,2 @@
+SyntaxError in line 16 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/simulateRead_blast_and_selectRepeat_region-pipeline.py:
+Unexpected keyword expand in rule definition (simulateRead_blast_and_selectRepeat_region-pipeline.py, line 16)

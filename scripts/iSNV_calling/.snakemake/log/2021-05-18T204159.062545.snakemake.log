@@ -1,0 +1,290 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	21	iSNV_SNV_density_stat
+	22
+Select jobs to execute...
+
+[Tue May 18 20:41:59 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/snv_density_Stat
+    jobid: 72
+    wildcards: person=P6
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/snv_density_Stat -M 0.02 -S 500 -L 1700000
+
+[Tue May 18 20:41:59 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/snv_density_Stat
+    jobid: 79
+    wildcards: person=P16
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/snv_density_Stat -M 0.02 -S 500 -L 1700000
+
+[Tue May 18 20:41:59 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/snv_density_Stat
+    jobid: 82
+    wildcards: person=P19
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/snv_density_Stat -M 0.02 -S 500 -L 1700000
+
+[Tue May 18 20:41:59 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/snv_density_Stat
+    jobid: 85
+    wildcards: person=P22
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:42:39 2021]
+Finished job 85.
+1 of 22 steps (5%) done
+Select jobs to execute...
+
+[Tue May 18 20:42:39 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/snv_density_Stat
+    jobid: 68
+    wildcards: person=P2
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:42:39 2021]
+Finished job 72.
+2 of 22 steps (9%) done
+Select jobs to execute...
+
+[Tue May 18 20:42:39 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/snv_density_Stat
+    jobid: 69
+    wildcards: person=P3
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:42:58 2021]
+Finished job 82.
+3 of 22 steps (14%) done
+Select jobs to execute...
+
+[Tue May 18 20:42:58 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/snv_density_Stat
+    jobid: 84
+    wildcards: person=P21
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:42:58 2021]
+Finished job 79.
+4 of 22 steps (18%) done
+Select jobs to execute...
+
+[Tue May 18 20:42:58 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/snv_density_Stat
+    jobid: 86
+    wildcards: person=P23
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:43:38 2021]
+Finished job 86.
+5 of 22 steps (23%) done
+Select jobs to execute...
+
+[Tue May 18 20:43:38 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/snv_density_Stat
+    jobid: 74
+    wildcards: person=P8
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:43:39 2021]
+Finished job 69.
+6 of 22 steps (27%) done
+Select jobs to execute...
+
+[Tue May 18 20:43:39 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/snv_density_Stat
+    jobid: 88
+    wildcards: person=P25
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:43:58 2021]
+Finished job 68.
+7 of 22 steps (32%) done
+Select jobs to execute...
+
+[Tue May 18 20:43:58 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/snv_density_Stat
+    jobid: 76
+    wildcards: person=P10
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:44:18 2021]
+Finished job 84.
+8 of 22 steps (36%) done
+Select jobs to execute...
+
+[Tue May 18 20:44:18 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/snv_density_Stat
+    jobid: 78
+    wildcards: person=P15
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:44:19 2021]
+Finished job 88.
+9 of 22 steps (41%) done
+Select jobs to execute...
+
+[Tue May 18 20:44:19 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/snv_density_Stat
+    jobid: 70
+    wildcards: person=P4
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:44:38 2021]
+Finished job 74.
+10 of 22 steps (45%) done
+Select jobs to execute...
+
+[Tue May 18 20:44:38 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/snv_density_Stat
+    jobid: 81
+    wildcards: person=P18
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:44:58 2021]
+Finished job 76.
+11 of 22 steps (50%) done
+Select jobs to execute...
+
+[Tue May 18 20:44:58 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/snv_density_Stat
+    jobid: 77
+    wildcards: person=P12
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:45:18 2021]
+Finished job 81.
+12 of 22 steps (55%) done
+Select jobs to execute...
+
+[Tue May 18 20:45:18 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/snv_density_Stat
+    jobid: 75
+    wildcards: person=P9
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:45:18 2021]
+Finished job 78.
+13 of 22 steps (59%) done
+Select jobs to execute...
+
+[Tue May 18 20:45:18 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/snv_density_Stat
+    jobid: 87
+    wildcards: person=P24
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:45:19 2021]
+Finished job 70.
+14 of 22 steps (64%) done
+Select jobs to execute...
+
+[Tue May 18 20:45:19 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/snv_density_Stat
+    jobid: 71
+    wildcards: person=P5
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:45:37 2021]
+Finished job 77.
+15 of 22 steps (68%) done
+Select jobs to execute...
+
+[Tue May 18 20:45:37 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/snv_density_Stat
+    jobid: 83
+    wildcards: person=P20
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:45:58 2021]
+Finished job 71.
+16 of 22 steps (73%) done
+Select jobs to execute...
+
+[Tue May 18 20:45:58 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/snv_density_Stat
+    jobid: 80
+    wildcards: person=P17
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:46:16 2021]
+Finished job 75.
+17 of 22 steps (77%) done
+Select jobs to execute...
+
+[Tue May 18 20:46:16 2021]
+rule iSNV_SNV_density_stat:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/all.iSNV_with_SNP.pyResults.txt
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/snv_density_Stat
+    jobid: 73
+    wildcards: person=P7
+
+python iSNVpy_SNV_density_distribut.py -i  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/all.iSNV_with_SNP.pyResults.txt -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/snv_density_Stat -M 0.02 -S 500 -L 1700000
+[Tue May 18 20:46:17 2021]
+Finished job 87.
+18 of 22 steps (82%) done
+[Tue May 18 20:46:55 2021]
+Finished job 83.
+19 of 22 steps (86%) done
+[Tue May 18 20:46:56 2021]
+Finished job 80.
+20 of 22 steps (91%) done
+[Tue May 18 20:47:14 2021]
+Finished job 73.
+21 of 22 steps (95%) done
+Select jobs to execute...
+
+[Tue May 18 20:47:14 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/general-snvFreq_distribut_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P2/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P3/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P4/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P5/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P6/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P7/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P8/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P9/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P10/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P12/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P15/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P16/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P17/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P18/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P19/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P20/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P21/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P22/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P23/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P24/snv_density_Stat, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P25/snv_density_Stat
+    jobid: 0
+
+[Tue May 18 20:47:14 2021]
+Finished job 0.
+22 of 22 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/.snakemake/log/2021-05-18T204159.062545.snakemake.log

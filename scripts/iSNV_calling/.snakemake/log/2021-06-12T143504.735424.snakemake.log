@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	iSNV_freq_distribut_RepeatRegion_recombiRegion_filt
+	2
+Select jobs to execute...
+
+[Sat Jun 12 14:35:04 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 3
+    wildcards: person=P11
+
+RuleException in line 120 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNV_calling-pipeline-20210515.py:
+'InputFiles' object has no attribute 'FlonalFrameF'
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 140, in run_jobs
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 441, in run
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 230, in _run
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 156, in _run
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 162, in printjob

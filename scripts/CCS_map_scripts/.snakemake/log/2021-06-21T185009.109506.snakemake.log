@@ -1,0 +1,63 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	bam_index
+	1	bam_sort
+	1	mpileup
+	1	ngmlr_run
+	5
+Select jobs to execute...
+
+[Mon Jun 21 18:50:09 2021]
+rule ngmlr_run:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P5-E-d.fasta, /shared/liuhj/HP/data/CCS/P5-E-d.fastq.gz
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.bam
+    jobid: 2
+    wildcards: sample=P5-E-d, bwa_ref_samp=P5-E-d
+
+ngmlr -t 30 -x  pacbio -r   /shared/liuhj/HP/process/assembly/all_genomes/P5-E-d.fasta -q  /shared/liuhj/HP/data/CCS/P5-E-d.fastq.gz        		|  samtools view -bS -bF 4 -  > /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.bam   
+[Mon Jun 21 18:54:10 2021]
+Finished job 2.
+1 of 5 steps (20%) done
+Select jobs to execute...
+
+[Mon Jun 21 18:54:10 2021]
+rule bam_sort:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.bam
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.sort.bam
+    jobid: 1
+    wildcards: sample=P5-E-d, bwa_ref_samp=P5-E-d
+
+samtools  sort  --threads   30  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.bam  -o /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.sort.bam
+Removing temporary output file /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.bam.
+[Mon Jun 21 18:54:23 2021]
+Finished job 1.
+2 of 5 steps (40%) done
+Select jobs to execute...
+
+[Mon Jun 21 18:54:23 2021]
+rule bam_index:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.sort.bam
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.sort.bam.bai
+    jobid: 5
+    wildcards: sample=P5-E-d, bwa_ref_samp=P5-E-d
+
+samtools index  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.sort.bam
+[Mon Jun 21 18:54:30 2021]
+Finished job 5.
+3 of 5 steps (60%) done
+Select jobs to execute...
+
+[Mon Jun 21 18:54:30 2021]
+rule mpileup:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P5-E-d.fasta, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.sort.bam, /shared/liuhj/HP/process/assembly/all_genomes/P5-E-d.fasta.fai, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.sort.bam.bai
+    output: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-d.sort.mpileup
+    log: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-d.sort.mpileup.log
+    jobid: 3
+    wildcards: sample=P5-E-d, bwa_ref_samp=P5-E-d
+
+samtools mpileup -q 20  --reference  /shared/liuhj/HP/process/assembly/all_genomes/P5-E-d.fasta  /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P5-E-d/P5-E-d_2_P5-E-d.sort.bam  1>/shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-d.sort.mpileup 2>/shared/liuhj/HP/process/CCS_map2PersonRespectSamp/mpileup/P5-E-d_2_P5-E-d.sort.mpileup.log

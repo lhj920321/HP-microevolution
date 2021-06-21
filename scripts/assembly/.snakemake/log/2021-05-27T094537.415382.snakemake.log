@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 18 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/assembly/pilon_pipeline.py:
+Missing input files for rule reads_Trim:
+/shared/liuhj/HP/data/NGS/LBFC20201376/210109_A00838_0374_BHV3CTDSXY/P1-E-j.R1.fastq.gz
+/shared/liuhj/HP/data/NGS/LBFC20201376/210109_A00838_0374_BHV3CTDSXY/P1-E-j.R2.fastq.gz

@@ -1,0 +1,33 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	blast
+	2
+Select jobs to execute...
+
+[Sat Jun 12 13:21:00 2021]
+rule blast:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastdb.ndb
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastOut.txt
+    jobid: 2
+    wildcards: samp=P1-E-j
+
+blastn -db    /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastdb   -query  /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.simulateReads.fasta  -outfmt 6 -num_threads 4   1>/shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastOut.txt
+[Sat Jun 12 13:21:02 2021]
+Finished job 2.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Sat Jun 12 13:21:02 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.simulateReads.fasta, /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastOut.txt
+    jobid: 0
+
+[Sat Jun 12 13:21:02 2021]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/.snakemake/log/2021-06-12T132100.635588.snakemake.log

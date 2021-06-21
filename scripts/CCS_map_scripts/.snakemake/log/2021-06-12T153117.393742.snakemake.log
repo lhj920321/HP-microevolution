@@ -1,0 +1,6 @@
+Building DAG of jobs...
+WorkflowError:
+MissingInputException: Missing input files for rule ngmlr_run:
+/shared/liuhj/HP/process/assembly/all_genomes/P1-E-j_2_selfGnm.fasta
+MissingInputException: Missing input files for rule ngmlr_run:
+/shared/liuhj/HP/process/assembly/all_genomes/P1-E-j_2_selfGnm.sort.fasta

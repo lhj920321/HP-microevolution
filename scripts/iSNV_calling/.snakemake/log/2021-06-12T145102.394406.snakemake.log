@@ -1,0 +1,33 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	iSNV_freq_distribut_RepeatRegion_recombiRegion_filt
+	2
+Select jobs to execute...
+
+[Sat Jun 12 14:51:02 2021]
+rule iSNV_freq_distribut_RepeatRegion_recombiRegion_filt:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt, /shared/liuhj/HP/process/Genome_repeatRegion
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 3
+    wildcards: person=P11
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/iSNVpy_Freq_distribut_Stat-filtRepeatRegion.py  -i /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/all.iSNV_with_SNP.pyResults.txt /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt /shared/liuhj/HP/process/Genome_repeatRegion -o  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions  -F  /shared/liuhj/HP/process/samps_Tree-20210527/clonalFrame.RAxML_bestTree.20210527-allSamp.raxml.importation_status.txt -R /shared/liuhj/HP/process/Genome_repeatRegion -m 0.05  -M 1.0  -s 2  
+[Sat Jun 12 14:51:03 2021]
+Finished job 3.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Sat Jun 12 14:51:03 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/all.iSNV_with_SNP.pyResults.txt, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P11/SNVFreq_distribut_Stat_filtRepeatAndRecombRegions
+    jobid: 0
+
+[Sat Jun 12 14:51:03 2021]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/.snakemake/log/2021-06-12T145102.394406.snakemake.log

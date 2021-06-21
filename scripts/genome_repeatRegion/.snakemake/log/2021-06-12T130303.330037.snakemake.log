@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 19 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/simulateRead_blast_and_selectRepeat_region-pipeline.py:
+Missing input files for rule cutGenmTosimulRead:
+/shared/liuhj/HP/process/assembly/all_genomes/P1.fasta

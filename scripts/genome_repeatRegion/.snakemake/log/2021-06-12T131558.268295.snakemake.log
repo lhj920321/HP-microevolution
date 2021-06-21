@@ -1,0 +1,31 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	blast
+	1	makeblastdb
+	1	select_repeatRegion
+	4
+Select jobs to execute...
+
+[Sat Jun 12 13:15:58 2021]
+rule makeblastdb:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P1-E-j.fasta
+    output: /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastdb
+    jobid: 4
+    wildcards: samp=P1-E-j
+
+makeblastdb  -in   /shared/liuhj/HP/process/assembly/all_genomes/P1-E-j.fasta   -input_type  fasta   -dbtype  nucl  -out   /shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastdb
+Waiting at most 5 seconds for missing files.
+Terminating processes on user request, this might take some time.
+MissingOutputException in line 34 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/simulateRead_blast_and_selectRepeat_region-pipeline.py:
+Job Missing files after 5 seconds:
+/shared/liuhj/HP/process/Genome_repeatRegion/P1-E-j/P1-E-j.blastdb
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 4 completed successfully, but some output files are missing. 4
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 583, in handle_job_success
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 259, in handle_job_success
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/.snakemake/log/2021-06-12T131558.268295.snakemake.log

@@ -1,0 +1,310 @@
+The flag 'temp' used in rule pal2nal_codon is only valid for outputs, not inputs.
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run_null is only valid for outputs, not inputs.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	22	Nuc_AA_FnaF_of_diverGene
+	1	all
+	23
+Select jobs to execute...
+
+[Tue Jun 15 19:24:37 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P8
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8
+    jobid: 8
+    wildcards: person=P8
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P8 -r /shared/liuhj/HP/process/Person_core_genome/P8  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8
+[Tue Jun 15 19:24:37 2021]
+Finished job 8.
+1 of 23 steps (4%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:37 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P25
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25
+    jobid: 22
+    wildcards: person=P25
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P25 -r /shared/liuhj/HP/process/Person_core_genome/P25  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25
+[Tue Jun 15 19:24:38 2021]
+Finished job 22.
+2 of 23 steps (9%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:38 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P18
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18
+    jobid: 15
+    wildcards: person=P18
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P18 -r /shared/liuhj/HP/process/Person_core_genome/P18  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18
+[Tue Jun 15 19:24:38 2021]
+Finished job 15.
+3 of 23 steps (13%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:38 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P1
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1
+    jobid: 1
+    wildcards: person=P1
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P1 -r /shared/liuhj/HP/process/Person_core_genome/P1  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1
+[Tue Jun 15 19:24:38 2021]
+Finished job 1.
+4 of 23 steps (17%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:38 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P24
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24
+    jobid: 21
+    wildcards: person=P24
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P24 -r /shared/liuhj/HP/process/Person_core_genome/P24  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24
+[Tue Jun 15 19:24:39 2021]
+Finished job 21.
+5 of 23 steps (22%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:39 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P16
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16
+    jobid: 13
+    wildcards: person=P16
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P16 -r /shared/liuhj/HP/process/Person_core_genome/P16  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16
+[Tue Jun 15 19:24:39 2021]
+Finished job 13.
+6 of 23 steps (26%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:39 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P17
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17
+    jobid: 14
+    wildcards: person=P17
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P17 -r /shared/liuhj/HP/process/Person_core_genome/P17  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17
+[Tue Jun 15 19:24:39 2021]
+Finished job 14.
+7 of 23 steps (30%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:39 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P15
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15
+    jobid: 12
+    wildcards: person=P15
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P15 -r /shared/liuhj/HP/process/Person_core_genome/P15  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15
+[Tue Jun 15 19:24:39 2021]
+Finished job 12.
+8 of 23 steps (35%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:39 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P22
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22
+    jobid: 19
+    wildcards: person=P22
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P22 -r /shared/liuhj/HP/process/Person_core_genome/P22  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22
+[Tue Jun 15 19:24:40 2021]
+Finished job 19.
+9 of 23 steps (39%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:40 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P20
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20
+    jobid: 17
+    wildcards: person=P20
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P20 -r /shared/liuhj/HP/process/Person_core_genome/P20  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20
+[Tue Jun 15 19:24:40 2021]
+Finished job 17.
+10 of 23 steps (43%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:40 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P5
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5
+    jobid: 5
+    wildcards: person=P5
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P5 -r /shared/liuhj/HP/process/Person_core_genome/P5  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5
+[Tue Jun 15 19:24:40 2021]
+Finished job 5.
+11 of 23 steps (48%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:40 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P7
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7
+    jobid: 7
+    wildcards: person=P7
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P7 -r /shared/liuhj/HP/process/Person_core_genome/P7  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7
+[Tue Jun 15 19:24:41 2021]
+Finished job 7.
+12 of 23 steps (52%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:41 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P9
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9
+    jobid: 9
+    wildcards: person=P9
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P9 -r /shared/liuhj/HP/process/Person_core_genome/P9  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9
+[Tue Jun 15 19:24:41 2021]
+Finished job 9.
+13 of 23 steps (57%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:41 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P3
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3
+    jobid: 3
+    wildcards: person=P3
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P3 -r /shared/liuhj/HP/process/Person_core_genome/P3  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3
+[Tue Jun 15 19:24:41 2021]
+Finished job 3.
+14 of 23 steps (61%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:41 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P10
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10
+    jobid: 10
+    wildcards: person=P10
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P10 -r /shared/liuhj/HP/process/Person_core_genome/P10  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10
+[Tue Jun 15 19:24:41 2021]
+Finished job 10.
+15 of 23 steps (65%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:41 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P23
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23
+    jobid: 20
+    wildcards: person=P23
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P23 -r /shared/liuhj/HP/process/Person_core_genome/P23  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23
+[Tue Jun 15 19:24:42 2021]
+Finished job 20.
+16 of 23 steps (70%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:42 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P6
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6
+    jobid: 6
+    wildcards: person=P6
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P6 -r /shared/liuhj/HP/process/Person_core_genome/P6  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6
+[Tue Jun 15 19:24:42 2021]
+Finished job 6.
+17 of 23 steps (74%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:42 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P21
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21
+    jobid: 18
+    wildcards: person=P21
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P21 -r /shared/liuhj/HP/process/Person_core_genome/P21  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21
+[Tue Jun 15 19:24:42 2021]
+Finished job 18.
+18 of 23 steps (78%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:42 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P2
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2
+    jobid: 2
+    wildcards: person=P2
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P2 -r /shared/liuhj/HP/process/Person_core_genome/P2  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2
+[Tue Jun 15 19:24:43 2021]
+Finished job 2.
+19 of 23 steps (83%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:43 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P19
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19
+    jobid: 16
+    wildcards: person=P19
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P19 -r /shared/liuhj/HP/process/Person_core_genome/P19  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19
+[Tue Jun 15 19:24:43 2021]
+Finished job 16.
+20 of 23 steps (87%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:43 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P12
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12
+    jobid: 11
+    wildcards: person=P12
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P12 -r /shared/liuhj/HP/process/Person_core_genome/P12  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12
+[Tue Jun 15 19:24:43 2021]
+Finished job 11.
+21 of 23 steps (91%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:43 2021]
+rule Nuc_AA_FnaF_of_diverGene:
+    input: /shared/liuhj/HP/process/Person_core_genome/P4
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4
+    jobid: 4
+    wildcards: person=P4
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Core_Genome_nuc_aa-seq-from-roaryOutput.py  -i P4 -r /shared/liuhj/HP/process/Person_core_genome/P4  -p /shared/liuhj/HP/process/assembly/prokka  -o  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4
+[Tue Jun 15 19:24:43 2021]
+Finished job 4.
+22 of 23 steps (96%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:24:44 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25
+    jobid: 0
+
+[Tue Jun 15 19:24:44 2021]
+Finished job 0.
+23 of 23 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/.snakemake/log/2021-06-15T192437.610444.snakemake.log

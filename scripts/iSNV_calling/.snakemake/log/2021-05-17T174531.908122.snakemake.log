@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	iSNV_snvNumCount_noSNV
+	1	snpeffAnno
+	3
+
+[Mon May 17 17:45:31 2021]
+rule snpeffAnno:
+    input: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf_snpeff
+    jobid: 5
+    wildcards: person=P1
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/pipeline-snpeff.sh  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf_snpeff AE004091 /shared/liuhj/software/snpEff
+[Mon May 17 17:45:31 2021]
+Error in rule snpeffAnno:
+    jobid: 5
+    output: /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf_snpeff
+    shell:
+        bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/pipeline-snpeff.sh  /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/P1/vcf_snpeff AE004091 /shared/liuhj/software/snpEff
+        (exited with non-zero exit code)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/iSNV_calling/.snakemake/log/2021-05-17T174531.908122.snakemake.log

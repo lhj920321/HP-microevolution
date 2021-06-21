@@ -1,0 +1,34 @@
+The flag 'temp' used in rule pal2nal_codon is only valid for outputs, not inputs.
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run_null is only valid for outputs, not inputs.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	21	codeml_dNdS_select
+	22
+Select jobs to execute...
+
+[Tue Jun 15 15:36:49 2021]
+rule codeml_dNdS_select:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P4
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P4.codeml.dNdS.txt
+    jobid: 25
+    wildcards: person=P4
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P4  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P4.codeml.dNdS.txt 
+[Tue Jun 15 15:36:49 2021]
+Error in rule codeml_dNdS_select:
+    jobid: 25
+    output: /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P4.codeml.dNdS.txt
+    shell:
+        python /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/colect_dN_dS.py  -c /shared/liuhj/HP/process/dN-dS-caculate/P4  -o  /shared/liuhj/HP/process/dN-dS-caculate/dNdS_select/P4.codeml.dNdS.txt 
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/.snakemake/log/2021-06-15T153649.273039.snakemake.log

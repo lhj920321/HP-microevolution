@@ -1,0 +1,3 @@
+WildcardError in line 15 of /amax/homes/liuhj/HP/scripts/HP-microevolution/scripts/assembly/pilon_pipeline.py:
+No values given for wildcard 'sample'.
+  File "/amax/homes/liuhj/HP/scripts/HP-microevolution/scripts/assembly/pilon_pipeline.py", line 15, in <module>

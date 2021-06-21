@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	cutGenmTosimulRead
+	2
+Select jobs to execute...
+
+[Sat Jun 12 13:04:36 2021]
+rule cutGenmTosimulRead:
+    input: /shared/liuhj/HP/process/assembly/all_genomes/P1-E-j.fasta
+    output: /shared/liuhj/HP/process/Genm_repeatRegion/P1-E-j/P1-E-j.simulateReads.fasta
+    jobid: 1
+    wildcards: samp=P1-E-j
+
+python  /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/RefGnm_cutToSimmulateReads.py  -r  /shared/liuhj/HP/process/assembly/all_genomes/P1-E-j.fasta  -o /shared/liuhj/HP/process/Genm_repeatRegion/P1-E-j/P1-E-j.simulateReads.fasta -s 75 -l 150 
+ImproperOutputException in line 20 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/simulateRead_blast_and_selectRepeat_region-pipeline.py:
+Outputs of incorrect type (directories when expecting files or vice versa). Output directories must be flagged with directory(). for rule cutGenmTosimulRead:
+/shared/liuhj/HP/process/Genm_repeatRegion/P1-E-j/P1-E-j.simulateReads.fasta
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 583, in handle_job_success
+  File "/home/amax/anaconda3/envs/biotools_lhj/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 259, in handle_job_success
+Removing output files of failed job cutGenmTosimulRead since they might be corrupted:
+/shared/liuhj/HP/process/Genm_repeatRegion/P1-E-j/P1-E-j.simulateReads.fasta
+Skipped removing non-empty directory /shared/liuhj/HP/process/Genm_repeatRegion/P1-E-j/P1-E-j.simulateReads.fasta
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/genome_repeatRegion/.snakemake/log/2021-06-12T130436.324411.snakemake.log

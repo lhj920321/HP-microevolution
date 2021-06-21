@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 40 of /amax/homes/liuhj/HP/scripts/HP-microevolution/scripts/assembly/pilon_pipeline.py:
+Missing input files for rule pilon:
+/amax/homes/liuhj/HP/process/ONT_assembly/P12-E-x/6-bridge_contigs/bridged_contigs.fasta

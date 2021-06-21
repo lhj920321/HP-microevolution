@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 9 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/assembly/pilon_pipeline.py:
+Missing input files for rule all:
+/shared/liuhj/HP/process/Pacbio_assemble_control/P1-E-j

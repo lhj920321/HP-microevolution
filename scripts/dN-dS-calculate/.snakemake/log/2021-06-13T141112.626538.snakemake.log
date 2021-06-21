@@ -1,0 +1,38 @@
+The flag 'temp' used in rule pal2nal_codon is only valid for outputs, not inputs.
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run_null is only valid for outputs, not inputs.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	codeml_run_null
+	2
+Select jobs to execute...
+
+[Sun Jun 13 14:11:12 2021]
+rule codeml_run_null:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P1.ctl.null.log, /shared/liuhj/HP/process/dN-dS-caculate/P1
+    output: /shared/liuhj/HP/process/dN-dS-caculate/P1.codeml.null.log
+    jobid: 6
+    wildcards: person=P1
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run-null.sh  /shared/liuhj/HP/process/dN-dS-caculate/P1 /shared/liuhj/HP/process/dN-dS-caculate/P1.codeml.null.log
+[Sun Jun 13 14:11:39 2021]
+Finished job 6.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Sun Jun 13 14:11:39 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/dN-dS-caculate/P1, /shared/liuhj/HP/process/dN-dS-caculate/P1.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate/P1.ctl.null.log, /shared/liuhj/HP/process/dN-dS-caculate/P1.codeml.null.log
+    jobid: 0
+
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate/P1.codeml.null.log.
+[Sun Jun 13 14:11:39 2021]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/.snakemake/log/2021-06-13T141112.626538.snakemake.log

@@ -1,0 +1,905 @@
+The flag 'temp' used in rule Generate_controlF is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run is only valid for outputs, not inputs.
+The flag 'temp' used in rule codeml_run_null is only valid for outputs, not inputs.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	22	Generate_controlF
+	1	all
+	22	codeml_run
+	22	pal2nal_codon
+	67
+Select jobs to execute...
+
+[Tue Jun 15 19:32:54 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.pal2nal.log
+    jobid: 21
+    wildcards: person=P24
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.pal2nal.log
+[Tue Jun 15 19:33:04 2021]
+Finished job 21.
+1 of 67 steps (1%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:33:04 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.pal2nal.log
+    jobid: 8
+    wildcards: person=P8
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.pal2nal.log
+[Tue Jun 15 19:33:15 2021]
+Finished job 8.
+2 of 67 steps (3%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:33:15 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.pal2nal.log
+    jobid: 22
+    wildcards: person=P25
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.pal2nal.log
+[Tue Jun 15 19:33:26 2021]
+Finished job 22.
+3 of 67 steps (4%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:33:26 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.ctl.log
+    jobid: 43
+    wildcards: person=P24
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.ctl.log
+[Tue Jun 15 19:33:31 2021]
+Finished job 43.
+4 of 67 steps (6%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:33:31 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.pal2nal.log
+    jobid: 1
+    wildcards: person=P1
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.pal2nal.log
+[Tue Jun 15 19:33:44 2021]
+Finished job 1.
+5 of 67 steps (7%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:33:44 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.pal2nal.log
+    jobid: 15
+    wildcards: person=P18
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.pal2nal.log
+[Tue Jun 15 19:33:55 2021]
+Finished job 15.
+6 of 67 steps (9%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:33:55 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.codeml.log
+    jobid: 65
+    wildcards: person=P24
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.codeml.log
+[Tue Jun 15 19:35:04 2021]
+Finished job 65.
+7 of 67 steps (10%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:35:04 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.ctl.log
+    jobid: 23
+    wildcards: person=P1
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.ctl.log
+[Tue Jun 15 19:35:09 2021]
+Finished job 23.
+8 of 67 steps (12%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:35:09 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.pal2nal.log
+    jobid: 9
+    wildcards: person=P9
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.pal2nal.log
+[Tue Jun 15 19:35:22 2021]
+Finished job 9.
+9 of 67 steps (13%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:35:22 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.ctl.log
+    jobid: 37
+    wildcards: person=P18
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.ctl.log
+[Tue Jun 15 19:35:27 2021]
+Finished job 37.
+10 of 67 steps (15%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:35:27 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.ctl.log
+    jobid: 44
+    wildcards: person=P25
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.ctl.log
+[Tue Jun 15 19:35:33 2021]
+Finished job 44.
+11 of 67 steps (16%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:35:33 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.ctl.log
+    jobid: 30
+    wildcards: person=P8
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.ctl.log
+[Tue Jun 15 19:35:38 2021]
+Finished job 30.
+12 of 67 steps (18%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:35:38 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.pal2nal.log
+    jobid: 16
+    wildcards: person=P19
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.pal2nal.log
+[Tue Jun 15 19:35:49 2021]
+Finished job 16.
+13 of 67 steps (19%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:35:50 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.pal2nal.log
+    jobid: 2
+    wildcards: person=P2
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.pal2nal.log
+[Tue Jun 15 19:36:02 2021]
+Finished job 2.
+14 of 67 steps (21%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:36:03 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.codeml.log
+    jobid: 66
+    wildcards: person=P25
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.codeml.log
+[Tue Jun 15 19:37:10 2021]
+Finished job 66.
+15 of 67 steps (22%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:37:10 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.codeml.log
+    jobid: 52
+    wildcards: person=P8
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.codeml.log
+[Tue Jun 15 19:38:07 2021]
+Finished job 52.
+16 of 67 steps (24%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:38:07 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.ctl.log
+    jobid: 38
+    wildcards: person=P19
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.ctl.log
+[Tue Jun 15 19:38:12 2021]
+Finished job 38.
+17 of 67 steps (25%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:38:12 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.ctl.log
+    jobid: 24
+    wildcards: person=P2
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.ctl.log
+[Tue Jun 15 19:38:17 2021]
+Finished job 24.
+18 of 67 steps (27%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:38:17 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.pal2nal.log
+    jobid: 10
+    wildcards: person=P10
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.pal2nal.log
+[Tue Jun 15 19:38:30 2021]
+Finished job 10.
+19 of 67 steps (28%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:38:30 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.codeml.log
+    jobid: 45
+    wildcards: person=P1
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.codeml.log
+[Tue Jun 15 19:44:11 2021]
+Finished job 45.
+20 of 67 steps (30%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:44:11 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.pal2nal.log
+    jobid: 13
+    wildcards: person=P16
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.pal2nal.log
+[Tue Jun 15 19:44:23 2021]
+Finished job 13.
+21 of 67 steps (31%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:44:23 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.pal2nal.log
+    jobid: 14
+    wildcards: person=P17
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.pal2nal.log
+[Tue Jun 15 19:44:35 2021]
+Finished job 14.
+22 of 67 steps (33%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:44:35 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.pal2nal.log
+    jobid: 5
+    wildcards: person=P5
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.pal2nal.log
+[Tue Jun 15 19:44:46 2021]
+Finished job 5.
+23 of 67 steps (34%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:44:46 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.ctl.log
+    jobid: 27
+    wildcards: person=P5
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.ctl.log
+[Tue Jun 15 19:44:51 2021]
+Finished job 27.
+24 of 67 steps (36%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:44:51 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.codeml.log
+    jobid: 49
+    wildcards: person=P5
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.codeml.log
+[Tue Jun 15 19:45:53 2021]
+Finished job 49.
+25 of 67 steps (37%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:45:53 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.ctl.log
+    jobid: 35
+    wildcards: person=P16
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.ctl.log
+[Tue Jun 15 19:45:59 2021]
+Finished job 35.
+26 of 67 steps (39%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:45:59 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.pal2nal.log
+    jobid: 4
+    wildcards: person=P4
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.pal2nal.log
+[Tue Jun 15 19:46:10 2021]
+Finished job 4.
+27 of 67 steps (40%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:46:10 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.pal2nal.log
+    jobid: 18
+    wildcards: person=P21
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.pal2nal.log
+[Tue Jun 15 19:46:24 2021]
+Finished job 18.
+28 of 67 steps (42%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:46:24 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.codeml.log
+    jobid: 60
+    wildcards: person=P19
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.codeml.log
+[Tue Jun 15 19:49:17 2021]
+Finished job 60.
+29 of 67 steps (43%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:49:17 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.codeml.log
+    jobid: 46
+    wildcards: person=P2
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.codeml.log
+[Tue Jun 15 19:54:44 2021]
+Finished job 46.
+30 of 67 steps (45%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:54:44 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.ctl.log
+    jobid: 40
+    wildcards: person=P21
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.ctl.log
+[Tue Jun 15 19:54:49 2021]
+Finished job 40.
+31 of 67 steps (46%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:54:49 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.ctl.log
+    jobid: 26
+    wildcards: person=P4
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.ctl.log
+[Tue Jun 15 19:54:55 2021]
+Finished job 26.
+32 of 67 steps (48%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:54:55 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.codeml.log
+    jobid: 59
+    wildcards: person=P18
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.codeml.log
+[Tue Jun 15 19:55:56 2021]
+Finished job 59.
+33 of 67 steps (49%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:55:56 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.codeml.log
+    jobid: 57
+    wildcards: person=P16
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.codeml.log
+[Tue Jun 15 19:59:00 2021]
+Finished job 57.
+34 of 67 steps (51%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:59:00 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.pal2nal.log
+    jobid: 17
+    wildcards: person=P20
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.pal2nal.log
+[Tue Jun 15 19:59:13 2021]
+Finished job 17.
+35 of 67 steps (52%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:59:13 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.ctl.log
+    jobid: 31
+    wildcards: person=P9
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.ctl.log
+[Tue Jun 15 19:59:18 2021]
+Finished job 31.
+36 of 67 steps (54%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:59:18 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.pal2nal.log
+    jobid: 12
+    wildcards: person=P15
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.pal2nal.log
+[Tue Jun 15 19:59:30 2021]
+Finished job 12.
+37 of 67 steps (55%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:59:30 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.ctl.log
+    jobid: 34
+    wildcards: person=P15
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.ctl.log
+[Tue Jun 15 19:59:35 2021]
+Finished job 34.
+38 of 67 steps (57%) done
+Select jobs to execute...
+
+[Tue Jun 15 19:59:35 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.codeml.log
+    jobid: 48
+    wildcards: person=P4
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.codeml.log
+[Tue Jun 15 20:02:40 2021]
+Finished job 48.
+39 of 67 steps (58%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:02:40 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.pal2nal.log
+    jobid: 3
+    wildcards: person=P3
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.pal2nal.log
+[Tue Jun 15 20:02:51 2021]
+Finished job 3.
+40 of 67 steps (60%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:02:51 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.codeml.log
+    jobid: 62
+    wildcards: person=P21
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.codeml.log
+[Tue Jun 15 20:08:25 2021]
+Finished job 62.
+41 of 67 steps (61%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:08:25 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.pal2nal.log
+    jobid: 19
+    wildcards: person=P22
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.pal2nal.log
+[Tue Jun 15 20:08:36 2021]
+Finished job 19.
+42 of 67 steps (63%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:08:36 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.ctl.log
+    jobid: 36
+    wildcards: person=P17
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.ctl.log
+[Tue Jun 15 20:08:41 2021]
+Finished job 36.
+43 of 67 steps (64%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:08:41 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.pal2nal.log
+    jobid: 20
+    wildcards: person=P23
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.pal2nal.log
+[Tue Jun 15 20:08:52 2021]
+Finished job 20.
+44 of 67 steps (66%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:08:52 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.pal2nal.log
+    jobid: 6
+    wildcards: person=P6
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.pal2nal.log
+[Tue Jun 15 20:09:03 2021]
+Finished job 6.
+45 of 67 steps (67%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:09:04 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.ctl.log
+    jobid: 32
+    wildcards: person=P10
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.ctl.log
+[Tue Jun 15 20:09:09 2021]
+Finished job 32.
+46 of 67 steps (69%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:09:09 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.codeml.log
+    jobid: 54
+    wildcards: person=P10
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.codeml.log
+[Tue Jun 15 20:12:10 2021]
+Finished job 54.
+47 of 67 steps (70%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:12:10 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.pal2nal.log
+    jobid: 7
+    wildcards: person=P7
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.pal2nal.log
+[Tue Jun 15 20:12:22 2021]
+Finished job 7.
+48 of 67 steps (72%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:12:22 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.ctl.log
+    jobid: 29
+    wildcards: person=P7
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.ctl.log
+[Tue Jun 15 20:12:28 2021]
+Finished job 29.
+49 of 67 steps (73%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:12:28 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.codeml.log
+    jobid: 51
+    wildcards: person=P7
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.codeml.log
+[Tue Jun 15 20:15:29 2021]
+Finished job 51.
+50 of 67 steps (75%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:15:29 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.codeml.log
+    jobid: 58
+    wildcards: person=P17
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.codeml.log
+[Tue Jun 15 20:18:24 2021]
+Finished job 58.
+51 of 67 steps (76%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:18:24 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.ctl.log
+    jobid: 28
+    wildcards: person=P6
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.ctl.log
+[Tue Jun 15 20:18:29 2021]
+Finished job 28.
+52 of 67 steps (78%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:18:29 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.codeml.log
+    jobid: 50
+    wildcards: person=P6
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.codeml.log
+[Tue Jun 15 20:19:32 2021]
+Finished job 50.
+53 of 67 steps (79%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:19:32 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.ctl.log
+    jobid: 42
+    wildcards: person=P23
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.ctl.log
+[Tue Jun 15 20:19:37 2021]
+Finished job 42.
+54 of 67 steps (81%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:19:37 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.codeml.log
+    jobid: 64
+    wildcards: person=P23
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.codeml.log
+[Tue Jun 15 20:20:44 2021]
+Finished job 64.
+55 of 67 steps (82%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:20:44 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.codeml.log
+    jobid: 56
+    wildcards: person=P15
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.codeml.log
+[Tue Jun 15 20:23:51 2021]
+Finished job 56.
+56 of 67 steps (84%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:23:51 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.ctl.log
+    jobid: 39
+    wildcards: person=P20
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.ctl.log
+[Tue Jun 15 20:23:57 2021]
+Finished job 39.
+57 of 67 steps (85%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:23:57 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.codeml.log
+    jobid: 61
+    wildcards: person=P20
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.codeml.log
+[Tue Jun 15 20:29:34 2021]
+Finished job 61.
+58 of 67 steps (87%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:29:34 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.codeml.log
+    jobid: 53
+    wildcards: person=P9
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.codeml.log
+[Tue Jun 15 20:32:25 2021]
+Finished job 53.
+59 of 67 steps (88%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:32:25 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.ctl.log
+    jobid: 25
+    wildcards: person=P3
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.ctl.log
+[Tue Jun 15 20:32:30 2021]
+Finished job 25.
+60 of 67 steps (90%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:32:30 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.codeml.log
+    jobid: 47
+    wildcards: person=P3
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.codeml.log
+[Tue Jun 15 20:35:31 2021]
+Finished job 47.
+61 of 67 steps (91%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:35:31 2021]
+rule pal2nal_codon:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.pal2nal.log
+    jobid: 11
+    wildcards: person=P12
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/pal2nal_condon_align.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.pal2nal.log
+[Tue Jun 15 20:35:42 2021]
+Finished job 11.
+62 of 67 steps (93%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:35:42 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.ctl.log
+    jobid: 41
+    wildcards: person=P22
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.ctl.log
+[Tue Jun 15 20:35:47 2021]
+Finished job 41.
+63 of 67 steps (94%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:35:47 2021]
+rule Generate_controlF:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12, /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.pal2nal.log
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.ctl.log
+    jobid: 33
+    wildcards: person=P12
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/Generate_sample_controlF.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12  /shared/liuhj/HP/process/dN-dS-caculate/paml-control-file-sample.ctl  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.ctl.log
+[Tue Jun 15 20:35:53 2021]
+Finished job 33.
+64 of 67 steps (96%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:35:53 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.codeml.log
+    jobid: 55
+    wildcards: person=P12
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.codeml.log
+[Tue Jun 15 20:36:58 2021]
+Finished job 55.
+65 of 67 steps (97%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:36:58 2021]
+rule codeml_run:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22
+    output: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.codeml.log
+    jobid: 63
+    wildcards: person=P22
+
+bash /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/codeml-run.sh  /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22 /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.codeml.log
+[Tue Jun 15 20:38:05 2021]
+Finished job 63.
+66 of 67 steps (99%) done
+Select jobs to execute...
+
+[Tue Jun 15 20:38:05 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.pal2nal.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.ctl.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.codeml.log, /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.codeml.log
+    jobid: 0
+
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P1.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P2.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P3.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P4.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P5.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P6.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P7.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P8.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P9.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P10.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P12.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P15.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P16.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P17.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P18.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P19.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P20.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P21.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P22.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P23.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P24.codeml.log.
+Removing temporary output file /shared/liuhj/HP/process/dN-dS-caculate-CoreGnm/P25.codeml.log.
+[Tue Jun 15 20:38:05 2021]
+Finished job 0.
+67 of 67 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/dN-dS-calculate/.snakemake/log/2021-06-15T193254.183130.snakemake.log
