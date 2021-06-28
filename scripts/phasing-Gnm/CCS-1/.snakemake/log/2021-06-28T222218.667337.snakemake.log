@@ -1,0 +1,61 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	FiltNGS_CCS_Posi
+	1	all
+	1	phasing
+	1	read_LongReadbam_file
+	4
+Select jobs to execute...
+
+[Mon Jun 28 22:22:18 2021]
+rule FiltNGS_CCS_Posi:
+    input: /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/allVcf/P6-E-d_2_P6-E-t.minFreq0.02.iSNVpy.vcf, /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/allVcf/P6-E-d_2_P6-E-t.minFreq0.02.iSNVpy.vcf
+    output: /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/1.out-Filted_reliablePosi.txt
+    jobid: 1
+    wildcards: samp=P6-E-d, Ref_samp=P6-E-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/phasing-Gnm/CCS/Step0__read_vcf_FiltPosi.py  -N /shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/allVcf/P6-E-d_2_P6-E-t.minFreq0.02.iSNVpy.vcf 		-P /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/allVcf/P6-E-d_2_P6-E-t.minFreq0.02.iSNVpy.vcf -r 0.02 -m   0.86 -M   0.96 -o /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/1.out-Filted_reliablePosi.txt 
+[Mon Jun 28 22:22:18 2021]
+Finished job 1.
+1 of 4 steps (25%) done
+Select jobs to execute...
+
+[Mon Jun 28 22:22:18 2021]
+rule read_LongReadbam_file:
+    input: /shared/liuhj/HP/process/phasing_CCS/config.txt, /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/1.out-Filted_reliablePosi.txt, /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P6-E-d/P6-E-d_2_P6-E-t.sort.bam, /shared/liuhj/HP/process/assembly/all_genomes/P6-E-t.fasta
+    output: /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/1.out-SNVtype_of_Filted_Cites.txt, /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/1.out-SNVtype_of_Filted_Cites.Stat.txt
+    jobid: 2
+    wildcards: samp=P6-E-d, Ref_samp=P6-E-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/phasing-Gnm/CCS/Step1__read_ONTbam_f.py  -c /shared/liuhj/HP/process/phasing_CCS/config.txt   -b /shared/liuhj/HP/process/CCS_map2PersonRespectSamp/ngmlr/P6-E-d/P6-E-d_2_P6-E-t.sort.bam -v /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/1.out-Filted_reliablePosi.txt -r /shared/liuhj/HP/process/assembly/all_genomes/P6-E-t.fasta -o /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96
+[Mon Jun 28 22:22:28 2021]
+Finished job 2.
+2 of 4 steps (50%) done
+Select jobs to execute...
+
+[Mon Jun 28 22:22:28 2021]
+rule phasing:
+    input: /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/1.out-Filted_reliablePosi.txt, /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/1.out-SNVtype_of_Filted_Cites.Stat.txt
+    output: /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/step2_phasing.log
+    jobid: 3
+    wildcards: samp=P6-E-d, Ref_samp=P6-E-t
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/phasing-Gnm/CCS-1/step3_phasing.py  -f /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/1.out-Filted_reliablePosi.txt -F /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/1.out-SNVtype_of_Filted_Cites.Stat.txt -o /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96  -s 10 -m 20 -c 0.7 -l /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/step2_phasing.log
+[Mon Jun 28 22:22:31 2021]
+Finished job 3.
+3 of 4 steps (75%) done
+Select jobs to execute...
+
+[Mon Jun 28 22:22:31 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/1.out-Filted_reliablePosi.txt, /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/1.out-SNVtype_of_Filted_Cites.txt, /shared/liuhj/HP/process/phasing_CCS-1/phasing_P6-E-d_2_P6-E-t--0.86-0.96/step2_phasing.log
+    jobid: 0
+
+[Mon Jun 28 22:22:31 2021]
+Finished job 0.
+4 of 4 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/phasing-Gnm/CCS-1/.snakemake/log/2021-06-28T222218.667337.snakemake.log

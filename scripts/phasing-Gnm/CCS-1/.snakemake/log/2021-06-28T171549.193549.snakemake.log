@@ -1,0 +1,34 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	phasing
+	2
+Select jobs to execute...
+
+[Mon Jun 28 17:15:49 2021]
+rule phasing:
+    input: /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/1.out-Filted_reliablePosi.txt, /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/1.out-SNVtype_of_Filted_Cites.Stat.txt
+    output: /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/step2_phasing.log
+    jobid: 3
+    wildcards: samp=P4-E-j, Ref_samp=P4-E-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/phasing-Gnm/CCS-1/step3_phasing.py  -f /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/1.out-Filted_reliablePosi.txt -F /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/1.out-SNVtype_of_Filted_Cites.Stat.txt -o /shared/liuhj/HP/process/phasing_CCS-1/phasing_P4-E-j_2_P4-E-j--0.12-0.28  -s 10 -m 20 -c 90 -l /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/step2_phasing.log
+[Mon Jun 28 17:15:50 2021]
+Finished job 3.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Mon Jun 28 17:15:50 2021]
+localrule all:
+    input: /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/1.out-Filted_reliablePosi.txt, /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/1.out-SNVtype_of_Filted_Cites.txt, /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/step2_phasing.log
+    jobid: 0
+
+Removing temporary output file /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/step2_phasing.log.
+[Mon Jun 28 17:15:50 2021]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/phasing-Gnm/CCS-1/.snakemake/log/2021-06-28T171549.193549.snakemake.log

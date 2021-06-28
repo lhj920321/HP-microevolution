@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	phasing
+	2
+Select jobs to execute...
+
+[Mon Jun 28 16:46:54 2021]
+rule phasing:
+    input: /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/1.out-Filted_reliablePosi.txt, /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/1.out-SNVtype_of_Filted_Cites.Stat.txt
+    output: /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/step2_phasing.log
+    jobid: 3
+    wildcards: samp=P4-E-j, Ref_samp=P4-E-j
+
+python /shared/liuhj/HP/scripts/HP-microevolution/scripts/phasing-Gnm/CCS-1/step3_phasing.py  -f /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/1.out-Filted_reliablePosi.txt -F /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/1.out-SNVtype_of_Filted_Cites.Stat.txt -o /shared/liuhj/HP/process/phasing_CCS-1/phasing_P4-E-j_2_P4-E-j--0.12-0.28  -s 10 -m 20 -c 90 -l /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/step2_phasing.log
+[Mon Jun 28 16:46:55 2021]
+Error in rule phasing:
+    jobid: 3
+    output: /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/step2_phasing.log
+    shell:
+        python /shared/liuhj/HP/scripts/HP-microevolution/scripts/phasing-Gnm/CCS-1/step3_phasing.py  -f /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/1.out-Filted_reliablePosi.txt -F /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/1.out-SNVtype_of_Filted_Cites.Stat.txt -o /shared/liuhj/HP/process/phasing_CCS-1/phasing_P4-E-j_2_P4-E-j--0.12-0.28  -s 10 -m 20 -c 90 -l /shared/liuhj/HP/process/phasing_CCS-1/P4-E-j_2_P4-E-j--0.12-0.28/step2_phasing.log
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /shared/liuhj/HP/scripts/HP-microevolution/scripts/phasing-Gnm/CCS-1/.snakemake/log/2021-06-28T164654.579306.snakemake.log

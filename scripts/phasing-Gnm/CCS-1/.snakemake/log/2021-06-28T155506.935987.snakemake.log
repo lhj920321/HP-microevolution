@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 44 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/phasing-Gnm/CCS-1/P4-E-j--0.12-0.28.phasing.snakemake.phasing.py:
+Missing input files for rule read_LongReadbam_file:
+/shared/liuhj/HP/process/phasing_CCS-1/config.txt

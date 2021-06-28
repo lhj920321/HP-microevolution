@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 25 of /shared/liuhj/HP/scripts/HP-microevolution/scripts/phasing-Gnm/CCS-1/Samp_phasing_RunScripts/P6-E-d--0.86-0.96.phasing.snakemake.phasing.py:
+Missing input files for rule FiltNGS_CCS_Posi:
+/shared/liuhj/HP/process/NGS_map2PersonResptGnm/table/allVcf/0.86_2_P6-E-t.minFreq0.02.iSNVpy.vcf
+/shared/liuhj/HP/process/CCS_map2PersonRespectSamp/table/allVcf/0.86_2_P6-E-t.minFreq0.02.iSNVpy.vcf
